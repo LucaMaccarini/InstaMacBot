@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace InstaMacBot.classi_MacBotClient
 {
-    //OVERVIEW: this class represents a followers screaper bot that extract all followers it can from a username
-    //          objects of this class are mutable
-
     class ExtractFollowersBot : SSSBot
     {
+        //OVERVIEW: this class represents a followers screaper bot that extract all followers it can from a username
+        //          objects of this class are mutable
+
         private string username;
         private List<string> extracted_list;
         private bool stop_bot;
