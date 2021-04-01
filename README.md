@@ -1,5 +1,6 @@
 # InstaMacBot
-a c# bot for istagram 
+a c# classes + desktop client bot for istagram
+# description
 this project is composed by 2 parts:
 #### 1) Set of c# classes to split api and bot logic with deskotp implementation
 #### 2) Desktop client
@@ -20,3 +21,6 @@ this project is composed by 2 parts:
  # 2) Desktop Client
     a basic client that use these classes
     (I am developing another client for android using these classes)
+    
+ #Terms and Conditions
+ use this bot at you own risk!
