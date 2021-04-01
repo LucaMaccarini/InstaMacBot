@@ -8,6 +8,8 @@ namespace InstaMacBot.classi_MacBotClient
 {
     class BotClient
     {
+        //OVERVIEW: the objects of this class are bot client with some <name,SSSbot> connected
+        //          just to have an organizzation of all bots grouped in a client and with an unic name
         public Dictionary<string, SSSBot> bots;
         
         public BotClient()
