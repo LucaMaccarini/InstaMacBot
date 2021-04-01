@@ -31,6 +31,8 @@ this project is composed by 2 parts:
     
  # Terms and Conditions
  use this bot at you own risk!
+ # Legal
+This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by Instagram or any of its affiliates or subsidiaries. This is an independent and unofficial instagram bot
  
 # Installation
 just download and start:
