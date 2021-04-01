@@ -31,3 +31,10 @@ this project is composed by 2 parts:
     
  # Terms and Conditions
  use this bot at you own risk!
+ 
+#Installation
+just download and start:
+1) exe folder is InstaMacBot/InstaMacBot class/InstaMacBot/bin/Debug/
+>- you can start InstaMacBot.exe or padte the entire debug folder on yout desktop and rename it just don't touch files inside
+>- to edit the project is just a c# project open the solution file with visual studio
+
