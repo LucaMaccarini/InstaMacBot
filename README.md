@@ -6,7 +6,7 @@ this project is composed by 2 parts:
 ### 2) Desktop client
 
 
-# 1) Main Classes
+## 1) Main Classes
 
   UserApi (Class): rappresents the instagram user and contains the api to do all action on instagram
   
@@ -18,7 +18,7 @@ this project is composed by 2 parts:
   
   the other entities are class that extends SSSbot and implements the bot behavior
   
- # 2) Desktop Client
+ ## 2) Desktop Client
     a basic client that use these classes
     (I am developing another client for android using these classes)
     
