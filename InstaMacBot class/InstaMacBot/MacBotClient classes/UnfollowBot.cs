@@ -214,7 +214,7 @@ namespace InstaMacBot.classi_MacBotClient
                 if (!exists)
                     System.IO.Directory.CreateDirectory("UnfollowBot");
 
-                using (StreamWriter scrivi = new StreamWriter("unfollow/left_followed.txt"))
+                using (StreamWriter scrivi = new StreamWriter("UnfollowBot/left_followed.txt"))
                 {
                     for (int i = 0; i < followed_list.Count(); i++)
                     {

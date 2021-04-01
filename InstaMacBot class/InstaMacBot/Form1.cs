@@ -91,19 +91,19 @@ namespace InstaMacBot
             {
                 FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)client.bots["follow_like"];
                 x.save_on_file_accounts_followed();
-                MessageBox.Show("followed accounts saved in 'followed.txt'");
+                MessageBox.Show("followed accounts saved in 'followed.txt'", "FollowLikeLastsPicBot");
 
                 x.save_on_file_accounts_not_proccessed();
-                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'left.txt'", "accounts left");
+                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'left.txt'", "FollowLikeLastsPicBot");
             }
 
             if (client.bots.ContainsKey("unfollow"))
             {
                 UnfollowBot y = (UnfollowBot)client.bots["unfollow"];
                 y.save_on_file_error_unfollow();
-                MessageBox.Show("bot unfollowed errors saved in 'error_unfollow.txt'", "accounts left");
+                MessageBox.Show("bot unfollowed errors saved in 'error_unfollow.txt'", "UnfollowBot");
                 y.save_on_file_accounts_not_proccessed();
-                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'leftFollowed.txt'", "accounts left");
+                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'leftFollowed.txt'", "UnfollowBot");
             }
             
         }
