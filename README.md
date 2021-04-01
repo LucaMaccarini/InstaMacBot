@@ -35,6 +35,6 @@ this project is composed by 2 parts:
 # Installation
 just download and start:
 1) exe file is in InstaMacBot/InstaMacBot class/InstaMacBot/bin/Debug/
->- you can start InstaMacBot.exe or paste the entire debug folder on yout desktop and rename it just don't touch files inside
+>- you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it just don't touch files inside
 >- to edit the project is just a c# project open the solution file with visual studio
 
