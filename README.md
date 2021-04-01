@@ -26,8 +26,8 @@ this project is composed by 2 parts:
   
   
  ## 2) Desktop Client
-   a basic client that use these classes
-   (I am developing another client for android using these classes)
+ >-A basic client that uses these classes, (bot is in beta testing)
+ >-I am developing another client for android using these classes
     
  # Terms and Conditions
  use this bot at you own risk!
