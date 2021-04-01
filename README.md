@@ -32,7 +32,7 @@ this project is composed by 2 parts:
  # Terms and Conditions
  use this bot at you own risk!
  
-#Installation
+# Installation
 just download and start:
 1) exe file is in InstaMacBot/InstaMacBot class/InstaMacBot/bin/Debug/
 >- you can start InstaMacBot.exe or paste the entire debug folder on yout desktop and rename it just don't touch files inside
