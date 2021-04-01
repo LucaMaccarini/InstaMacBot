@@ -45,8 +45,8 @@ all folders are client's bots folders where each bot can save its informarion or
 
 other files are files of InstagramApiSharp the api that my bot use (don't touch them)
 
-- 1 bot ExtractFollowersBot: used to extract followers from a public instagram user
-- 2 bot FollowLikeLastsPicBot use the extracted followes (bot 1) for follow and left some likes at lasts pics (likes from 1 to 3 settable: default 1)
-- 3 bot Unfollow use the followed list from bot2 to unfollow all person in the list
+1) bot ExtractFollowersBot: used to extract followers from a public instagram user
+2) bot FollowLikeLastsPicBot use the extracted followes (bot 1) for follow and left some likes at lasts pics (likes from 1 to 3 settable: default 1)
+3) bot Unfollow use the followed list from bot2 to unfollow all person in the list
 
 
