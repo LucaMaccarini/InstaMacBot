@@ -22,5 +22,5 @@ this project is composed by 2 parts:
     a basic client that use these classes
     (I am developing another client for android using these classes)
     
- #Terms and Conditions
+ # Terms and Conditions
  use this bot at you own risk!
