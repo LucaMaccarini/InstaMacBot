@@ -38,3 +38,12 @@ just download and start:
 >- you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it just don't touch files inside
 >- to edit the project is just a c# project open the solution file with visual studio
 
+# Usage
+inside debug folder you can see the exe file and some folders:
+>all folders are client's bots folders where each bot can save its informarion or outputs for now bots saves informations on txt files cause is a beta after i will change method
+>other files are files of InstagramApiSharp the api that my bot use (don't touch them)
+>1 bot ExtractFollowersBot: used to extract followers from a public instagram user
+>2 bot FollowLikeLastsPicBot use the extracted followes (bot 1) for follow and left some likes at lasts pics (likes from 1 to 3 settable: default 1)
+>3)bot Unfollow use the followed list from bot2 to unfollow all person in the list
+
+
