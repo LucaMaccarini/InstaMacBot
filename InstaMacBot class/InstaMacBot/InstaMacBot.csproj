@@ -53,12 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classi MacBotClient\BotClient.cs" />
-    <Compile Include="classi MacBotClient\ExtractFollowersBot.cs" />
-    <Compile Include="classi MacBotClient\FollowLikeLastsPicBot.cs" />
-    <Compile Include="classi MacBotClient\SSSBot.cs" />
-    <Compile Include="classi MacBotClient\StartStopBot.cs" />
-    <Compile Include="classi MacBotClient\UnfollowBot.cs" />
+    <Compile Include="MacBotClient classes\BotClient.cs" />
+    <Compile Include="MacBotClient classes\ExtractFollowersBot.cs" />
+    <Compile Include="MacBotClient classes\FollowLikeLastsPicBot.cs" />
+    <Compile Include="MacBotClient classes\SSSBot.cs" />
+    <Compile Include="MacBotClient classes\StartStopBot.cs" />
+    <Compile Include="MacBotClient classes\UnfollowBot.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +67,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="classi MacBotClient\UserApi.cs" />
+    <Compile Include="MacBotClient classes\UserApi.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
