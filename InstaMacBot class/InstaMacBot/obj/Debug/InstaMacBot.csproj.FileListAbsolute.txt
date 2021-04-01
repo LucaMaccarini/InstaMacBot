@@ -82,3 +82,17 @@ C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.cspro
 C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
 C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.exe
 C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.pdb
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe.config
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.pdb
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstagramApiSharp.dll
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.exe
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.pdb

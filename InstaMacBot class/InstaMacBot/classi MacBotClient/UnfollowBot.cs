@@ -70,7 +70,6 @@ namespace InstaMacBot.classi_MacBotClient
         private async void bot_procedure()
         {
             error_unfollowed_list.Clear();
-            clear_followed_list();
             unfollow = 0;
             int fails_search_user = 0;
             while (followed_list.Count > 0 && !stop_bot)
