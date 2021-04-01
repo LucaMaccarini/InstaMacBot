@@ -5,6 +5,7 @@ this project is composed by 2 parts:
 2) desktop client
 
 1) Main Classes
+
   UserApi (Class): rappresents the instagram user and contains the api to do all action on instagram
   
   BotClient (Classs): rappresents a botClient with some different bots connected, haveing an organizzation of all bots grouped in a client and with an unic name for bot
