@@ -2,8 +2,8 @@
 a c# classes + desktop client bot for istagram
 # Description
 this project is composed by 2 parts:
-### - Set of c# classes to split api and bot logic with desktop client implementation
-### - Desktop client
+### >-Set of c# classes to split api and bot logic with desktop client implementation
+### >- Desktop client
 
 
 ## 1) Main Classes
