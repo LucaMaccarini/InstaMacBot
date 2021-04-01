@@ -26,8 +26,8 @@ this project is composed by 2 parts:
   
   
  ## 2) Desktop Client
- >- A basic client that uses these classes, (bot is in beta testing)
- >- I am developing another client for android using these classes
+ - A basic client that uses these classes, (bot is in beta testing)
+ - I am developing another client for android using these classes
     
  # Terms and Conditions
  use this bot at you own risk!
@@ -37,8 +37,8 @@ This code is in no way affiliated with, authorized, maintained, sponsored or end
 # Installation
 just download and start:
 1) exe file is in InstaMacBot/InstaMacBot class/InstaMacBot/bin/Debug/
->- you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it just don't touch files inside
->- to edit the project is just a c# project open the solution file with visual studio
+- you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it just don't touch files inside
+- to edit the project is just a c# project open the solution file with visual studio
 
 # Usage
 inside debug folder you can see the exe file and some folders:
