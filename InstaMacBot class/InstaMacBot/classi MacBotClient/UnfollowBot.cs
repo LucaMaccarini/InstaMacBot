@@ -190,6 +190,8 @@ namespace InstaMacBot.classi_MacBotClient
                     }
                 }
 
+                MessageBox.Show("bot unfollowed errors saved in 'error_unfollow.txt'");
+
             }
         }
 
@@ -205,20 +207,22 @@ namespace InstaMacBot.classi_MacBotClient
 
             if (followed_list.Count > 0)
             {
-                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'leftFollowed.txt'", "accounts left");
+                
 
                 bool exists = System.IO.Directory.Exists("UnfollowBot");
 
                 if (!exists)
                     System.IO.Directory.CreateDirectory("UnfollowBot");
 
-                using (StreamWriter scrivi = new StreamWriter("unfollow/leftFollowed.txt"))
+                using (StreamWriter scrivi = new StreamWriter("unfollow/left_followed.txt"))
                 {
                     for (int i = 0; i < followed_list.Count(); i++)
                     {
                         scrivi.WriteLine(followed_list[i]);
                     }
                 }
+
+                write_on_console("bot didn't process all account loaded the rest of accounts are saved in 'leftFollowed.txt'");
             }
 
         }

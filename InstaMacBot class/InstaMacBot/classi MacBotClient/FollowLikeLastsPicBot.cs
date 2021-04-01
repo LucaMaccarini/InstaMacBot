@@ -265,7 +265,7 @@ namespace InstaMacBot.classi_MacBotClient
            
             if (processing_accounts_list.Count > 0)
             {
-                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'left.txt'", "accounts left");
+               
 
                 bool exists = System.IO.Directory.Exists("FollowLikeLastsPicBot");
 
@@ -279,6 +279,8 @@ namespace InstaMacBot.classi_MacBotClient
                         scrivi.WriteLine(processing_accounts_list[i]);
                     }
                 }
+
+                write_on_console("bot didn't process all account loaded the rest of accounts are saved in 'left.txt'");
             }
             
         }
@@ -299,7 +301,7 @@ namespace InstaMacBot.classi_MacBotClient
                         scrivi.WriteLine(followed_list[i]);
                     }
                 }
-                MessageBox.Show("followed accounts saved in 'followed.txt'");
+                write_on_console("followed accounts saved in 'followed.txt'");
             }
         }
 
