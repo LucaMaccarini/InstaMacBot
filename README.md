@@ -18,6 +18,9 @@ this project is composed by 2 parts:
   >rappresents a status bot or StartStopBot with status is_running
   >
   the other entities are class that extends SSSbot and implements the bot behavior
+  ###Classes Diagram
+  ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/documentation/Class%20Diagram.svg)
+  
   
  ## 2) Desktop Client
     a basic client that use these classes
