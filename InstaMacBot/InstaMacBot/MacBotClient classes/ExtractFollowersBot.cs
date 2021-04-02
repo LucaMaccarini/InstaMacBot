@@ -77,7 +77,7 @@ namespace InstaMacBot.classi_MacBotClient
 
         public void clear_extracted_list()
         {
-            clear_extracted_list();
+            extracted_list.Clear();
             tx_console.write_on_console("extracted list cleared");
         }
 
@@ -98,6 +98,8 @@ namespace InstaMacBot.classi_MacBotClient
                         scrivi.WriteLine(extracted_list[i]);
                     }
                 }
+
+                tx_console.write_on_console("extracted Accounts saved in 'ExtractFollowersBot/Extracted_followers.txt'");
 
             }
         }

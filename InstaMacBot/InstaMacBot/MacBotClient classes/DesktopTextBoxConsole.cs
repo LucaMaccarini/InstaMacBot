@@ -9,6 +9,8 @@ namespace InstaMacBot.MacBotClient_classes
 {
     class DesktopTextBoxConsole : BotConsole
     {
+        //OVERVIEW: this class rappresents a console for desktop client that wrap a textbox
+
         TextBox out_console;
 
         public DesktopTextBoxConsole(TextBox out_c)
