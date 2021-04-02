@@ -17,7 +17,7 @@ this project is composed by 2 parts:
   #### SSSBot (Abstract class, implemets StartStopBot):
   >rappresents a status bot or StartStopBot with status is_running
   >
-  the other entities are class that extends SSSbot: implements the bot behavior
+  the other entities are classes that extend SSSbot: implement the bot behavior
   
   ### Classes Diagram
   (is an svg open in your browser for a better view)
