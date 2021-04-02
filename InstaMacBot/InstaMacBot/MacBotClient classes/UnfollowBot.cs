@@ -23,6 +23,7 @@ namespace InstaMacBot.classi_MacBotClient
         private int stop_fails_search_user;
         private int stop_fails_unfollow;
         private int delay;
+        private string file_followed_accounts_path;
 
 
         public int get_unfollow { get { return unfollow; } }
@@ -40,6 +41,7 @@ namespace InstaMacBot.classi_MacBotClient
             this.stop_fails_search_user = stop_fails_search_user;
             this.stop_fails_unfollow = stop_fails_unfollow;
             this.delay = delay;
+            file_followed_accounts_path = "";
         }
 
         public override void start()
@@ -163,7 +165,7 @@ namespace InstaMacBot.classi_MacBotClient
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 path_file_seguiti = openFileDialog.FileName;
-
+                file_followed_accounts_path = path_file_seguiti;
                 using (StreamReader reader = new StreamReader(path_file_seguiti))
                 {
 
@@ -196,7 +198,7 @@ namespace InstaMacBot.classi_MacBotClient
                     }
                 }
 
-                MessageBox.Show("bot unfollowed errors saved in 'error_unfollow.txt'");
+                MessageBox.Show("bot unfollowed errors added in 'UnfollowBot/error_unfollow.txt'");
 
             }
         }
@@ -213,22 +215,44 @@ namespace InstaMacBot.classi_MacBotClient
 
             if (followed_list.Count > 0)
             {
-                
 
-                bool exists = System.IO.Directory.Exists("UnfollowBot");
+
+                bool exists = File.Exists(file_followed_accounts_path);
 
                 if (!exists)
-                    System.IO.Directory.CreateDirectory("UnfollowBot");
-
-                using (StreamWriter scrivi = new StreamWriter("UnfollowBot/left_followed.txt"))
                 {
-                    for (int i = 0; i < followed_list.Count(); i++)
+                    
+                    write_on_console("source file was deleted by someone");
+                    bool existdir = Directory.Exists("UnfollowBot");
+                    if(!existdir)
+                        System.IO.Directory.CreateDirectory("UnfollowBot");
+
+                    using (StreamWriter scrivi = new StreamWriter("UnfollowBot/leftFollowed.txt"))
                     {
-                        scrivi.WriteLine(followed_list[i]);
+                        for (int i = 0; i < followed_list.Count(); i++)
+                        {
+                            scrivi.WriteLine(followed_list[i]);
+                        }
                     }
+                    write_on_console("Accounts not procecced are saved in 'UnfollowBot/leftFollowed.txt'");
+                }
+                else 
+                {
+                    using (StreamWriter scrivi = new StreamWriter(file_followed_accounts_path))
+                    {
+                        for (int i = 0; i < followed_list.Count(); i++)
+                        {
+                            scrivi.WriteLine(followed_list[i]);
+                        }
+                    }
+                    write_on_console("Accounts not procecced are saved in source file (path wrote up this line)");
+                    write_on_console(file_followed_accounts_path);
+
                 }
 
-                write_on_console("bot didn't process all account loaded the rest of accounts are saved in 'leftFollowed.txt'");
+
+
+
             }
 
         }

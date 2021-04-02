@@ -285,7 +285,7 @@ namespace InstaMacBot.classi_MacBotClient
                     }
                 }
 
-                write_on_console("bot didn't process all account loaded the rest of accounts are saved in 'left.txt'");
+                write_on_console("Accounts not processed saved in 'FollowLikeLastsPicBot/left.txt'");
             }
             
         }
@@ -306,7 +306,7 @@ namespace InstaMacBot.classi_MacBotClient
                         scrivi.WriteLine(followed_list[i]);
                     }
                 }
-                write_on_console("followed accounts saved in 'followed.txt'");
+                write_on_console("followed accounts added in 'FollowLikeLastsPicBot/followed.txt'");
             }
         }
 
