@@ -11,7 +11,7 @@ this project is composed by 2 parts:
   #### UserApi (Class): 
   >rappresents the instagram user and contains the api to do all action on instagram
   #### BotClient (Classes): 
-  >rappresents a botClient with some different bots connected, having an organizzation of all bots grouped in a client and with an unic name for bot
+  >rappresents a botClient with some different bots connected, having an organizzation of all bots grouped in a client and with an unic name for the bot
   #### StartStopBot (interface): 
   >a startable or stoppable bot
   #### SSSBot (Abstract class, implemets StartStopBot):
