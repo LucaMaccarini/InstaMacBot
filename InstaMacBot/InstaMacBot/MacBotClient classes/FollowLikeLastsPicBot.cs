@@ -33,7 +33,7 @@ namespace InstaMacBot.classi_MacBotClient
         public int get_account_rocessing_counts { get { return processing_accounts_list.Count; } }
         public int get_likes { get { return likes; } }
         public int get_follow { get { return follow; } }
-        public FollowLikeLastsPicBot(UserApi Utente, BotConsole tx_console = null, Label OnOf = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, bool skip_following = false) : base(tx_console)
+        public FollowLikeLastsPicBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, bool skip_following = false) : base(tx_console)
         {
             if(Utente==null) throw new ArgumentNullException("utente must be != null");
             if (like_lasts_pic > 3 || like_lasts_pic <= 0) throw new ArgumentOutOfRangeException("like_lasts_pic must be > 0 and <= 3");
