@@ -52,7 +52,7 @@ other files are files of InstagramApiSharp the api that my bot use (don't touch 
 3) bot Unfollow use the followed list from bot2 to unfollow all person in the list
 
 # Bug or Bad choises
-- currently bot output is on textbox passed to the bot when is called its constructor, is the only class constraint to interface
+- currently my classes open files only with openfiledialog, this method doesen't work on android same when bots saves them infos on files, i am searching an alternative
 
 # Developer
 me :)
