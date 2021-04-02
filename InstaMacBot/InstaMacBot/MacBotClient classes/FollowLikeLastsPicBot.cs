@@ -223,7 +223,7 @@ namespace InstaMacBot.classi_MacBotClient
             }
 
             write_on_console("bot ended");
-            stop(true);
+            stop(false);
         }
 
 
