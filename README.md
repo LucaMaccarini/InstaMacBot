@@ -10,14 +10,14 @@ this project is composed by 2 parts:
 
   #### UserApi (Class): 
   >rappresents the instagram user and contains the api to do all action on instagram
-  #### BotClient (Classs): 
-  >rappresents a botClient with some different bots connected, haveing an organizzation of all bots grouped in a client and with an unic name for bot
+  #### BotClient (Classes): 
+  >rappresents a botClient with some different bots connected, having an organizzation of all bots grouped in a client and with an unic name for the bot
   #### StartStopBot (interface): 
   >a startable or stoppable bot
   #### SSSBot (Abstract class, implemets StartStopBot):
   >rappresents a status bot or StartStopBot with status is_running
   >
-  the other entities are class that extends SSSbot: implements the bot behavior
+  the other entities are classes that extend SSSbot: implement the bot behavior
   
   ### Classes Diagram
   (is an svg open in your browser for a better view)
@@ -37,7 +37,7 @@ This code is in no way affiliated with, authorized, maintained, sponsored or end
 # Installation
 just download and start:
 InstaMacBot.exe is in InstaMacBot/InstaMacBot/InstaMacBot/bin/Debug/
-- you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it just don't touch files inside
+- you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it. It is important to do not touch the files inside the folder!
 - to edit the project is just a c# project open the solution file with visual studio
 
 # Usage
@@ -52,7 +52,7 @@ other files are files of InstagramApiSharp the api that my bot use (don't touch 
 3) bot Unfollow use the followed list from bot2 to unfollow all person in the list
 
 # Bug or Bad choises
-- currently bot output is on textbox passed to the bot whan is called its constructor, is the only class constraint to interface
+- currently bot output is on textbox passed to the bot when is called its constructor, is the only class constraint to interface
 
 # Developer
 me :)
