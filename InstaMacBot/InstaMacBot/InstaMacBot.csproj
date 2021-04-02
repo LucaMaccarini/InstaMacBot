@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MacBotClient classes\BotClient.cs" />
+    <Compile Include="MacBotClient classes\BotConsole.cs" />
+    <Compile Include="MacBotClient classes\DesktopTextBoxConsole.cs" />
     <Compile Include="MacBotClient classes\ExtractFollowersBot.cs" />
     <Compile Include="MacBotClient classes\FollowLikeLastsPicBot.cs" />
     <Compile Include="MacBotClient classes\SSSBot.cs" />

@@ -1,6 +1,7 @@
 ﻿using InstagramApiSharp;
 using InstagramApiSharp.Classes;
 using InstagramApiSharp.Classes.Models;
+using InstaMacBot.MacBotClient_classes;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,7 +33,7 @@ namespace InstaMacBot.classi_MacBotClient
         public int get_account_rocessing_counts { get { return processing_accounts_list.Count; } }
         public int get_likes { get { return likes; } }
         public int get_follow { get { return follow; } }
-        public FollowLikeLastsPicBot(UserApi Utente, TextBox tx_console = null, Label OnOf = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, bool skip_following = false) : base(tx_console)
+        public FollowLikeLastsPicBot(UserApi Utente, BotConsole tx_console = null, Label OnOf = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, bool skip_following = false) : base(tx_console)
         {
             if(Utente==null) throw new ArgumentNullException("utente must be != null");
             if (like_lasts_pic > 3 || like_lasts_pic <= 0) throw new ArgumentOutOfRangeException("like_lasts_pic must be > 0 and <= 3");
@@ -116,7 +117,7 @@ namespace InstaMacBot.classi_MacBotClient
             HashSet<string> following = null;
             if (skip_following)
             {
-                write_on_console("extracting your following...");
+                tx_console.write_on_console("extracting your following...");
                 following = await UtenteApi.get_following();
             }
 
@@ -138,13 +139,13 @@ namespace InstaMacBot.classi_MacBotClient
 
                         if (privato)
                         {
-                            write_on_console("private account skipped: " + processing_accounts_list[0]);
+                            tx_console.write_on_console("private account skipped: " + processing_accounts_list[0]);
                             processing_accounts_list.RemoveAt(0);
                         }
                     }
                     else
                     {
-                        write_on_console("account not found skipped: " + processing_accounts_list[0] + " [search fail = " + search_fail + "]");
+                        tx_console.write_on_console("account not found skipped: " + processing_accounts_list[0] + " [search fail = " + search_fail + "]");
 
                         privato = true; //usato per skippare ma l'account non è stato proprio trovato
                         processing_accounts_list.RemoveAt(0);
@@ -153,7 +154,7 @@ namespace InstaMacBot.classi_MacBotClient
                         if (search_fail > stop_fails_search_user)
                         {
                             //MessageBox.Show("errore sugli ultimi 20 account: stop di sicurezza");
-                            write_on_console("stop fails reach [ "+ stop_fails_search_user+" ], securestop");
+                            tx_console.write_on_console("stop fails reach [ "+ stop_fails_search_user+" ], securestop");
                             stop(true);
                             return;
 
@@ -165,7 +166,7 @@ namespace InstaMacBot.classi_MacBotClient
                 {
                     if (following.Contains(processing_accounts_list[0]))
                     {
-                        write_on_console("skipped " + processing_accounts_list[0] + " because you already follow him");
+                        tx_console.write_on_console("skipped " + processing_accounts_list[0] + " because you already follow him");
                         processing_accounts_list.RemoveAt(0);
                         continue;
                     }
@@ -177,7 +178,7 @@ namespace InstaMacBot.classi_MacBotClient
                 foto = await lasts_media_id(processing_accounts_list[0]);
                 if (foto == null)
                 {
-                    write_on_console("no photo account skipped: " + processing_accounts_list[0]);
+                    tx_console.write_on_console("no photo account skipped: " + processing_accounts_list[0]);
                     processing_accounts_list.RemoveAt(0);
                     continue;
                 }
@@ -193,7 +194,7 @@ namespace InstaMacBot.classi_MacBotClient
                     if (like_messo)
                     {
                         likes++;
-                        write_on_console("like lasts "+ like_lasts_pic +" foto of: " + processing_accounts_list[0] + " [tot: " + likes + "]");
+                        tx_console.write_on_console("like lasts "+ like_lasts_pic +" foto of: " + processing_accounts_list[0] + " [tot: " + likes + "]");
                         if (like_fail != 0)
                         {
                             like_fail = 0;
@@ -203,7 +204,7 @@ namespace InstaMacBot.classi_MacBotClient
                             like_fail++;
                             if (like_fail > stop_fails_like)
                             {
-                                write_on_console("bot reached likes fails [ "+ stop_fails_like + " ] secure stop");
+                                tx_console.write_on_console("bot reached likes fails [ "+ stop_fails_like + " ] secure stop");
                                 stop(true);
                                 return;
                                 
@@ -218,7 +219,7 @@ namespace InstaMacBot.classi_MacBotClient
                 {
                     followed_list.Add(processing_accounts_list[0]);
                     follow++;
-                    write_on_console("followed: " + processing_accounts_list[0] + " [tot: " + follow + "]");
+                    tx_console.write_on_console("followed: " + processing_accounts_list[0] + " [tot: " + follow + "]");
                     if (follow_fail != 0)
                     {
                         follow_fail = 0;
@@ -230,7 +231,7 @@ namespace InstaMacBot.classi_MacBotClient
                     if (follow_fail > stop_fails_follow)
                     {
 
-                        write_on_console("bot reached follow fails [ " + stop_fails_follow + " ] secure stop");
+                        tx_console.write_on_console("bot reached follow fails [ " + stop_fails_follow + " ] secure stop");
                         stop(true);
                         return;
                     }
@@ -241,7 +242,7 @@ namespace InstaMacBot.classi_MacBotClient
                 await wait(delay);
             }
 
-            write_on_console("bot ended");
+            tx_console.write_on_console("bot ended");
             stop(false);
         }
 
@@ -250,7 +251,7 @@ namespace InstaMacBot.classi_MacBotClient
         public void clear_processing_accounts_list()
         {
             processing_accounts_list.Clear();
-            write_on_console("processing account list cleared");
+            tx_console.write_on_console("processing account list cleared");
         }
 
 
@@ -277,7 +278,7 @@ namespace InstaMacBot.classi_MacBotClient
                         processing_accounts_list.Add(line);
                     }
                 }
-                write_on_console("loaded: " + processing_accounts_list.Count.ToString() + " Accounts");
+                tx_console.write_on_console("loaded: " + processing_accounts_list.Count.ToString() + " Accounts");
                     
             }
         }
@@ -304,7 +305,7 @@ namespace InstaMacBot.classi_MacBotClient
                     }
                 }
 
-                write_on_console("Accounts not processed saved in 'FollowLikeLastsPicBot/left.txt'");
+                tx_console.write_on_console("Accounts not processed saved in 'FollowLikeLastsPicBot/left.txt'");
             }
             else
             {
@@ -318,7 +319,7 @@ namespace InstaMacBot.classi_MacBotClient
                     scrivi.WriteLine("");
                 }
 
-                write_on_console("Accounts not processed saved in 'FollowLikeLastsPicBot/left.txt'");
+                tx_console.write_on_console("Accounts not processed saved in 'FollowLikeLastsPicBot/left.txt'");
             }
             
         }
@@ -339,7 +340,7 @@ namespace InstaMacBot.classi_MacBotClient
                         scrivi.WriteLine(followed_list[i]);
                     }
                 }
-                write_on_console("followed accounts added in 'FollowLikeLastsPicBot/followed.txt'");
+                tx_console.write_on_console("followed accounts added in 'FollowLikeLastsPicBot/followed.txt'");
             }
         }
 

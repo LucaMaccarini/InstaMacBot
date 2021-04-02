@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InstaMacBot.MacBotClient_classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace InstaMacBot.classi_MacBotClient
         //OVERVIEW: this abstract class define a status bot -> a StartStopBot with status is_running
 
         protected bool status;
-        protected TextBox tx_console;
+        protected BotConsole tx_console;
 
         public bool is_running { get { return status; } }
 
@@ -28,26 +29,13 @@ namespace InstaMacBot.classi_MacBotClient
             return true;
         }
 
-        public SSSBot(TextBox console = null)
+        public SSSBot(BotConsole console = null)
         {
             status = false;
             if (console != null)
                 tx_console = console;
-
-
         }
 
-        protected void write_on_console(string output)
-        {
-            if (tx_console != null)
-            {
-                string s = tx_console.Text;
-                tx_console.Text = output;
-                tx_console.Text += Environment.NewLine;
-                tx_console.Text += s;
-
-            }
-        }
 
         public abstract void start();
         public abstract void stop(bool save_infos);

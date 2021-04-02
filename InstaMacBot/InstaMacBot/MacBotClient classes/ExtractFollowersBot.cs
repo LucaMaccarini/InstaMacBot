@@ -1,5 +1,6 @@
 ﻿using InstagramApiSharp.Classes;
 using InstagramApiSharp.Classes.Models;
+using InstaMacBot.MacBotClient_classes;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,7 +21,7 @@ namespace InstaMacBot.classi_MacBotClient
         private bool stop_bot;
         private UserApi UtenteApi;
 
-        public ExtractFollowersBot(UserApi Utente, TextBox tx_console = null) : base(tx_console)
+        public ExtractFollowersBot(UserApi Utente, BotConsole tx_console = null) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente needs to be != null");
 
@@ -30,7 +31,7 @@ namespace InstaMacBot.classi_MacBotClient
             status = false;
         }
 
-        public ExtractFollowersBot(UserApi Utente, string username, TextBox tx_console = null) : base(tx_console)
+        public ExtractFollowersBot(UserApi Utente, string username, BotConsole tx_console = null) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente must be != null");
             if (username != "") throw new ArgumentNullException("username must be != ''");
@@ -70,14 +71,14 @@ namespace InstaMacBot.classi_MacBotClient
             {
                 extracted_list.Add(followers.Value[i].UserName);
             }
-            write_on_console("Extracted Followers: " + extracted_list.Count.ToString());
+            tx_console.write_on_console("Extracted Followers: " + extracted_list.Count.ToString());
 
         }
 
         public void clear_extracted_list()
         {
             clear_extracted_list();
-            write_on_console("extracted list cleared");
+            tx_console.write_on_console("extracted list cleared");
         }
 
         public void save_on_file_extracted_list()

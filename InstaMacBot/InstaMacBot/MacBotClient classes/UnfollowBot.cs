@@ -1,5 +1,6 @@
 ﻿using InstagramApiSharp.Classes;
 using InstagramApiSharp.Classes.Models;
+using InstaMacBot.MacBotClient_classes;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,7 +29,7 @@ namespace InstaMacBot.classi_MacBotClient
 
 
         public int get_unfollow { get { return unfollow; } }
-        public UnfollowBot(UserApi Utente, TextBox tx_console = null, int stop_fails_search_user = 20, int stop_fails_unfollow = 5, int delay = 40, bool skip_non_following = false) : base(tx_console)
+        public UnfollowBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, int stop_fails_unfollow = 5, int delay = 40, bool skip_non_following = false) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente must be != null");
             if (stop_fails_search_user <= 0) throw new ArgumentOutOfRangeException("stop_fails_search_user must be > 0");
@@ -85,7 +86,7 @@ namespace InstaMacBot.classi_MacBotClient
             HashSet<string> x=null;
             if (skip_non_following)
             {
-                write_on_console("extracting your following...");
+                tx_console.write_on_console("extracting your following...");
                 x = await UtenteApi.get_following();
             }
             while (followed_list.Count > 0 && !stop_bot)
@@ -100,7 +101,7 @@ namespace InstaMacBot.classi_MacBotClient
 
                     if (utente.Value == null)
                     {
-                        write_on_console("account not found skipped: " + followed_list[0]);
+                        tx_console.write_on_console("account not found skipped: " + followed_list[0]);
                         errore = true;
 
                         error_unfollowed_list.Add(followed_list[0]);
@@ -110,7 +111,7 @@ namespace InstaMacBot.classi_MacBotClient
 
                         if (fails_search_user > stop_fails_search_user)
                         {
-                            write_on_console("error stop unfollow fail reach: secure stop");
+                            tx_console.write_on_console("error stop unfollow fail reach: secure stop");
                             stop(true);
                             return;
 
@@ -131,7 +132,7 @@ namespace InstaMacBot.classi_MacBotClient
                 if (followed_list.Count == 0)
                 {
                     stop(true);
-                    write_on_console("bot ended");
+                    tx_console.write_on_console("bot ended");
                     return;
                 }
 
@@ -139,7 +140,7 @@ namespace InstaMacBot.classi_MacBotClient
                 {
                     if (!(x.Contains(followed_list[0])))
                     {
-                        write_on_console("skipped " + followed_list[0] + " cause you don't follow him");
+                        tx_console.write_on_console("skipped " + followed_list[0] + " cause you don't follow him");
                         followed_list.RemoveAt(0);
                         continue;
                     }
@@ -153,18 +154,18 @@ namespace InstaMacBot.classi_MacBotClient
                    
                     unfollow++;
 
-                    write_on_console("unfollowed: " + followed_list[0] + " [tot: " + unfollow +"]");
+                    tx_console.write_on_console("unfollowed: " + followed_list[0] + " [tot: " + unfollow +"]");
                 }
                 else
                 {
                     error_unfollowed_list.Add(followed_list[0]);
-                    write_on_console("unfollow error" + followed_list[0]);
+                    tx_console.write_on_console("unfollow error" + followed_list[0]);
                 }
 
                 followed_list.RemoveAt(0);
                 await wait(delay);
             }
-            write_on_console("bot ended");
+            tx_console.write_on_console("bot ended");
             stop(false);
         }
 
@@ -192,7 +193,7 @@ namespace InstaMacBot.classi_MacBotClient
                         followed_list.Add(line);
                     }
                 }
-                write_on_console("account loaded: " + followed_list.Count);
+                tx_console.write_on_console("account loaded: " + followed_list.Count);
 
 
             }
@@ -224,7 +225,7 @@ namespace InstaMacBot.classi_MacBotClient
         public void clear_followed_list()
         {
             followed_list.Clear();
-            write_on_console("followed list cleared");
+            tx_console.write_on_console("followed list cleared");
         }
 
         public void save_on_file_accounts_not_proccessed()
@@ -239,8 +240,8 @@ namespace InstaMacBot.classi_MacBotClient
 
                 if (!exists)
                 {
-                    
-                    write_on_console("source file was deleted by someone");
+
+                    tx_console.write_on_console("source file was deleted by someone");
                     bool existdir = Directory.Exists("UnfollowBot");
                     if(!existdir)
                         System.IO.Directory.CreateDirectory("UnfollowBot");
@@ -252,7 +253,7 @@ namespace InstaMacBot.classi_MacBotClient
                             scrivi.WriteLine(followed_list[i]);
                         }
                     }
-                    write_on_console("Accounts not procecced are saved in 'UnfollowBot/leftFollowed.txt'");
+                    tx_console.write_on_console("Accounts not procecced are saved in 'UnfollowBot/leftFollowed.txt'");
                 }
                 else 
                 {
@@ -263,8 +264,8 @@ namespace InstaMacBot.classi_MacBotClient
                             scrivi.WriteLine(followed_list[i]);
                         }
                     }
-                    write_on_console("Accounts not procecced are saved in source file (path wrote up this line)");
-                    write_on_console(file_followed_accounts_path);
+                    tx_console.write_on_console("Accounts not procecced are saved in source file (path wrote up this line)");
+                    tx_console.write_on_console(file_followed_accounts_path);
 
                 }
 

@@ -12,7 +12,7 @@ using InstagramApiSharp;
 using InstagramApiSharp.Classes;
 using InstagramApiSharp.Classes.Models;
 using InstaMacBot.classi_MacBotClient;
-
+using InstaMacBot.MacBotClient_classes;
 
 namespace InstaMacBot
 {
@@ -46,9 +46,14 @@ namespace InstaMacBot
                 tx_password.ReadOnly = true;
                 tx_password.Enabled = false;
 
-                SSSBot follow_like = new FollowLikeLastsPicBot(utente, tx_console: tx_console, like_lasts_pic: 1, delay:60);
-                SSSBot unfollow = new UnfollowBot(utente, tx_console: tx_console_unfollow, skip_non_following:true);
-                SSSBot extract = new ExtractFollowersBot(utente, tx_console: console_extract);
+                BotConsole follow_like_console = new DesktopTextBoxConsole(tx_console);
+                BotConsole unfollow_console = new DesktopTextBoxConsole(tx_console_unfollow);
+                BotConsole extract_console = new DesktopTextBoxConsole(console_extract);
+
+
+                SSSBot follow_like = new FollowLikeLastsPicBot(utente, tx_console: follow_like_console, like_lasts_pic: 1, delay:60);
+                SSSBot unfollow = new UnfollowBot(utente, tx_console: unfollow_console, skip_non_following:true);
+                SSSBot extract = new ExtractFollowersBot(utente, tx_console: extract_console);
 
                 client.bots.Add("follow_like", follow_like);
                 client.bots.Add("unfollow", unfollow);
@@ -200,18 +205,7 @@ namespace InstaMacBot
             }
         }
 
-        private async void button5_Click_2(object sender, EventArgs e)
-        {
-            UserApi mio_utente = new UserApi("iammacca_", "M4ss3r1n15");
-            string a = await mio_utente.loginAsync();
-            MessageBox.Show(a);
-
-            StartStopBot bot = new FollowLikeLastsPicBot(mio_utente, like_lasts_pic:3, tx_console:tx_console);
-
-            ((FollowLikeLastsPicBot)bot).load_list_from_file();
-            bot.start();
-            
-        }
+      
 
         private void button5_Click_3(object sender, EventArgs e)
         {
