@@ -10,6 +10,6 @@ namespace InstaMacBot.classi_MacBotClient
     {
         //OVERVIEW: this interface define a start stop bot -> a bot that is possible start or stop
         void start();
-        void stop();
+        void stop(bool save_infos);
     }
 }

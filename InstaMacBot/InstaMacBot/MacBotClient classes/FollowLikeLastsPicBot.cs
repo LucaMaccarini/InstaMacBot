@@ -60,8 +60,13 @@ namespace InstaMacBot.classi_MacBotClient
             procedura_bot();
         }
 
-        public override void stop()
+        public override void stop(bool save_infos)
         {
+            if (save_infos)
+            {
+                save_on_file_accounts_followed();
+                save_on_file_accounts_not_proccessed();
+            }
             stop_bot = true;
             status = false;
         }
@@ -140,7 +145,7 @@ namespace InstaMacBot.classi_MacBotClient
                         {
                             //MessageBox.Show("errore sugli ultimi 20 account: stop di sicurezza");
                             write_on_console("stop fails reach [ "+ stop_fails_search_user+" ], securestop");
-                            stop();
+                            stop(true);
                             return;
 
                         }
@@ -180,7 +185,7 @@ namespace InstaMacBot.classi_MacBotClient
                             if (like_fail > stop_fails_like)
                             {
                                 write_on_console("bot reached likes fails [ "+ stop_fails_like + " ] secure stop");
-                                stop();
+                                stop(true);
                                 return;
                                 
                             }
@@ -194,7 +199,7 @@ namespace InstaMacBot.classi_MacBotClient
                 {
                     followed_list.Add(processing_accounts_list[0]);
                     follow++;
-                    write_on_console("followed: " + processing_accounts_list[0] + "[total: " + follow + "]");
+                    write_on_console("followed: " + processing_accounts_list[0] + " [tot: " + follow + "]");
                     if (follow_fail != 0)
                     {
                         follow_fail = 0;
@@ -207,7 +212,7 @@ namespace InstaMacBot.classi_MacBotClient
                     {
 
                         write_on_console("bot reached follow fails [ " + stop_fails_follow + " ] secure stop");
-                        stop();
+                        stop(true);
                         return;
                     }
                 }
@@ -218,7 +223,7 @@ namespace InstaMacBot.classi_MacBotClient
             }
 
             write_on_console("bot ended");
-            stop();
+            stop(true);
         }
 
 

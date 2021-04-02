@@ -87,25 +87,22 @@ namespace InstaMacBot
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (client.bots.ContainsKey("follow_like"))
-            {
-                FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)client.bots["follow_like"];
-                x.save_on_file_accounts_followed();
-                MessageBox.Show("followed accounts saved in 'followed.txt'", "FollowLikeLastsPicBot");
+            bool spento = false;
 
-                x.save_on_file_accounts_not_proccessed();
-                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'left.txt'", "FollowLikeLastsPicBot");
+            foreach (KeyValuePair<string, SSSBot> entry in client.bots)
+            {
+                if (entry.Value.is_running)
+                {
+                    entry.Value.stop(true);
+                    spento = true;
+                }
             }
 
-            if (client.bots.ContainsKey("unfollow"))
+            if (spento)
             {
-                UnfollowBot y = (UnfollowBot)client.bots["unfollow"];
-                y.save_on_file_error_unfollow();
-                MessageBox.Show("bot unfollowed errors saved in 'error_unfollow.txt'", "UnfollowBot");
-                y.save_on_file_accounts_not_proccessed();
-                MessageBox.Show("bot didn't process all account loaded the rest of accounts are saved in 'leftFollowed.txt'", "UnfollowBot");
+                MessageBox.Show("Stopped all running bots and saved infos in bots files");
             }
-            
+
         }
 
 
@@ -129,20 +126,17 @@ namespace InstaMacBot
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)client.bots["follow_like"];
-            x.save_on_file_accounts_followed();
-            x.save_on_file_accounts_not_proccessed();
+            client.bots["follow_like"].stop(true);
 
-            x.stop();
             int i = 0;
             do
             {
                 await wait(1);
                 i++;
 
-            } while (x.is_running && i<5);
+            } while (client.bots["follow_like"].is_running && i<5);
 
-            if (x.is_running)
+            if (client.bots["follow_like"].is_running)
             {
                 MessageBox.Show("couldn't stop bot: time out exxedeed");
             }
@@ -190,11 +184,7 @@ namespace InstaMacBot
 
         private async void button5_Click_1(object sender, EventArgs e)
         {
-            UnfollowBot x = (UnfollowBot)client.bots["unfollow"];
-            x.save_on_file_accounts_not_proccessed();
-            x.save_on_file_error_unfollow();
-
-            x.stop();
+            client.bots["unfollow"].stop(true);
 
             int i = 0;
             do
@@ -202,9 +192,9 @@ namespace InstaMacBot
                 await wait(1);
                 i++;
 
-            } while (x.is_running && i < 5);
+            } while (client.bots["unfollow"].is_running && i < 5);
 
-            if (x.is_running)
+            if (client.bots["unfollow"].is_running)
             {
                 MessageBox.Show("couldn't stop bot: time out exxedeed");
             }

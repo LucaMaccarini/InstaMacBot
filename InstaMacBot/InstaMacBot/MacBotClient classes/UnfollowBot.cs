@@ -49,8 +49,14 @@ namespace InstaMacBot.classi_MacBotClient
             bot_procedure();
         }
 
-        public override void stop()
+        public override void stop(bool save_infos)
         {
+            if (save_infos)
+            {
+                save_on_file_accounts_not_proccessed();
+                save_on_file_error_unfollow();
+            }
+            
             stop_bot = true;
             status = false;
         }
@@ -95,7 +101,7 @@ namespace InstaMacBot.classi_MacBotClient
                         if (fails_search_user > stop_fails_search_user)
                         {
                             write_on_console("error stop unfollow fail reach: secure stop");
-                            stop();
+                            stop(true);
                             return;
 
                         }
@@ -114,7 +120,7 @@ namespace InstaMacBot.classi_MacBotClient
 
                 if (followed_list.Count == 0)
                 {
-                    stop();
+                    stop(true);
                     write_on_console("bot ended");
                     return;
                 }
@@ -139,7 +145,7 @@ namespace InstaMacBot.classi_MacBotClient
                 await wait(delay);
             }
             write_on_console("bot ended");
-            stop();
+            stop(true);
         }
 
 

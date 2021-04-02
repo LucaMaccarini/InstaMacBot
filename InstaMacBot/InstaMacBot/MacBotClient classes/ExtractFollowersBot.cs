@@ -53,7 +53,7 @@ namespace InstaMacBot.classi_MacBotClient
             procedura_bot();
         }
 
-        public override  void stop()
+        public override  void stop(bool save_infos)
         {
             MessageBox.Show("non stoppable bot");
         }

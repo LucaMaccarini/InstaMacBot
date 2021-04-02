@@ -50,7 +50,7 @@ namespace InstaMacBot.classi_MacBotClient
         }
 
         public abstract void start();
-        public abstract void stop();
+        public abstract void stop(bool save_infos);
         
     }
 }
