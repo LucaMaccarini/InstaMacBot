@@ -27,11 +27,12 @@ namespace InstaMacBot.classi_MacBotClient
         private int stop_fails_like;
         private int stop_fails_follow;
         private int delay;
+        private bool skip_following;
 
         public int get_account_rocessing_counts { get { return processing_accounts_list.Count; } }
         public int get_likes { get { return likes; } }
         public int get_follow { get { return follow; } }
-        public FollowLikeLastsPicBot(UserApi Utente, TextBox tx_console = null, Label OnOf=null, int stop_fails_search_user = 20, int like_lasts_pic = 1, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40) : base(tx_console)
+        public FollowLikeLastsPicBot(UserApi Utente, TextBox tx_console = null, Label OnOf = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, bool skip_following = false) : base(tx_console)
         {
             if(Utente==null) throw new ArgumentNullException("utente must be != null");
             if (like_lasts_pic > 3 || like_lasts_pic <= 0) throw new ArgumentOutOfRangeException("like_lasts_pic must be > 0 and <= 3");
@@ -51,6 +52,8 @@ namespace InstaMacBot.classi_MacBotClient
             this.stop_fails_like = stop_fails_like;
             this.stop_fails_follow = stop_fails_follow;
             this.delay = delay;
+            this.skip_following = skip_following;
+            
         }
 
         public override void start()
@@ -110,6 +113,12 @@ namespace InstaMacBot.classi_MacBotClient
             likes = 0;
             follow = 0;
             followed_list.Clear();
+            HashSet<string> following = null;
+            if (skip_following)
+            {
+                write_on_console("extracting your following...");
+                following = await UtenteApi.get_following();
+            }
 
             while (processing_accounts_list.Count > 0 && !stop_bot)
             {
@@ -151,6 +160,16 @@ namespace InstaMacBot.classi_MacBotClient
                         }
                     }
                 } while (privato);
+
+                if (skip_following)
+                {
+                    if (following.Contains(processing_accounts_list[0]))
+                    {
+                        write_on_console("skipped " + processing_accounts_list[0] + " because you already follow him");
+                        processing_accounts_list.RemoveAt(0);
+                        continue;
+                    }
+                }
 
 
                 InstaMediaList foto = null;
@@ -283,6 +302,20 @@ namespace InstaMacBot.classi_MacBotClient
                     {
                         scrivi.WriteLine(processing_accounts_list[i]);
                     }
+                }
+
+                write_on_console("Accounts not processed saved in 'FollowLikeLastsPicBot/left.txt'");
+            }
+            else
+            {
+                bool exists = System.IO.Directory.Exists("FollowLikeLastsPicBot");
+
+                if (!exists)
+                    System.IO.Directory.CreateDirectory("FollowLikeLastsPicBot");
+
+                using (StreamWriter scrivi = new StreamWriter("FollowLikeLastsPicBot/left.txt"))
+                {
+                    scrivi.WriteLine("");
                 }
 
                 write_on_console("Accounts not processed saved in 'FollowLikeLastsPicBot/left.txt'");

@@ -180,5 +180,19 @@ namespace InstaMacBot
             return await api.UserProcessor.GetUserFollowersAsync(username, PaginationParameters.Empty);
         }
 
+        public async Task<HashSet<string>> get_following()
+        {
+            HashSet<string> following = new HashSet<string>();
+
+            IResult<InstaUserShortList> x = await api.UserProcessor.GetCurrentUserFollowersAsync(PaginationParameters.Empty);
+
+            for (int i = 0; i < x.Value.Count; i++)
+            {
+                following.Add(x.Value[i].UserName);
+            }
+
+            return following;
+        }
+
     }
 }

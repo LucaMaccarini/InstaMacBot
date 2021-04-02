@@ -47,7 +47,7 @@ namespace InstaMacBot
                 tx_password.Enabled = false;
 
                 SSSBot follow_like = new FollowLikeLastsPicBot(utente, tx_console: tx_console, like_lasts_pic: 1, delay:60);
-                SSSBot unfollow = new UnfollowBot(utente, tx_console: tx_console_unfollow);
+                SSSBot unfollow = new UnfollowBot(utente, tx_console: tx_console_unfollow, skip_non_following:true);
                 SSSBot extract = new ExtractFollowersBot(utente, tx_console: console_extract);
 
                 client.bots.Add("follow_like", follow_like);

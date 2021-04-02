@@ -24,10 +24,11 @@ namespace InstaMacBot.classi_MacBotClient
         private int stop_fails_unfollow;
         private int delay;
         private string file_followed_accounts_path;
+        private bool skip_non_following;
 
 
         public int get_unfollow { get { return unfollow; } }
-        public UnfollowBot(UserApi Utente, TextBox tx_console = null, int stop_fails_search_user = 20, int stop_fails_unfollow = 5, int delay = 40) : base(tx_console)
+        public UnfollowBot(UserApi Utente, TextBox tx_console = null, int stop_fails_search_user = 20, int stop_fails_unfollow = 5, int delay = 40, bool skip_non_following = false) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente must be != null");
             if (stop_fails_search_user <= 0) throw new ArgumentOutOfRangeException("stop_fails_search_user must be > 0");
@@ -42,6 +43,7 @@ namespace InstaMacBot.classi_MacBotClient
             this.stop_fails_unfollow = stop_fails_unfollow;
             this.delay = delay;
             file_followed_accounts_path = "";
+            this.skip_non_following = skip_non_following;
         }
 
         public override void start()
@@ -80,6 +82,12 @@ namespace InstaMacBot.classi_MacBotClient
             error_unfollowed_list.Clear();
             unfollow = 0;
             int fails_search_user = 0;
+            HashSet<string> x=null;
+            if (skip_non_following)
+            {
+                write_on_console("extracting your following...");
+                x = await UtenteApi.get_following();
+            }
             while (followed_list.Count > 0 && !stop_bot)
             {
 
@@ -125,6 +133,16 @@ namespace InstaMacBot.classi_MacBotClient
                     stop(true);
                     write_on_console("bot ended");
                     return;
+                }
+
+                if (skip_non_following)
+                {
+                    if (!(x.Contains(followed_list[0])))
+                    {
+                        write_on_console("skipped " + followed_list[0] + " cause you don't follow him");
+                        followed_list.RemoveAt(0);
+                        continue;
+                    }
                 }
 
                 bool esito = await UtenteApi.unfollow(utente.Value.Pk);
