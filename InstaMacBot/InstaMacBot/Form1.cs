@@ -52,12 +52,12 @@ namespace InstaMacBot
 
 
                 SSSBot follow_like = new FollowLikeLastsPicBot(utente, tx_console: follow_like_console, like_lasts_pic: 1, delay:60);
-                SSSBot unfollow = new UnfollowBot(utente, tx_console: unfollow_console, skip_non_following:true);
-                SSSBot extract = new ExtractFollowersBot(utente, tx_console: extract_console);
+                SSSBot unfollow = new UnfollowBot(utente, tx_console: unfollow_console);
+                SSSBot extract_from_user = new ExtractFollowersBot(utente, tx_console: extract_console);
 
                 client.bots.Add("follow_like", follow_like);
                 client.bots.Add("unfollow", unfollow);
-                client.bots.Add("extract", extract);
+                client.bots.Add("extract_from_user", extract_from_user);
             }
             else
             {
@@ -65,17 +65,30 @@ namespace InstaMacBot
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract"];
+            ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract_from_user"];
             x.set_username(tx_username_estrai_followers.Text);
             x.start();
-           
+            console_extract.Text = ("extract process can take some times (more followers more time)");
+            do
+            {
+                string s = console_extract.Text;                
+                console_extract.Text=("wait extracting...");
+                console_extract.Text+=Environment.NewLine;
+                console_extract.Text += s;
+                await wait(5);
+       
+                
+            } while (x.is_running);
+
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract"];
+            ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract_from_user"];
             x.save_on_file_extracted_list();
         }
         private void button3_Click(object sender, EventArgs e)
@@ -223,10 +236,6 @@ namespace InstaMacBot
                 MessageBox.Show("OFF");
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract"];
-            x.clear_extracted_list();
-        }
+   
     }
 }

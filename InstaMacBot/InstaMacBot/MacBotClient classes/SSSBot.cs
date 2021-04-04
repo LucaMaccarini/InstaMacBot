@@ -18,10 +18,10 @@ namespace InstaMacBot.classi_MacBotClient
         public bool is_running { get { return status; } }
 
 
-        private async Task<bool> wait(int secondi)
+        private async Task<bool> wait(int seconds)
         {
             int i = 0;
-            while (i < secondi)
+            while (i < seconds)
             {
                 await Task.Delay(1000);
                 i++;

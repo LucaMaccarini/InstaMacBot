@@ -64,14 +64,27 @@ namespace InstaMacBot.classi_MacBotClient
         {
             extracted_list.Clear();
 
+            tx_console.write_on_console("Extracting followers, don't close bot");
+
             IResult<InstaUserShortList> followers = await UtenteApi.get_user_followers(username);
 
-
-            for (int i = 0; i < followers.Value.Count; i++)
+            if (followers.Value!=null)
             {
-                extracted_list.Add(followers.Value[i].UserName);
+
+                for (int i = 0; i < followers.Value.Count; i++)
+                {
+                    extracted_list.Add(followers.Value[i].UserName);
+                }
+                tx_console.write_on_console("Extracted Followers: " + extracted_list.Count.ToString() + " (instragram limit reached)");
+
             }
-            tx_console.write_on_console("Extracted Followers: " + extracted_list.Count.ToString());
+            else
+            {
+                tx_console.write_on_console("Acoount private or not exist");
+            }
+
+            status = false;
+            
 
         }
 
