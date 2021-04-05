@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace InstaMacBot.MacBotClient_classes
 {
-    class ExtractAccountsFromHastagBot : SSSBot
+    class ExtractAccountsFromLocationBot : SSSBot
     {
-        //OVERVIEW: this class represents a followers screaper bot that extract all followers it can from hastag
+        //OVERVIEW: this class represents a followers screaper bot that extract all followers it can from Locations
         //          objects of this class are mutable
 
-        private string hastag;
+        private string location;
         private List<string> extracted_list;
         private bool stop_bot;
         private UserApi UtenteApi;
 
-        public ExtractAccountsFromHastagBot(UserApi Utente, BotConsole tx_console = null) : base(tx_console)
+        public ExtractAccountsFromLocationBot(UserApi Utente, BotConsole tx_console = null) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente needs to be != null");
 
@@ -32,21 +32,21 @@ namespace InstaMacBot.MacBotClient_classes
             status = false;
         }
 
-        public ExtractAccountsFromHastagBot(UserApi Utente, string hastag, BotConsole tx_console = null) : base(tx_console)
+        public ExtractAccountsFromLocationBot(UserApi Utente, string location, BotConsole tx_console = null) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente must be != null");
-            if (hastag != "") throw new ArgumentNullException("username must be != ''");
+            if (location != "") throw new ArgumentNullException("username must be != ''");
 
             UtenteApi = Utente;
             extracted_list = new List<string>();
             stop_bot = true;
             status = false;
-            this.hastag = hastag;
+            this.location = location;
         }
 
-        public void set_hastag(string hastag)
+        public void set_location(string location)
         {
-            this.hastag = hastag;
+            this.location = location;
         }
         public override void start()
         {
@@ -66,16 +66,21 @@ namespace InstaMacBot.MacBotClient_classes
             extracted_list.Clear();
 
             tx_console.write_on_console("Extracting followers, don't close bot");
-            HashSet<string> followers = await UtenteApi.get_user_from_hastag(hastag);
-
-            if (followers.Count==0)
+            HashSet<string> followers = await UtenteApi.get_user_from_location(location);
+            if(followers == null)
             {
-                tx_console.write_on_console("can't find that hastag posts");
+                tx_console.write_on_console("Location not found");
+                return;
+            }
+
+            if (followers.Count == 0)
+            {
+                tx_console.write_on_console("can't find that location posts");
 
             }
             else
             {
-                foreach(string entry in followers)
+                foreach (string entry in followers)
                 {
                     extracted_list.Add(entry);
                 }
@@ -99,12 +104,12 @@ namespace InstaMacBot.MacBotClient_classes
             if (extracted_list.Count > 0)
             {
 
-                bool exists = System.IO.Directory.Exists("ExtractAccountsFromHastagBot");
+                bool exists = System.IO.Directory.Exists("ExtractAccountsFromLocationBot");
 
                 if (!exists)
-                    System.IO.Directory.CreateDirectory("ExtractAccountsFromHastagBot");
+                    System.IO.Directory.CreateDirectory("ExtractAccountsFromLocationBot");
 
-                using (StreamWriter scrivi = new StreamWriter("ExtractAccountsFromHastagBot/Extracted_followers_from_hastag.txt"))
+                using (StreamWriter scrivi = new StreamWriter("ExtractAccountsFromLocationBot/Extracted_followers_from_location.txt"))
                 {
                     for (int i = 0; i < extracted_list.Count(); i++)
                     {
@@ -112,10 +117,9 @@ namespace InstaMacBot.MacBotClient_classes
                     }
                 }
 
-                tx_console.write_on_console("extracted Accounts saved in 'ExtractAccountsFromHastagBot/Extracted_followers_from_hastag.txt'");
+                tx_console.write_on_console("extracted Accounts saved in 'ExtractAccountsFromLocationBot/Extracted_followers_from_location.txt'");
 
             }
         }
-
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,15 @@ namespace InstaMacBot
 
         BotClient client = new BotClient();
         UserApi utente;
+        BotConsole follow_like_console;
+        BotConsole unfollow_console;
+        BotConsole extract_console;
+        BotConsole console_hastag;
+        BotConsole console_location;
+
+        bool client_enabled=false;
+        string id_client = "testing_version";
+
         public Form1()
         {
             InitializeComponent();
@@ -50,21 +60,24 @@ namespace InstaMacBot
                 tx_password.ReadOnly = true;
                 tx_password.Enabled = false;
 
-                BotConsole follow_like_console = new DesktopTextBoxConsole(tx_console);
-                BotConsole unfollow_console = new DesktopTextBoxConsole(tx_console_unfollow);
-                BotConsole extract_console = new DesktopTextBoxConsole(console_extract);
-                BotConsole console_hastag = new DesktopTextBoxConsole(tx_console_hastag);
+                follow_like_console = new DesktopTextBoxConsole(tx_console);
+                unfollow_console = new DesktopTextBoxConsole(tx_console_unfollow);
+                extract_console = new DesktopTextBoxConsole(console_extract);
+                console_hastag = new DesktopTextBoxConsole(tx_console_hastag);
+                console_location = new DesktopTextBoxConsole(tx_console_location);
 
 
                 SSSBot follow_like = new FollowLikeLastsPicBot(utente, tx_console: follow_like_console, like_lasts_pic: 1, delay:60);
                 SSSBot unfollow = new UnfollowBot(utente, tx_console: unfollow_console);
                 SSSBot extract_from_user = new ExtractFollowersBot(utente, tx_console: extract_console);
                 SSSBot extract_from_hastag = new ExtractAccountsFromHastagBot(utente, tx_console: console_hastag);
+                SSSBot extract_from_location = new ExtractAccountsFromLocationBot(utente, tx_console: console_location);
 
                 client.bots.Add("follow_like", follow_like);
                 client.bots.Add("unfollow", unfollow);
                 client.bots.Add("extract_from_user", extract_from_user);
                 client.bots.Add("extract_from_hastag", extract_from_hastag);
+                client.bots.Add("extract_from_location", extract_from_location);
             }
             else
             {
@@ -77,14 +90,12 @@ namespace InstaMacBot
             ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract_from_user"];
             x.set_username(tx_username_estrai_followers.Text);
             x.start();
-            console_extract.Text = ("extract process can take some times (more followers more time)");
+            console_location.write_on_console("extract process can take some times (more followers more time)");
+
             do
             {
-                string s = console_extract.Text;                
-                console_extract.Text=("wait extracting...");
-                console_extract.Text+=Environment.NewLine;
-                console_extract.Text += s;
-                await wait(5);
+                extract_console.write_on_console("wait extracting...");            
+                await wait(10);
        
                 
             } while (x.is_running);
@@ -268,14 +279,11 @@ namespace InstaMacBot
             x.set_hastag(tx_hastag.Text);
             x.start();
 
-            console_extract.Text = ("extract process can take some times (more followers more time)");
+            console_location.write_on_console("extract process can take some times (more recent posts on this hastag more time)");
             do
             {
-                string s = tx_console_hastag.Text;
-                tx_console_hastag.Text = ("wait extracting...");
-                tx_console_hastag.Text += Environment.NewLine;
-                tx_console_hastag.Text += s;
-                await wait(5);
+                console_hastag.write_on_console("wait extracting...");
+                await wait(10);
 
 
             } while (x.is_running);
@@ -285,6 +293,76 @@ namespace InstaMacBot
         {
             ExtractAccountsFromHastagBot x = (ExtractAccountsFromHastagBot)client.bots["extract_from_hastag"];
             x.save_on_file_extracted_list();
+        }
+
+        private async void button8_Click(object sender, EventArgs e)
+        {
+            
+            ExtractAccountsFromLocationBot x = (ExtractAccountsFromLocationBot)client.bots["extract_from_location"];
+            
+            x.set_location(tx_location.Text);
+            x.start();
+
+            console_location.write_on_console("extract process can take some times (more recent location posts more time)");
+            do
+            {
+                console_location.write_on_console("wait extracting...");
+                await wait(10);
+
+
+            } while (x.is_running);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ExtractAccountsFromLocationBot x = (ExtractAccountsFromLocationBot)client.bots["extract_from_location"];
+            x.save_on_file_extracted_list();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string urlAddress = "https://www.how2macca.altervista.org/fiver_check_client/index.php?id_client=" + id_client;
+            string client_id_check_response = "";
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Stream receiveStream = response.GetResponseStream();
+                StreamReader readStream = null;
+
+                if (String.IsNullOrWhiteSpace(response.CharacterSet))
+                    readStream = new StreamReader(receiveStream);
+                else
+                    readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+
+                client_id_check_response = readStream.ReadToEnd();
+
+                response.Close();
+                readStream.Close();
+            }
+
+            switch (client_id_check_response){
+                case "-1":
+                    MessageBox.Show("this license doesen't exist", "License error");
+                    break;
+
+                case "0":
+                    MessageBox.Show("this license is not active (client time expired), contact lucamaccarini22@gmail.com to get another license", "License expired");
+                    break;
+                case "1":
+                    client_enabled = true;
+                    break;
+
+            }
+
+            if (!client_enabled)
+            {
+                Application.Exit();
+            }
+
+            lb_id.Text = id_client;
         }
     }
 }

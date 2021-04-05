@@ -41,7 +41,17 @@ namespace InstaMacBot
 
         }
 
-        
+        private async Task<bool> wait(int secondi)
+        {
+            int i = 0;
+            while (i < secondi)
+            {
+                await Task.Delay(1000);
+                i++;
+            }
+            return true;
+        }
+
         public bool is_logged { get { return logged; } }
 
         
@@ -72,7 +82,8 @@ namespace InstaMacBot
                     {
                         do
                         {
-                            MessageBox.Show("open instagram and click 'am i' on challenge request");
+                            MessageBox.Show("open instagram and click 'am i' on challenge request (if doesen't have challenge request on your instagram click ok and close bot)");
+                            await wait(5);
                         } while (challenge.Value.SubmitPhoneRequired);
 
                         logged = true;
@@ -190,6 +201,28 @@ namespace InstaMacBot
                 for(int i=0; i<list_media.Count; i++)
                 {
                     if(!(output.Contains(list_media[i].User.UserName)))
+                        output.Add(list_media[i].User.UserName);
+                }
+            }
+            return output;
+        }
+
+        public async Task<HashSet<string>> get_user_from_location(string location)
+        {
+            HashSet<string> output = new HashSet<string>();
+
+            IResult<InstaPlaceShort> x = await api.LocationProcessor.GetLocationInfoAsync(location);
+            if (x == null)
+            {
+                return null;
+            }
+            IResult<InstaSectionMedia> request = await api.LocationProcessor.GetRecentLocationFeedsAsync(x.Value.Pk, PaginationParameters.Empty);
+            if (request.Value != null)
+            {
+                List<InstaMedia> list_media = request.Value.Medias;
+                for (int i = 0; i < list_media.Count; i++)
+                {
+                    if (!(output.Contains(list_media[i].User.UserName)))
                         output.Add(list_media[i].User.UserName);
                 }
             }

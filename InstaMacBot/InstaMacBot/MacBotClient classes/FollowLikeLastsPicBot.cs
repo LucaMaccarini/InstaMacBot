@@ -29,11 +29,12 @@ namespace InstaMacBot.classi_MacBotClient
         private int stop_fails_follow;
         private int delay;
         private bool skip_following;
+        private bool follow_account;
 
         public int get_account_rocessing_counts { get { return processing_accounts_list.Count; } }
         public int get_likes { get { return likes; } }
         public int get_follow { get { return follow; } }
-        public FollowLikeLastsPicBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, bool skip_following = false) : base(tx_console)
+        public FollowLikeLastsPicBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, bool follow_accounts=true, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, bool skip_following = false) : base(tx_console)
         {
             if(Utente==null) throw new ArgumentNullException("utente must be != null");
             if (like_lasts_pic > 3 || like_lasts_pic <= 0) throw new ArgumentOutOfRangeException("like_lasts_pic must be > 0 and <= 3");
@@ -54,18 +55,25 @@ namespace InstaMacBot.classi_MacBotClient
             this.stop_fails_follow = stop_fails_follow;
             this.delay = delay;
             this.skip_following = skip_following;
+            this.follow_account = follow_accounts;
             
         }
 
         public bool set_likes_last_pic(int i)
         {
-            if (i <= 0 || i > 3)
+            if (i < 0 || i > 3)
                 return false;
 
             like_lasts_pic = i;
             return true;
             
         }
+
+        public void set_follow_accounts(bool i)
+        {
+            follow_account = i;
+        }
+
 
         public bool set_delay(int i)
         {
@@ -234,30 +242,32 @@ namespace InstaMacBot.classi_MacBotClient
                     i++;
                 }
 
-                bool follow_messo = await UtenteApi.follow(processing_accounts_list[0]);
-
-                if (follow_messo)
+                if (follow_account)
                 {
-                    followed_list.Add(processing_accounts_list[0]);
-                    follow++;
-                    tx_console.write_on_console("followed: " + processing_accounts_list[0] + " [tot: " + follow + "]");
-                    if (follow_fail != 0)
+                    bool follow_messo = await UtenteApi.follow(processing_accounts_list[0]);
+
+                    if (follow_messo)
                     {
-                        follow_fail = 0;
+                        followed_list.Add(processing_accounts_list[0]);
+                        follow++;
+                        tx_console.write_on_console("followed: " + processing_accounts_list[0] + " [tot: " + follow + "]");
+                        if (follow_fail != 0)
+                        {
+                            follow_fail = 0;
+                        }
+                    }
+                    else
+                    {
+                        follow_fail++;
+                        if (follow_fail > stop_fails_follow)
+                        {
+
+                            tx_console.write_on_console("bot reached follow fails [ " + stop_fails_follow + " ] secure stop");
+                            stop(true);
+                            return;
+                        }
                     }
                 }
-                else
-                {
-                    follow_fail++;
-                    if (follow_fail > stop_fails_follow)
-                    {
-
-                        tx_console.write_on_console("bot reached follow fails [ " + stop_fails_follow + " ] secure stop");
-                        stop(true);
-                        return;
-                    }
-                }
-
                 
                 processing_accounts_list.RemoveAt(0);
                 await wait(delay);
