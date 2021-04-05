@@ -29,7 +29,11 @@ namespace InstaMacBot
    
         private async void bt_login_Click(object sender, EventArgs e)
         {
-            
+            if (tx_username.Text == "" || tx_password.Text=="")
+            {
+                MessageBox.Show("fill username and password", "invalid credentials");
+                return;
+            }
             utente = new UserApi(tx_username.Text, tx_password.Text);
 
             string esito = await utente.loginAsync();
@@ -236,6 +240,22 @@ namespace InstaMacBot
                 MessageBox.Show("OFF");
         }
 
-   
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)client.bots["follow_like"];
+            x.set_likes_last_pic(int.Parse(comboBox1.SelectedItem.ToString()));
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)client.bots["follow_like"];
+            x.set_delay(int.Parse(comboBox2.SelectedItem.ToString()));
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UnfollowBot x = (UnfollowBot)client.bots["unfollow"];
+            x.set_delay(int.Parse(comboBox3.SelectedItem.ToString()));
+        }
     }
 }

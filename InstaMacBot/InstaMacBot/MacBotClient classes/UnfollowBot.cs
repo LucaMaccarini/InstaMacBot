@@ -47,6 +47,16 @@ namespace InstaMacBot.classi_MacBotClient
             this.skip_non_following = skip_non_following;
         }
 
+        public bool set_delay(int i)
+        {
+            if (i < 40)
+                return false;
+
+            delay = i;
+            return true;
+
+        }
+
         public override void start()
         {
             stop_bot = false;

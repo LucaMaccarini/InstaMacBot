@@ -57,6 +57,26 @@ namespace InstaMacBot.classi_MacBotClient
             
         }
 
+        public bool set_likes_last_pic(int i)
+        {
+            if (i <= 0 || i > 3)
+                return false;
+
+            like_lasts_pic = i;
+            return true;
+            
+        }
+
+        public bool set_delay(int i)
+        {
+            if (i < 30)
+                return false;
+
+            delay = i;
+            return true;
+
+        }
+
         public override void start()
         {
             stop_bot = false;
@@ -185,8 +205,8 @@ namespace InstaMacBot.classi_MacBotClient
 
                 //foto estratte
 
-
-                for(int i=0; i<like_lasts_pic && i<foto.Count; i++)
+                int i = 0;
+                while ( i<like_lasts_pic && i<foto.Count)
                 {
                     bool like_messo = await UtenteApi.put_like(foto[i].InstaIdentifier);
                    
@@ -194,7 +214,7 @@ namespace InstaMacBot.classi_MacBotClient
                     if (like_messo)
                     {
                         likes++;
-                        tx_console.write_on_console("like lasts "+ like_lasts_pic +" foto of: " + processing_accounts_list[0] + " [tot: " + likes + "]");
+                        tx_console.write_on_console("like last "+ i+1 +" foto of: " + processing_accounts_list[0] + " [tot: " + likes + "]");
                         if (like_fail != 0)
                         {
                             like_fail = 0;
@@ -211,6 +231,7 @@ namespace InstaMacBot.classi_MacBotClient
                             }
                         }
                     }
+                    i++;
                 }
 
                 bool follow_messo = await UtenteApi.follow(processing_accounts_list[0]);
