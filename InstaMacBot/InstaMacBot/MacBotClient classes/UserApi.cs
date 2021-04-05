@@ -98,7 +98,7 @@ namespace InstaMacBot
             }
             else
             {
-                return "errore nel logout: " + logoutRequest.Info.Message;
+                return "logout error (close and reopen the entire bot): " + logoutRequest.Info.Message;
             }
         }
 
@@ -178,6 +178,22 @@ namespace InstaMacBot
         public async Task<IResult<InstaUserShortList>> get_user_followers(string username)
         {
             return await api.UserProcessor.GetUserFollowersAsync(username, PaginationParameters.Empty);
+        }
+
+        public async Task<HashSet<string>> get_user_from_hastag(string hastag)
+        {
+            HashSet<string> output = new HashSet<string>();
+            IResult<InstaSectionMedia> request = await api.HashtagProcessor.GetRecentHashtagMediaListAsync(hastag, PaginationParameters.Empty);
+            if (request.Value != null)
+            {
+                List<InstaMedia> list_media = request.Value.Medias;
+                for(int i=0; i<list_media.Count; i++)
+                {
+                    if(!(output.Contains(list_media[i].User.UserName)))
+                        output.Add(list_media[i].User.UserName);
+                }
+            }
+            return output;
         }
 
         public async Task<HashSet<string>> get_following()

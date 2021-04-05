@@ -53,15 +53,18 @@ namespace InstaMacBot
                 BotConsole follow_like_console = new DesktopTextBoxConsole(tx_console);
                 BotConsole unfollow_console = new DesktopTextBoxConsole(tx_console_unfollow);
                 BotConsole extract_console = new DesktopTextBoxConsole(console_extract);
+                BotConsole console_hastag = new DesktopTextBoxConsole(tx_console_hastag);
 
 
                 SSSBot follow_like = new FollowLikeLastsPicBot(utente, tx_console: follow_like_console, like_lasts_pic: 1, delay:60);
                 SSSBot unfollow = new UnfollowBot(utente, tx_console: unfollow_console);
                 SSSBot extract_from_user = new ExtractFollowersBot(utente, tx_console: extract_console);
+                SSSBot extract_from_hastag = new ExtractAccountsFromHastagBot(utente, tx_console: console_hastag);
 
                 client.bots.Add("follow_like", follow_like);
                 client.bots.Add("unfollow", unfollow);
                 client.bots.Add("extract_from_user", extract_from_user);
+                client.bots.Add("extract_from_hastag", extract_from_hastag);
             }
             else
             {
@@ -172,7 +175,8 @@ namespace InstaMacBot
 
         private async void bt_logout_Click(object sender, EventArgs e)
         {
-            await utente.logoutAsync();
+            string s = await utente.logoutAsync();
+            MessageBox.Show(s);
 
             bt_login.Enabled = true;
             bt_logout.Enabled = false;
@@ -256,6 +260,31 @@ namespace InstaMacBot
         {
             UnfollowBot x = (UnfollowBot)client.bots["unfollow"];
             x.set_delay(int.Parse(comboBox3.SelectedItem.ToString()));
+        }
+
+        private async void button7_Click(object sender, EventArgs e)
+        {
+            ExtractAccountsFromHastagBot x = (ExtractAccountsFromHastagBot)client.bots["extract_from_hastag"];
+            x.set_hastag(tx_hastag.Text);
+            x.start();
+
+            console_extract.Text = ("extract process can take some times (more followers more time)");
+            do
+            {
+                string s = tx_console_hastag.Text;
+                tx_console_hastag.Text = ("wait extracting...");
+                tx_console_hastag.Text += Environment.NewLine;
+                tx_console_hastag.Text += s;
+                await wait(5);
+
+
+            } while (x.is_running);
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            ExtractAccountsFromHastagBot x = (ExtractAccountsFromHastagBot)client.bots["extract_from_hastag"];
+            x.save_on_file_extracted_list();
         }
     }
 }
