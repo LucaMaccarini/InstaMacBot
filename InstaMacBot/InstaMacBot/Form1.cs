@@ -27,6 +27,7 @@ namespace InstaMacBot
         BotConsole extract_console;
         BotConsole console_hastag;
         BotConsole console_location;
+        BotConsole console_send_dm;
 
         bool client_enabled=false;
         string id_client = "testing_version";
@@ -65,6 +66,7 @@ namespace InstaMacBot
                 extract_console = new DesktopTextBoxConsole(console_extract);
                 console_hastag = new DesktopTextBoxConsole(tx_console_hastag);
                 console_location = new DesktopTextBoxConsole(tx_console_location);
+                console_send_dm = new DesktopTextBoxConsole(tx_console_send_dm);
 
 
                 SSSBot follow_like = new FollowLikeLastsPicBot(utente, tx_console: follow_like_console, like_lasts_pic: 1, delay:60);
@@ -72,12 +74,14 @@ namespace InstaMacBot
                 SSSBot extract_from_user = new ExtractFollowersBot(utente, tx_console: extract_console);
                 SSSBot extract_from_hastag = new ExtractAccountsFromHastagBot(utente, tx_console: console_hastag);
                 SSSBot extract_from_location = new ExtractAccountsFromLocationBot(utente, tx_console: console_location);
+                SSSBot send_dm = new SendDmBot(utente, tx_console: console_send_dm);
 
                 client.bots.Add("follow_like", follow_like);
                 client.bots.Add("unfollow", unfollow);
                 client.bots.Add("extract_from_user", extract_from_user);
                 client.bots.Add("extract_from_hastag", extract_from_hastag);
                 client.bots.Add("extract_from_location", extract_from_location);
+                client.bots.Add("send_dm", send_dm);
             }
             else
             {
@@ -87,21 +91,24 @@ namespace InstaMacBot
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            
             ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract_from_user"];
-            x.set_username(tx_username_estrai_followers.Text);
-            x.start();
-            console_location.write_on_console("extract process can take some times (more followers more time)");
-
-            do
+            if (!x.is_running)
             {
-                extract_console.write_on_console("wait extracting...");            
-                await wait(10);
-       
-                
-            } while (x.is_running);
+                x.set_username(tx_username_estrai_followers.Text);
+                x.start();
+                console_location.write_on_console("extract process can take some times (more followers more time)");
+
+                do
+                {
+                    extract_console.write_on_console("wait extracting...");
+                    await wait(10);
 
 
+                } while (x.is_running);
 
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -112,7 +119,14 @@ namespace InstaMacBot
         private void button3_Click(object sender, EventArgs e)
         {
             FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)client.bots["follow_like"];
-            x.load_list_from_file();
+            if (x.is_running)
+            {
+                MessageBox.Show("stop bot before");
+            }
+            else
+            {
+                x.load_list_from_file();
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -174,7 +188,7 @@ namespace InstaMacBot
 
             if (client.bots["follow_like"].is_running)
             {
-                MessageBox.Show("couldn't stop bot: time out exxedeed");
+                MessageBox.Show("couldn't stop bot: time out excedeed");
             }
             
            
@@ -201,7 +215,16 @@ namespace InstaMacBot
         private void button4_Click_1(object sender, EventArgs e)
         {
             UnfollowBot x = (UnfollowBot) client.bots["unfollow"];
-            x.load_followed_accounts();
+            
+
+            if (x.is_running)
+            {
+                MessageBox.Show("stop bot before");
+            }
+            else
+            {
+                x.load_followed_accounts();
+            }
 
         }
 
@@ -233,7 +256,7 @@ namespace InstaMacBot
 
             if (client.bots["unfollow"].is_running)
             {
-                MessageBox.Show("couldn't stop bot: time out exxedeed");
+                MessageBox.Show("couldn't stop bot: time out excedeed");
             }
         }
 
@@ -276,10 +299,13 @@ namespace InstaMacBot
         private async void button7_Click(object sender, EventArgs e)
         {
             ExtractAccountsFromHastagBot x = (ExtractAccountsFromHastagBot)client.bots["extract_from_hastag"];
-            x.set_hastag(tx_hastag.Text);
-            x.start();
+            if (!x.is_running)
+            {
+                x.set_hastag(tx_hastag.Text);
+                x.start();
+            }
 
-            console_location.write_on_console("extract process can take some times (more recent posts on this hastag more time)");
+            console_hastag.write_on_console("extract process can take some times (more recent posts on this hastag more time)");
             do
             {
                 console_hastag.write_on_console("wait extracting...");
@@ -299,9 +325,11 @@ namespace InstaMacBot
         {
             
             ExtractAccountsFromLocationBot x = (ExtractAccountsFromLocationBot)client.bots["extract_from_location"];
-            
-            x.set_location(tx_location.Text);
-            x.start();
+            if (!x.is_running)
+            {
+                x.set_location(tx_location.Text);
+                x.start();
+            }
 
             console_location.write_on_console("extract process can take some times (more recent location posts more time)");
             do
@@ -363,6 +391,85 @@ namespace InstaMacBot
             }
 
             lb_id.Text = id_client;
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)client.bots["follow_like"];
+            if (comboBox2.SelectedItem.ToString() == "yes")
+            {
+                x.set_follow_accounts(true);
+            }
+            else
+            {
+                x.set_follow_accounts(false);
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            SendDmBot x = (SendDmBot)client.bots["send_dm"];
+            if (x.is_running)
+            {
+                MessageBox.Show("stop bot before");
+            }
+            else
+            {
+                x.load_list_from_file();
+            }
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+            client.bots["send_dm"].start();
+        }
+
+        private async void button12_Click(object sender, EventArgs e)
+        {
+            client.bots["send_dm"].stop(true);
+
+            int i = 0;
+            do
+            {
+                await wait(1);
+                i++;
+
+            } while (client.bots["send_dm"].is_running && i < 5);
+
+            if (client.bots["send_dm"].is_running)
+            {
+                MessageBox.Show("couldn't stop bot: time out excedeed");
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (client.bots["send_dm"].is_running)
+                MessageBox.Show("ON");
+            else
+                MessageBox.Show("OFF");
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            SendDmBot x = (SendDmBot)client.bots["send_dm"];
+            string mess = x.get_message();
+            using (message_form form2 = new message_form())
+            {
+                if(mess != "")
+                {
+                    form2.set_message(mess);
+                }
+
+                if (form2.ShowDialog() == DialogResult.OK)
+                {
+                    x.set_message(form2.get_message());
+                    console_send_dm.write_on_console("message added");
+                    button13.Enabled = true;
+                }
+            }
         }
     }
 }

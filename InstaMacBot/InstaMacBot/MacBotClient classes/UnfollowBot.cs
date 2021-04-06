@@ -176,7 +176,7 @@ namespace InstaMacBot.classi_MacBotClient
                 await wait(delay);
             }
             tx_console.write_on_console("bot ended");
-            stop(false);
+            stop(true);
         }
 
 

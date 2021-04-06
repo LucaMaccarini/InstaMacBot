@@ -110,3 +110,4 @@ C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\Insta
 C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
 C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
 C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
+C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.MacBotClient_classes.message_form.resources

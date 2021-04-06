@@ -63,6 +63,13 @@
     <Compile Include="MacBotClient classes\ExtractAccountsFromLocationBot.cs" />
     <Compile Include="MacBotClient classes\ExtractFollowersBot.cs" />
     <Compile Include="MacBotClient classes\FollowLikeLastsPicBot.cs" />
+    <Compile Include="MacBotClient classes\message_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MacBotClient classes\message_form.Designer.cs">
+      <DependentUpon>message_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MacBotClient classes\SendDmBot.cs" />
     <Compile Include="MacBotClient classes\SSSBot.cs" />
     <Compile Include="MacBotClient classes\StartStopBot.cs" />
     <Compile Include="MacBotClient classes\UnfollowBot.cs" />
@@ -77,6 +84,9 @@
     <Compile Include="MacBotClient classes\UserApi.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MacBotClient classes\message_form.resx">
+      <DependentUpon>message_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

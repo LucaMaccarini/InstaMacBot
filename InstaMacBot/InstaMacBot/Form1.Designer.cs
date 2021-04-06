@@ -40,7 +40,7 @@
             this.tx_console = new System.Windows.Forms.TextBox();
             this.bt_stop = new System.Windows.Forms.Button();
             this.bt_start = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.load_list_follow_like = new System.Windows.Forms.Button();
             this.bt_salva_su_file = new System.Windows.Forms.Button();
             this.lb_follower_estratti_o_caricati = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,6 +59,13 @@
             this.tx_hastag = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.tx_console_location = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tx_location = new System.Windows.Forms.TextBox();
             this.tab_comandi1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -85,26 +92,40 @@
             this.button4 = new System.Windows.Forms.Button();
             this.bt_stop_unfollow = new System.Windows.Forms.Button();
             this.bt_start_unfollow = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.tx_console_send_dm = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.lb_id = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.tx_console_location = new System.Windows.Forms.TextBox();
-            this.tx_location = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
             this.tab_comandi.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tab_comandi1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -131,7 +152,6 @@
             this.tx_username.Name = "tx_username";
             this.tx_username.Size = new System.Drawing.Size(167, 20);
             this.tx_username.TabIndex = 2;
-            this.tx_username.Text = "gasdgaedga";
             // 
             // tx_password
             // 
@@ -140,7 +160,6 @@
             this.tx_password.PasswordChar = '*';
             this.tx_password.Size = new System.Drawing.Size(167, 20);
             this.tx_password.TabIndex = 3;
-            this.tx_password.Text = "Masserini1";
             // 
             // bt_login
             // 
@@ -210,15 +229,15 @@
             this.bt_start.UseVisualStyleBackColor = true;
             this.bt_start.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button3
+            // load_list_follow_like
             // 
-            this.button3.Location = new System.Drawing.Point(6, 25);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 24);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Load list accounts file";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.load_list_follow_like.Location = new System.Drawing.Point(6, 25);
+            this.load_list_follow_like.Name = "load_list_follow_like";
+            this.load_list_follow_like.Size = new System.Drawing.Size(138, 24);
+            this.load_list_follow_like.TabIndex = 10;
+            this.load_list_follow_like.Text = "Load list accounts file";
+            this.load_list_follow_like.UseVisualStyleBackColor = true;
+            this.load_list_follow_like.Click += new System.EventHandler(this.button3_Click);
             // 
             // bt_salva_su_file
             // 
@@ -271,6 +290,7 @@
             this.tab_comandi.Controls.Add(this.tabPage4);
             this.tab_comandi.Controls.Add(this.tab_comandi1);
             this.tab_comandi.Controls.Add(this.tabPage2);
+            this.tab_comandi.Controls.Add(this.tabPage5);
             this.tab_comandi.Enabled = false;
             this.tab_comandi.Location = new System.Drawing.Point(8, 126);
             this.tab_comandi.Name = "tab_comandi";
@@ -407,6 +427,78 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.label23);
+            this.tabPage4.Controls.Add(this.button8);
+            this.tabPage4.Controls.Add(this.button9);
+            this.tabPage4.Controls.Add(this.tx_console_location);
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.tx_location);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(868, 374);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "Scrape from location";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(3, 9);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(447, 18);
+            this.label23.TabIndex = 36;
+            this.label23.Text = "For more safety scrape users logged with a fake or unless account";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(383, 35);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(67, 24);
+            this.button8.TabIndex = 34;
+            this.button8.Text = "extract";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(456, 35);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(118, 24);
+            this.button9.TabIndex = 33;
+            this.button9.Text = "Save on file";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // tx_console_location
+            // 
+            this.tx_console_location.Location = new System.Drawing.Point(6, 84);
+            this.tx_console_location.Multiline = true;
+            this.tx_console_location.Name = "tx_console_location";
+            this.tx_console_location.ReadOnly = true;
+            this.tx_console_location.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tx_console_location.Size = new System.Drawing.Size(574, 290);
+            this.tx_console_location.TabIndex = 35;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(3, 41);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(213, 13);
+            this.label24.TabIndex = 31;
+            this.label24.Text = "extract accounts from location, LocationID :";
+            // 
+            // tx_location
+            // 
+            this.tx_location.Location = new System.Drawing.Point(218, 38);
+            this.tx_location.Name = "tx_location";
+            this.tx_location.Size = new System.Drawing.Size(161, 20);
+            this.tx_location.TabIndex = 32;
+            // 
             // tab_comandi1
             // 
             this.tab_comandi1.Controls.Add(this.groupBox1);
@@ -414,7 +506,7 @@
             this.tab_comandi1.Controls.Add(this.label10);
             this.tab_comandi1.Controls.Add(this.button5);
             this.tab_comandi1.Controls.Add(this.label8);
-            this.tab_comandi1.Controls.Add(this.button3);
+            this.tab_comandi1.Controls.Add(this.load_list_follow_like);
             this.tab_comandi1.Controls.Add(this.tx_console);
             this.tab_comandi1.Controls.Add(this.bt_stop);
             this.tab_comandi1.Controls.Add(this.bt_start);
@@ -487,6 +579,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(48, 21);
             this.comboBox4.TabIndex = 24;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -716,6 +809,227 @@
             this.bt_start_unfollow.UseVisualStyleBackColor = true;
             this.bt_start_unfollow.Click += new System.EventHandler(this.button6_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.groupBox3);
+            this.tabPage5.Controls.Add(this.tx_console_send_dm);
+            this.tabPage5.Controls.Add(this.label30);
+            this.tabPage5.Controls.Add(this.button13);
+            this.tabPage5.Controls.Add(this.label31);
+            this.tabPage5.Controls.Add(this.button12);
+            this.tabPage5.Controls.Add(this.button10);
+            this.tabPage5.Controls.Add(this.button11);
+            this.tabPage5.Controls.Add(this.label32);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(868, 374);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "send DM";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(146, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 24);
+            this.button3.TabIndex = 36;
+            this.button3.Text = "Add message";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label25);
+            this.groupBox3.Controls.Add(this.label26);
+            this.groupBox3.Controls.Add(this.label27);
+            this.groupBox3.Controls.Add(this.comboBox5);
+            this.groupBox3.Controls.Add(this.label28);
+            this.groupBox3.Controls.Add(this.comboBox6);
+            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Controls.Add(this.comboBox7);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBox3.Location = new System.Drawing.Point(575, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(284, 359);
+            this.groupBox3.TabIndex = 35;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "bot settings";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Red;
+            this.label25.Location = new System.Drawing.Point(6, 30);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(219, 15);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "modify them if you want cusom settings";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(6, 17);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(207, 15);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "don\'t touch settings for default values";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 143);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(136, 13);
+            this.label27.TabIndex = 23;
+            this.label27.Text = "follow account (default yes)";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DisplayMember = "1";
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "yes",
+            "no"});
+            this.comboBox5.Location = new System.Drawing.Point(9, 159);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(48, 21);
+            this.comboBox5.TabIndex = 24;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 100);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(201, 13);
+            this.label28.TabIndex = 21;
+            this.label28.Text = "delay between each account (default 40)";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.DisplayMember = "1";
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.comboBox6.Location = new System.Drawing.Point(9, 116);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(48, 21);
+            this.comboBox6.TabIndex = 22;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 57);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(214, 13);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "numbers of likes at each account (default 1)";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.DisplayMember = "1";
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3"});
+            this.comboBox7.Location = new System.Drawing.Point(9, 73);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(48, 21);
+            this.comboBox7.TabIndex = 20;
+            // 
+            // tx_console_send_dm
+            // 
+            this.tx_console_send_dm.Location = new System.Drawing.Point(3, 124);
+            this.tx_console_send_dm.Multiline = true;
+            this.tx_console_send_dm.Name = "tx_console_send_dm";
+            this.tx_console_send_dm.ReadOnly = true;
+            this.tx_console_send_dm.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tx_console_send_dm.Size = new System.Drawing.Size(566, 238);
+            this.tx_console_send_dm.TabIndex = 30;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label30.Location = new System.Drawing.Point(0, 59);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(77, 13);
+            this.label30.TabIndex = 34;
+            this.label30.Text = "Bot commands";
+            // 
+            // button13
+            // 
+            this.button13.Enabled = false;
+            this.button13.Location = new System.Drawing.Point(3, 75);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(66, 24);
+            this.button13.TabIndex = 27;
+            this.button13.Text = "start";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.Red;
+            this.label31.Location = new System.Drawing.Point(3, 3);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(352, 13);
+            this.label31.TabIndex = 33;
+            this.label31.Text = "First load an account list file where bot will operate and add a text to send";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(75, 75);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(66, 24);
+            this.button12.TabIndex = 28;
+            this.button12.Text = "stop";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(147, 75);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(96, 24);
+            this.button10.TabIndex = 32;
+            this.button10.Text = "check bot status";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(3, 19);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(138, 24);
+            this.button11.TabIndex = 29;
+            this.button11.Text = "Load list accounts file";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(0, 108);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(44, 13);
+            this.label32.TabIndex = 31;
+            this.label32.Text = "console";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -755,78 +1069,6 @@
             this.lb_id.Size = new System.Drawing.Size(0, 13);
             this.lb_id.TabIndex = 26;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.label23);
-            this.tabPage4.Controls.Add(this.button8);
-            this.tabPage4.Controls.Add(this.button9);
-            this.tabPage4.Controls.Add(this.tx_console_location);
-            this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.tx_location);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(868, 374);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "Scrape from location";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(3, 9);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(447, 18);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "For more safety scrape users logged with a fake or unless account";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(383, 35);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(67, 24);
-            this.button8.TabIndex = 34;
-            this.button8.Text = "extract";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // tx_console_location
-            // 
-            this.tx_console_location.Location = new System.Drawing.Point(6, 84);
-            this.tx_console_location.Multiline = true;
-            this.tx_console_location.Name = "tx_console_location";
-            this.tx_console_location.ReadOnly = true;
-            this.tx_console_location.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tx_console_location.Size = new System.Drawing.Size(574, 290);
-            this.tx_console_location.TabIndex = 35;
-            // 
-            // tx_location
-            // 
-            this.tx_location.Location = new System.Drawing.Point(218, 38);
-            this.tx_location.Name = "tx_location";
-            this.tx_location.Size = new System.Drawing.Size(161, 20);
-            this.tx_location.TabIndex = 32;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(3, 41);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(213, 13);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "extract accounts from location, LocationID :";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(456, 35);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(118, 24);
-            this.button9.TabIndex = 33;
-            this.button9.Text = "Save on file";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -857,6 +1099,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tab_comandi1.ResumeLayout(false);
             this.tab_comandi1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -865,9 +1109,11 @@
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -885,7 +1131,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tx_username_estrai_followers;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button load_list_follow_like;
         private System.Windows.Forms.Button bt_salva_su_file;
         private System.Windows.Forms.Label lb_follower_estratti_o_caricati;
         private System.Windows.Forms.Button bt_stop;
@@ -942,6 +1188,25 @@
         private System.Windows.Forms.TextBox tx_console_location;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox tx_location;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox tx_console_send_dm;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button button3;
     }
 }
 

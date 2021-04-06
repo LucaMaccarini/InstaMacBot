@@ -222,7 +222,8 @@ namespace InstaMacBot.classi_MacBotClient
                     if (like_messo)
                     {
                         likes++;
-                        tx_console.write_on_console("like last "+ i+1 +" foto of: " + processing_accounts_list[0] + " [tot: " + likes + "]");
+                        int k = i + 1;
+                        tx_console.write_on_console("like last "+ k +" foto of: " + processing_accounts_list[0] + " [tot: " + likes + "]");
                         if (like_fail != 0)
                         {
                             like_fail = 0;
@@ -274,7 +275,7 @@ namespace InstaMacBot.classi_MacBotClient
             }
 
             tx_console.write_on_console("bot ended");
-            stop(false);
+            stop(true);
         }
 
 

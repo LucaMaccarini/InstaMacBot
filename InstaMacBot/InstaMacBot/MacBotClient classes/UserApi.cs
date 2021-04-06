@@ -243,5 +243,24 @@ namespace InstaMacBot
             return following;
         }
 
+        public async Task<bool>send_dm_text(string message, string username_to_send)
+        {
+            IResult<InstaDirectInboxContainer> inbox = await api.MessagingProcessor.GetDirectInboxAsync(PaginationParameters.MaxPagesToLoad(1));
+
+            var user = await get_user(username_to_send);
+            var userId = user.Value.Pk.ToString();
+
+            var directText = await api.MessagingProcessor.SendDirectTextAsync(userId, null, message);
+
+            if (directText.Succeeded)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
