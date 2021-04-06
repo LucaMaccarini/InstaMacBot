@@ -27,8 +27,9 @@ namespace InstaMacBot.MacBotClient_classes
         private int stop_fails_send_dm;
         private int delay;
         private string message;
+        private string link;
 
-        public SendDmBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, string message="", int stop_fails_send_dm = 5, int delay = 40) : base(tx_console)
+        public SendDmBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, string message="", string link="", int stop_fails_send_dm = 5, int delay = 40) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente must be != null");
             if (stop_fails_search_user <= 0) throw new ArgumentOutOfRangeException("stop_fails_search_user must be > 0");
@@ -43,6 +44,7 @@ namespace InstaMacBot.MacBotClient_classes
             this.stop_fails_send_dm = stop_fails_send_dm;
             this.delay = delay;
             this.message = message;
+            this.link = link;
         }
 
         public string get_message()
@@ -52,6 +54,16 @@ namespace InstaMacBot.MacBotClient_classes
         public void set_message(string message)
         {
             this.message = message;
+        }
+
+        public void set_link(string link)
+        {
+            this.link = link;
+        }
+
+        public string get_link()
+        {
+            return link;
         }
 
         public bool set_delay(int i)
@@ -103,6 +115,13 @@ namespace InstaMacBot.MacBotClient_classes
             int search_fail = 0;
             dms = 0;
 
+            if (message == "")
+            {
+                tx_console.write_on_console("empty message");
+                stop(true);
+                return;
+            }
+
             while (processing_accounts_list.Count > 0 && !stop_bot)
             {
                 bool not_found;
@@ -118,14 +137,7 @@ namespace InstaMacBot.MacBotClient_classes
                         }
 
                         not_found = false;
-                        /*
-                        privato = utente_in_elaborazione.Value.IsPrivate;
-
-                        if (privato)
-                        {
-                            tx_console.write_on_console("private account skipped: " + processing_accounts_list[0]);
-                            processing_accounts_list.RemoveAt(0);
-                        }*/
+                       
                     }
                     else
                     {
@@ -146,13 +158,21 @@ namespace InstaMacBot.MacBotClient_classes
                     }
                 } while (not_found);
 
-
-
-
+               
                 bool dm_sent = await UtenteApi.send_dm_text(message,processing_accounts_list[0]);
 
 
-                if (dm_sent)
+                /*if (link != "")
+                {
+                    bool link_sent = await UtenteApi.send_dm_link(link, processing_accounts_list[0]);
+
+                    if (!link_sent)
+                        tx_console.write_on_console("failed link sent to:" + processing_accounts_list[0]);
+                }*/
+
+
+
+               if (dm_sent)
                 {
                     dms++;
                     tx_console.write_on_console("dm sent to: " + processing_accounts_list[0] + " [tot: " + dms + "]");
@@ -160,18 +180,19 @@ namespace InstaMacBot.MacBotClient_classes
                     {
                         dm_fail = 0;
                     }
-                    else
+                }
+                else
+                {
+                    dm_fail++;
+                    tx_console.write_on_console("fasiled sent dm to: " + processing_accounts_list[0]);
+                    if (dm_fail > stop_fails_send_dm)
                     {
-                        dm_fail++;
-                        if (dm_fail > stop_fails_send_dm)
-                        {
-                            tx_console.write_on_console("bot reached likes fails [ " + stop_fails_send_dm + " ] secure stop");
-                            stop(true);
-                            return;
+                        tx_console.write_on_console("bot reached dm fails [ " + stop_fails_send_dm + " ] secure stop");
+                        stop(true);
+                        return;
 
-                        }
                     }
-                }                
+                }
 
                 processing_accounts_list.RemoveAt(0);
                 await wait(delay);

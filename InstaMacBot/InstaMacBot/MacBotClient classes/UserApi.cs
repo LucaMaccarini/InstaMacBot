@@ -245,14 +245,38 @@ namespace InstaMacBot
 
         public async Task<bool>send_dm_text(string message, string username_to_send)
         {
-            IResult<InstaDirectInboxContainer> inbox = await api.MessagingProcessor.GetDirectInboxAsync(PaginationParameters.MaxPagesToLoad(1));
-
             var user = await get_user(username_to_send);
             var userId = user.Value.Pk.ToString();
 
             var directText = await api.MessagingProcessor.SendDirectTextAsync(userId, null, message);
 
             if (directText.Succeeded)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> send_dm_link(string link, string username_to_send, string message = "a")
+        {
+
+            var user = await get_user(username_to_send);
+            var userId = user.Value.Pk.ToString();
+
+            var inbox = await api.MessagingProcessor.GetDirectInboxAsync(PaginationParameters.MaxPagesToLoad(1));
+
+            var desireUsername = username_to_send;
+            var desireThread = inbox.Value.Inbox.Threads.Find(u => u.Users.FirstOrDefault().UserName.ToLower() == desireUsername);
+            var requestedThreadId = desireThread.ThreadId;
+            string[] treadsid_array = { requestedThreadId };
+
+            var directLink = await api.MessagingProcessor.SendDirectLinkAsync(message, link, treadsid_array);
+
+
+            if (directLink.Succeeded)
             {
                 return true;
             }

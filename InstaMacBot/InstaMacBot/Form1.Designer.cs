@@ -97,12 +97,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.tx_console_send_dm = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
@@ -842,12 +838,8 @@
             // 
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.comboBox5);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.comboBox6);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.comboBox7);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox3.Location = new System.Drawing.Point(575, 3);
             this.groupBox3.Name = "groupBox3";
@@ -878,32 +870,10 @@
             this.label26.TabIndex = 25;
             this.label26.Text = "don\'t touch settings for default values";
             // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 143);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(136, 13);
-            this.label27.TabIndex = 23;
-            this.label27.Text = "follow account (default yes)";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.DisplayMember = "1";
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "yes",
-            "no"});
-            this.comboBox5.Location = new System.Drawing.Point(9, 159);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(48, 21);
-            this.comboBox5.TabIndex = 24;
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 100);
+            this.label28.Location = new System.Drawing.Point(6, 56);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(201, 13);
             this.label28.TabIndex = 21;
@@ -921,34 +891,11 @@
             "60",
             "70",
             "80"});
-            this.comboBox6.Location = new System.Drawing.Point(9, 116);
+            this.comboBox6.Location = new System.Drawing.Point(9, 72);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(48, 21);
             this.comboBox6.TabIndex = 22;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 57);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(214, 13);
-            this.label29.TabIndex = 19;
-            this.label29.Text = "numbers of likes at each account (default 1)";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.DisplayMember = "1";
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3"});
-            this.comboBox7.Location = new System.Drawing.Point(9, 73);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(48, 21);
-            this.comboBox7.TabIndex = 20;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // tx_console_send_dm
             // 
@@ -1192,12 +1139,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.TextBox tx_console_send_dm;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button button13;

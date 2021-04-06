@@ -176,7 +176,7 @@ namespace InstaMacBot
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            client.bots["follow_like"].stop(true);
+            client.bots["follow_like"].stop(false);
 
             int i = 0;
             do
@@ -244,7 +244,7 @@ namespace InstaMacBot
 
         private async void button5_Click_1(object sender, EventArgs e)
         {
-            client.bots["unfollow"].stop(true);
+            client.bots["unfollow"].stop(false);
 
             int i = 0;
             do
@@ -428,7 +428,7 @@ namespace InstaMacBot
 
         private async void button12_Click(object sender, EventArgs e)
         {
-            client.bots["send_dm"].stop(true);
+            client.bots["send_dm"].stop(false);
 
             int i = 0;
             do
@@ -456,6 +456,7 @@ namespace InstaMacBot
         {
             SendDmBot x = (SendDmBot)client.bots["send_dm"];
             string mess = x.get_message();
+            string link = x.get_link();
             using (message_form form2 = new message_form())
             {
                 if(mess != "")
@@ -463,13 +464,26 @@ namespace InstaMacBot
                     form2.set_message(mess);
                 }
 
+                if (link != "")
+                {
+                    form2.set_check_link(true);
+                    form2.set_link(link);
+                }
+
                 if (form2.ShowDialog() == DialogResult.OK)
                 {
                     x.set_message(form2.get_message());
+                    x.set_link(form2.get_link());
                     console_send_dm.write_on_console("message added");
                     button13.Enabled = true;
                 }
             }
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SendDmBot x = (SendDmBot)client.bots["send_dm"];
+            x.set_delay(int.Parse(comboBox6.SelectedItem.ToString()));
         }
     }
 }

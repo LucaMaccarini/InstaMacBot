@@ -33,6 +33,9 @@ namespace InstaMacBot.MacBotClient_classes
             this.tx_messaggio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.check_link = new System.Windows.Forms.CheckBox();
+            this.tx_link = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tx_messaggio
@@ -63,11 +66,42 @@ namespace InstaMacBot.MacBotClient_classes
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // check_link
+            // 
+            this.check_link.AutoSize = true;
+            this.check_link.Location = new System.Drawing.Point(318, 5);
+            this.check_link.Name = "check_link";
+            this.check_link.Size = new System.Drawing.Size(117, 17);
+            this.check_link.TabIndex = 3;
+            this.check_link.Text = "Add a link to send?";
+            this.check_link.UseVisualStyleBackColor = true;
+            this.check_link.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // tx_link
+            // 
+            this.tx_link.Enabled = false;
+            this.tx_link.Location = new System.Drawing.Point(347, 25);
+            this.tx_link.Name = "tx_link";
+            this.tx_link.Size = new System.Drawing.Size(238, 20);
+            this.tx_link.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(315, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "link:";
+            // 
             // message_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 447);
+            this.ClientSize = new System.Drawing.Size(597, 447);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tx_link);
+            this.Controls.Add(this.check_link);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tx_messaggio);
@@ -85,5 +119,8 @@ namespace InstaMacBot.MacBotClient_classes
         private System.Windows.Forms.TextBox tx_messaggio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox check_link;
+        private System.Windows.Forms.TextBox tx_link;
+        private System.Windows.Forms.Label label2;
     }
 }
