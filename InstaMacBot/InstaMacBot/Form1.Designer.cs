@@ -109,8 +109,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lb_id = new System.Windows.Forms.Label();
+            this.lb_account_id = new System.Windows.Forms.Label();
             this.tab_comandi.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -997,32 +996,22 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // label19
+            // lb_account_id
             // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label19.Location = new System.Drawing.Point(9, 529);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 13);
-            this.label19.TabIndex = 25;
-            this.label19.Text = "Client id:";
-            // 
-            // lb_id
-            // 
-            this.lb_id.AutoSize = true;
-            this.lb_id.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lb_id.Location = new System.Drawing.Point(57, 529);
-            this.lb_id.Name = "lb_id";
-            this.lb_id.Size = new System.Drawing.Size(0, 13);
-            this.lb_id.TabIndex = 26;
+            this.lb_account_id.AutoSize = true;
+            this.lb_account_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_account_id.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lb_account_id.Location = new System.Drawing.Point(9, 525);
+            this.lb_account_id.Name = "lb_account_id";
+            this.lb_account_id.Size = new System.Drawing.Size(0, 12);
+            this.lb_account_id.TabIndex = 25;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 548);
-            this.Controls.Add(this.lb_id);
-            this.Controls.Add(this.label19);
+            this.ClientSize = new System.Drawing.Size(888, 541);
+            this.Controls.Add(this.lb_account_id);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tab_comandi);
@@ -1040,7 +1029,7 @@
             this.Name = "Form1";
             this.Text = "InstaMacbot";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.tab_comandi.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1126,8 +1115,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lb_id;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button button8;
@@ -1150,6 +1137,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lb_account_id;
     }
 }
 

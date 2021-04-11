@@ -29,7 +29,7 @@ namespace InstaMacBot.classi_MacBotClient
 
 
         public int get_unfollow { get { return unfollow; } }
-        public UnfollowBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, int stop_fails_unfollow = 5, int delay = 40, bool skip_non_following = false) : base(tx_console)
+        public UnfollowBot(UserApi Utente, BotConsole tx_console = null, int stop_fails_search_user = 20, int stop_fails_unfollow = 5, int delay = 50, bool skip_non_following = false) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente must be != null");
             if (stop_fails_search_user <= 0) throw new ArgumentOutOfRangeException("stop_fails_search_user must be > 0");

@@ -29,8 +29,6 @@ namespace InstaMacBot
         BotConsole console_location;
         BotConsole console_send_dm;
 
-        bool client_enabled=false;
-        string id_client = "testing_version";
 
         public Form1()
         {
@@ -45,7 +43,12 @@ namespace InstaMacBot
                 MessageBox.Show("fill username and password", "invalid credentials");
                 return;
             }
+
+            
             utente = new UserApi(tx_username.Text, tx_password.Text);
+
+            
+
 
             string esito = await utente.loginAsync();
 
@@ -53,6 +56,11 @@ namespace InstaMacBot
 
             if (utente.is_logged)
             {
+                bool result = await procedure_verify_account_legit(tx_username.Text);
+                if (!result)
+                {
+                    Application.Exit();
+                }
                 //MessageBox.Show("loggato");
                 bt_login.Enabled = false;
                 bt_logout.Enabled = true;
@@ -85,7 +93,7 @@ namespace InstaMacBot
             }
             else
             {
-                MessageBox.Show("errore nel login: " + esito);
+                MessageBox.Show("login error: " + esito);
             }
         }
 
@@ -159,7 +167,8 @@ namespace InstaMacBot
       
         private void button5_Click(object sender, EventArgs e)
         {
-            client.bots["follow_like"].start();     
+            if(!client.bots["follow_like"].is_running)
+                client.bots["follow_like"].start();     
             
         }
 
@@ -202,13 +211,17 @@ namespace InstaMacBot
         {
             string s = await utente.logoutAsync();
             MessageBox.Show(s);
+            if (s == "logout")
+            {
 
-            bt_login.Enabled = true;
-            bt_logout.Enabled = false;
+                tx_username.Enabled = true;
+                bt_login.Enabled = true;
+                bt_logout.Enabled = false;
 
-            tab_comandi.Enabled = false;
-            tx_password.Enabled = false;
-            tx_password.ReadOnly = false;
+                tab_comandi.Enabled = false;
+                tx_password.Enabled = true;
+                tx_password.ReadOnly = false;
+            }
 
         }
 
@@ -230,14 +243,12 @@ namespace InstaMacBot
 
 
 
-        private void avvia_bot_unfollow()
-        {
-            client.bots["unfollow"].start();
-        }
+ 
  
         private void button6_Click(object sender, EventArgs e)
         {
-            avvia_bot_unfollow();
+            if(client.bots["unfollow"].is_running)
+                client.bots["unfollow"].start();
         }
 
        
@@ -347,31 +358,53 @@ namespace InstaMacBot
             x.save_on_file_extracted_list();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async Task<bool> procedure_verify_account_legit(string username)
         {
-            string urlAddress = "https://www.how2macca.altervista.org/fiver_check_client/index.php?id_client=" + id_client;
+
+            var utente_da_controllare = await utente.get_user_info(tx_username.Text);
+
+            if (!utente_da_controllare.Succeeded)
+            {
+                MessageBox.Show("user not found", "license error");
+                return false;
+            }
+
+            string urlAddress = "https://www.how2macca.altervista.org/fiver_check_client/index.php?id_account=" + utente_da_controllare.Value.Pk;
             string client_id_check_response = "";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-            if (response.StatusCode == HttpStatusCode.OK)
+            if (response.StatusCode != HttpStatusCode.OK)
             {
-                Stream receiveStream = response.GetResponseStream();
-                StreamReader readStream = null;
-
-                if (String.IsNullOrWhiteSpace(response.CharacterSet))
-                    readStream = new StreamReader(receiveStream);
-                else
-                    readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
-
-                client_id_check_response = readStream.ReadToEnd();
-
-                response.Close();
-                readStream.Close();
+                MessageBox.Show("user not found, can't make request", "license error");
+                return false;
             }
 
-            switch (client_id_check_response){
+            Stream receiveStream = response.GetResponseStream();
+            StreamReader readStream = null;
+
+            if (String.IsNullOrWhiteSpace(response.CharacterSet))
+                readStream = new StreamReader(receiveStream);
+            else
+                readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+
+            client_id_check_response = readStream.ReadToEnd();
+
+            response.Close();
+            readStream.Close();
+
+            if (client_id_check_response == "1")
+                return true;
+
+
+            lb_account_id.Text = utente_da_controllare.Value.Pk.ToString();
+
+            switch (client_id_check_response)
+            {
+                case "-2":
+                    MessageBox.Show("can't verify license", "License error");
+                    break;
                 case "-1":
                     MessageBox.Show("this license doesen't exist", "License error");
                     break;
@@ -379,18 +412,19 @@ namespace InstaMacBot
                 case "0":
                     MessageBox.Show("this license is not active (client time expired), contact lucamaccarini22@gmail.com to get another license", "License expired");
                     break;
-                case "1":
-                    client_enabled = true;
-                    break;
 
             }
 
-            if (!client_enabled)
-            {
-                Application.Exit();
-            }
+            return false;
+            
 
-            lb_id.Text = id_client;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+
+           
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -422,7 +456,7 @@ namespace InstaMacBot
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            if(client.bots["send_dm"].is_running)
             client.bots["send_dm"].start();
         }
 
@@ -484,6 +518,11 @@ namespace InstaMacBot
         {
             SendDmBot x = (SendDmBot)client.bots["send_dm"];
             x.set_delay(int.Parse(comboBox6.SelectedItem.ToString()));
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
