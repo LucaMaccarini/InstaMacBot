@@ -5,6 +5,9 @@ this project is composed by 2 parts:
 >- Set of c# classes to split api and bot logic with desktop client implementation
 >- Desktop client
 
+##Video about InstaMacBot
+https://www.youtube.com/watch?v=30x-tAKDVMQ
+
 
 ## 1) Main Classes
 
@@ -27,7 +30,7 @@ this project is composed by 2 parts:
   
  ## 2) Desktop Client
  - A basic client that uses these classes, (bot is in beta testing)
- - I am developing another client for android using these classes
+ - In the future I will develop a client for android that will use these classes to bring the bot to a mobile platform
     
  # Terms and Conditions
  use this bot at you own risk!
