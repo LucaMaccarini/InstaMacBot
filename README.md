@@ -19,8 +19,8 @@ https://www.youtube.com/watch?v=30x-tAKDVMQ
   >a startable or stoppable bot
   #### SSSBot (Abstract class, implemets StartStopBot):
   >rappresents a status bot or StartStopBot with status is_running
-  
-  >the other entities are classes that extend SSSbot: implement the bot behavior
+  >
+  the other entities are classes that extend SSSbot: implement the bot behavior
   
   ### Classes Diagram
   >(is an svg open in your browser for a better view)
