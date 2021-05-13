@@ -56,6 +56,11 @@ other files are files of InstagramApiSharp the api that my bot use (don't touch 
 
 # Bug or Bad choises
 - currently my classes open files only with openfiledialog, this method doesen't work on android same when bots saves them infos on files, i am searching an alternative
+- async stop of procedura_bot() small active wait if the bot is scheduled to stop in a short time
+
+# To do
+- better bots file management maybe with an xml saved for each user that uses ClientBot
+- like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android
 
 # Developer
 me :)
