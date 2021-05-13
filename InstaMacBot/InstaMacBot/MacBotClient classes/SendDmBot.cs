@@ -115,6 +115,15 @@ namespace InstaMacBot.MacBotClient_classes
             int search_fail = 0;
             dms = 0;
 
+            if (processing_accounts_list.Count == 0)
+            {
+                tx_console.write_on_console("no accounts loaded");
+                stop(false);
+                tx_console.write_on_console("bot ended");
+                return;
+            }
+
+
             if (message == "")
             {
                 tx_console.write_on_console("empty message");

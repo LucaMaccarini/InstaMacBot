@@ -35,7 +35,7 @@ namespace InstaMacBot
             InitializeComponent();
         }
 
-   
+        bool is_loggin=false;
         private async void bt_login_Click(object sender, EventArgs e)
         {
             if (tx_username.Text == "" || tx_password.Text=="")
@@ -44,7 +44,14 @@ namespace InstaMacBot
                 return;
             }
 
-            
+            if (is_loggin)
+            {
+                MessageBox.Show("you are already logging in");
+                return;
+            }
+
+            is_loggin = true;
+
             utente = new UserApi(tx_username.Text, tx_password.Text);
 
             
@@ -56,19 +63,15 @@ namespace InstaMacBot
 
             if (utente.is_logged)
             {
-                bool result = await procedure_verify_account_legit(tx_username.Text);
-                if (!result)
-                {
-                    Application.Exit();
-                }
+                tx_username.Enabled = false;
+                tx_password.Enabled = false;
+                
                 //MessageBox.Show("loggato");
                 bt_login.Enabled = false;
                 bt_logout.Enabled = true;
 
                 tab_comandi.Enabled = true;
-                tx_password.ReadOnly = true;
-                tx_password.Enabled = false;
-
+                
                 follow_like_console = new DesktopTextBoxConsole(tx_console);
                 unfollow_console = new DesktopTextBoxConsole(tx_console_unfollow);
                 extract_console = new DesktopTextBoxConsole(console_extract);
@@ -84,22 +87,27 @@ namespace InstaMacBot
                 SSSBot extract_from_location = new ExtractAccountsFromLocationBot(utente, tx_console: console_location);
                 SSSBot send_dm = new SendDmBot(utente, tx_console: console_send_dm);
 
+               
                 client.bots.Add("follow_like", follow_like);
                 client.bots.Add("unfollow", unfollow);
                 client.bots.Add("extract_from_user", extract_from_user);
                 client.bots.Add("extract_from_hastag", extract_from_hastag);
                 client.bots.Add("extract_from_location", extract_from_location);
                 client.bots.Add("send_dm", send_dm);
+                    
+               
             }
             else
             {
                 MessageBox.Show("login error: " + esito);
             }
+            is_loggin = false;
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
             
+
             ExtractFollowersBot x = (ExtractFollowersBot)client.bots["extract_from_user"];
             if (!x.is_running)
             {
@@ -165,9 +173,11 @@ namespace InstaMacBot
 
 
       
-        private void button5_Click(object sender, EventArgs e)
+        private async void button5_Click(object sender, EventArgs e)
         {
-            if(!client.bots["follow_like"].is_running)
+            
+
+            if (!client.bots["follow_like"].is_running)
                 client.bots["follow_like"].start();     
             
         }
@@ -185,19 +195,22 @@ namespace InstaMacBot
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            client.bots["follow_like"].stop(false);
-
-            int i = 0;
-            do
-            {
-                await wait(1);
-                i++;
-
-            } while (client.bots["follow_like"].is_running && i<5);
-
             if (client.bots["follow_like"].is_running)
             {
-                MessageBox.Show("couldn't stop bot: time out excedeed");
+                client.bots["follow_like"].stop(true);
+
+                int i = 0;
+                do
+                {
+                    await wait(1);
+                    i++;
+
+                } while (client.bots["follow_like"].is_running && i < 5);
+
+                if (client.bots["follow_like"].is_running)
+                {
+                    MessageBox.Show("couldn't stop bot: time out excedeed");
+                }
             }
             
            
@@ -211,16 +224,9 @@ namespace InstaMacBot
         {
             string s = await utente.logoutAsync();
             MessageBox.Show(s);
-            if (s == "logout")
+            if (s == "logged out")
             {
-
-                tx_username.Enabled = true;
-                bt_login.Enabled = true;
-                bt_logout.Enabled = false;
-
-                tab_comandi.Enabled = false;
-                tx_password.Enabled = true;
-                tx_password.ReadOnly = false;
+                Application.Exit();
             }
 
         }
@@ -245,9 +251,11 @@ namespace InstaMacBot
 
  
  
-        private void button6_Click(object sender, EventArgs e)
+        private async void button6_Click(object sender, EventArgs e)
         {
-            if(client.bots["unfollow"].is_running)
+            
+
+            if (!client.bots["unfollow"].is_running)
                 client.bots["unfollow"].start();
         }
 
@@ -255,19 +263,22 @@ namespace InstaMacBot
 
         private async void button5_Click_1(object sender, EventArgs e)
         {
-            client.bots["unfollow"].stop(false);
-
-            int i = 0;
-            do
-            {
-                await wait(1);
-                i++;
-
-            } while (client.bots["unfollow"].is_running && i < 5);
-
             if (client.bots["unfollow"].is_running)
             {
-                MessageBox.Show("couldn't stop bot: time out excedeed");
+                client.bots["unfollow"].stop(true);
+
+                int i = 0;
+                do
+                {
+                    await wait(1);
+                    i++;
+
+                } while (client.bots["unfollow"].is_running && i < 5);
+
+                if (client.bots["unfollow"].is_running)
+                {
+                    MessageBox.Show("couldn't stop bot: time out excedeed");
+                }
             }
         }
 
@@ -309,6 +320,9 @@ namespace InstaMacBot
 
         private async void button7_Click(object sender, EventArgs e)
         {
+
+           
+
             ExtractAccountsFromHastagBot x = (ExtractAccountsFromHastagBot)client.bots["extract_from_hastag"];
             if (!x.is_running)
             {
@@ -334,7 +348,8 @@ namespace InstaMacBot
 
         private async void button8_Click(object sender, EventArgs e)
         {
-            
+           
+
             ExtractAccountsFromLocationBot x = (ExtractAccountsFromLocationBot)client.bots["extract_from_location"];
             if (!x.is_running)
             {
@@ -358,67 +373,7 @@ namespace InstaMacBot
             x.save_on_file_extracted_list();
         }
 
-        private async Task<bool> procedure_verify_account_legit(string username)
-        {
 
-            var utente_da_controllare = await utente.get_user_info(tx_username.Text);
-
-            if (!utente_da_controllare.Succeeded)
-            {
-                MessageBox.Show("user not found", "license error");
-                return false;
-            }
-
-            string urlAddress = "https://www.how2macca.altervista.org/fiver_check_client/index.php?id_account=" + utente_da_controllare.Value.Pk;
-            string client_id_check_response = "";
-
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            if (response.StatusCode != HttpStatusCode.OK)
-            {
-                MessageBox.Show("user not found, can't make request", "license error");
-                return false;
-            }
-
-            Stream receiveStream = response.GetResponseStream();
-            StreamReader readStream = null;
-
-            if (String.IsNullOrWhiteSpace(response.CharacterSet))
-                readStream = new StreamReader(receiveStream);
-            else
-                readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
-
-            client_id_check_response = readStream.ReadToEnd();
-
-            response.Close();
-            readStream.Close();
-
-            if (client_id_check_response == "1")
-                return true;
-
-
-            lb_account_id.Text = utente_da_controllare.Value.Pk.ToString();
-
-            switch (client_id_check_response)
-            {
-                case "-2":
-                    MessageBox.Show("can't verify license", "License error");
-                    break;
-                case "-1":
-                    MessageBox.Show("this license doesen't exist", "License error");
-                    break;
-
-                case "0":
-                    MessageBox.Show("this license is not active (client time expired), contact lucamaccarini22@gmail.com to get another license", "License expired");
-                    break;
-
-            }
-
-            return false;
-            
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -454,27 +409,31 @@ namespace InstaMacBot
 
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private async void button13_Click(object sender, EventArgs e)
         {
-            if(client.bots["send_dm"].is_running)
+            
+            if (!client.bots["send_dm"].is_running)
             client.bots["send_dm"].start();
         }
 
         private async void button12_Click(object sender, EventArgs e)
         {
-            client.bots["send_dm"].stop(false);
-
-            int i = 0;
-            do
-            {
-                await wait(1);
-                i++;
-
-            } while (client.bots["send_dm"].is_running && i < 5);
-
             if (client.bots["send_dm"].is_running)
             {
-                MessageBox.Show("couldn't stop bot: time out excedeed");
+                client.bots["send_dm"].stop(false);
+
+                int i = 0;
+                do
+                {
+                    await wait(1);
+                    i++;
+
+                } while (client.bots["send_dm"].is_running && i < 5);
+
+                if (client.bots["send_dm"].is_running)
+                {
+                    MessageBox.Show("couldn't stop bot: time out excedeed");
+                }
             }
         }
 

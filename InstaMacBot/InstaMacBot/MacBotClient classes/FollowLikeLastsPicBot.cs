@@ -136,6 +136,15 @@ namespace InstaMacBot.classi_MacBotClient
 
         private async void procedura_bot()
         {
+            if (processing_accounts_list.Count == 0)
+            {
+                tx_console.write_on_console("no accounts loaded");
+                stop(false);
+                tx_console.write_on_console("bot ended");
+                return;
+            }
+
+
             int like_fail = 0;
             int follow_fail = 0;
             int search_fail = 0;
@@ -275,7 +284,10 @@ namespace InstaMacBot.classi_MacBotClient
             }
 
             tx_console.write_on_console("bot ended");
-            stop(true);
+            if (status)
+                stop(true);
+            else
+                stop(false);
         }
 
 

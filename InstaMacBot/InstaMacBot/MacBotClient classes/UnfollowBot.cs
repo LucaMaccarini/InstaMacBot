@@ -90,6 +90,14 @@ namespace InstaMacBot.classi_MacBotClient
 
         private async void bot_procedure()
         {
+            if (followed_list.Count == 0)
+            {
+                tx_console.write_on_console("no accounts followed loaded");
+                stop(false);
+                tx_console.write_on_console("bot ended");
+                return;
+            }
+
             error_unfollowed_list.Clear();
             unfollow = 0;
             int fails_search_user = 0;
@@ -176,7 +184,10 @@ namespace InstaMacBot.classi_MacBotClient
                 await wait(delay);
             }
             tx_console.write_on_console("bot ended");
-            stop(true);
+            if (status)
+                stop(true);
+            else
+                stop(false);
         }
 
 
@@ -274,7 +285,7 @@ namespace InstaMacBot.classi_MacBotClient
                             scrivi.WriteLine(followed_list[i]);
                         }
                     }
-                    tx_console.write_on_console("Accounts not procecced are saved in source file (path wrote up this line)");
+                    tx_console.write_on_console("Accounts not procecced are saved in source file (path wrote up this line; i just removed unfollowed once from account loaded file)");
                     tx_console.write_on_console(file_followed_accounts_path);
 
                 }

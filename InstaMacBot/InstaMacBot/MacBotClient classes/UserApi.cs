@@ -105,7 +105,7 @@ namespace InstaMacBot
 
             if (logoutRequest.Succeeded)
             {
-                return "logout";
+                return "logged out";
             }
             else
             {
@@ -186,15 +186,19 @@ namespace InstaMacBot
             return await api.UserProcessor.GetUserInfoByUsernameAsync(username);
         }
 
+        PaginationParameters limitazione = PaginationParameters.MaxPagesToLoad(230);
+
         public async Task<IResult<InstaUserShortList>> get_user_followers(string username)
         {
-            return await api.UserProcessor.GetUserFollowersAsync(username, PaginationParameters.Empty);
+            return await api.UserProcessor.GetUserFollowersAsync(username, limitazione);
         }
+
+
 
         public async Task<HashSet<string>> get_user_from_hastag(string hastag)
         {
             HashSet<string> output = new HashSet<string>();
-            IResult<InstaSectionMedia> request = await api.HashtagProcessor.GetRecentHashtagMediaListAsync(hastag, PaginationParameters.Empty);
+            IResult<InstaSectionMedia> request = await api.HashtagProcessor.GetRecentHashtagMediaListAsync(hastag, limitazione);
             if (request.Value != null)
             {
                 List<InstaMedia> list_media = request.Value.Medias;
@@ -216,7 +220,7 @@ namespace InstaMacBot
             {
                 return null;
             }
-            IResult<InstaSectionMedia> request = await api.LocationProcessor.GetRecentLocationFeedsAsync(x.Value.Pk, PaginationParameters.Empty);
+            IResult<InstaSectionMedia> request = await api.LocationProcessor.GetRecentLocationFeedsAsync(x.Value.Pk, limitazione);
             if (request.Value != null)
             {
                 List<InstaMedia> list_media = request.Value.Medias;
@@ -233,7 +237,7 @@ namespace InstaMacBot
         {
             HashSet<string> following = new HashSet<string>();
 
-            IResult<InstaUserShortList> x = await api.UserProcessor.GetCurrentUserFollowersAsync(PaginationParameters.Empty);
+            IResult<InstaUserShortList> x = await api.UserProcessor.GetUserFollowingAsync(user.UserName, PaginationParameters.Empty);
 
             for (int i = 0; i < x.Value.Count; i++)
             {
