@@ -39,7 +39,7 @@ https://www.youtube.com/watch?v=30x-tAKDVMQ
  # Legal
 This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by Instagram or any of its affiliates or subsidiaries. This is an independent and unofficial instagram bot
  
-# Installation
+# Installation (plug and play)
 just download and start:
 InstaMacBot.exe is in InstaMacBot/InstaMacBot/InstaMacBot/bin/Debug/
 - you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it. It is important to do not touch the files inside the folder!
