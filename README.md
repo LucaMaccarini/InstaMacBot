@@ -1,4 +1,4 @@
-# InstaMacBot
+# InstaMacBot ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/resources/Instagram_logo_2016.ico)
 c# classes + desktop client bot for istagram
 # Description
 this project is composed by 2 parts:
