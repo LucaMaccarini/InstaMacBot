@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=30x-tAKDVMQ
   >the other entities are classes that extend SSSbot: implement the bot behavior
   
   ### Classes Diagram
-  >(is an svg open in your browser for a better view)
+  (is an svg open in your browser for a better view)
   
   ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/documentation/Class%20Diagram.svg)
   
