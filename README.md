@@ -66,5 +66,5 @@ other files are files of InstagramApiSharp the api that my bot use (don't touch 
 - like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android
 
 # Developer
-me :)
+me :), my instagram is: https://www.instagram.com/iammacca_ dm me for questions
 
