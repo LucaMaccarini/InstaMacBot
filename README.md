@@ -7,6 +7,9 @@ this project is composed by 2 parts:
 - Set of c# classes to split api and bot logic with desktop client implementation
 - Desktop client
 
+## Video about this bot and his istallation
+![link](https://www.youtube.com/watch?v=2prio4o70BA)
+
 ## 1) Main Classes
 
   #### UserApi (Class): 
