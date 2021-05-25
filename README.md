@@ -61,7 +61,7 @@ other files are files of InstagramApiSharp the api that my bot use (don't touch 
 - perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
 
 # To do
-- better bots file management maybe with an xml saved for each user that uses ClientBot
+- better bots file management maybe removing all files and creating one json file for each account that uses the bot
 - like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android
 - 2 factors login
 
