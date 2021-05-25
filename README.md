@@ -65,6 +65,7 @@ other files are files of InstagramApiSharp the api that my bot use (don't touch 
 - better bots file management maybe removing all files and creating one json file for each account that uses the bot
 - like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android
 - 2 factors login
+- better interface
 
 # Developer
 me :), my instagram is: https://www.instagram.com/iammacca_/ dm me for questions
