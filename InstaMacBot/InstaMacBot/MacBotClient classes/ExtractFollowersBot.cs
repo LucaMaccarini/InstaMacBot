@@ -18,7 +18,6 @@ namespace InstaMacBot.classi_MacBotClient
 
         private string username;
         private List<string> extracted_list;
-        private bool stop_bot;
         private UserApi UtenteApi;
 
         public ExtractFollowersBot(UserApi Utente, BotConsole tx_console = null) : base(tx_console)
@@ -27,7 +26,6 @@ namespace InstaMacBot.classi_MacBotClient
 
             UtenteApi = Utente;
             extracted_list = new List<string>();
-            stop_bot = true;
             status = false;
         }
 
@@ -38,7 +36,6 @@ namespace InstaMacBot.classi_MacBotClient
 
             UtenteApi = Utente;
             extracted_list = new List<string>();
-            stop_bot = true;
             status = false;
             this.username = username;
         }
@@ -49,7 +46,6 @@ namespace InstaMacBot.classi_MacBotClient
         }
         public override void start()
         {
-            stop_bot = false;
             status = true;
             procedura_bot();
         }

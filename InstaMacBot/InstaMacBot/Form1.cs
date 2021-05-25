@@ -99,7 +99,7 @@ namespace InstaMacBot
             }
             else
             {
-                MessageBox.Show("login error: " + esito);
+                MessageBox.Show(esito, "login error");
             }
             is_loggin = false;
         }

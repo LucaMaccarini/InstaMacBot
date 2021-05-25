@@ -65,6 +65,8 @@ namespace InstaMacBot
             
 
             await api.SendRequestsBeforeLoginAsync();
+            await wait(5); //instagram charp api documentations waits 5 seconds i reduced to 3
+
 
             var loginRequest = await api.LoginAsync();
 
@@ -75,22 +77,18 @@ namespace InstaMacBot
             }
             else
             {
-                if(loginRequest.Value == InstaLoginResult.ChallengeRequired)
+
+                if (loginRequest.Value == InstaLoginResult.ChallengeRequired)
                 {
                     var challenge = await api.GetChallengeRequireVerifyMethodAsync();
+
                     if (challenge.Succeeded)
                     {
-                        do
-                        {
-                            MessageBox.Show("open instagram and click 'am i' on challenge request (if doesen't have challenge request on your instagram click ok and close bot)");
-                            await wait(5);
-                        } while (challenge.Value.SubmitPhoneRequired);
-
-                        logged = true;
-                        return "";
+                        return "instagram blocked bot access caused by an unusual phone (this bot) is connecting to your account, open instagram and allow this new phone after relogin with bot.\n(it may be necessary to do this procedure several time, if the problem persists after a few tries wait some hours or one day)";
                     }
-                    else
-                        return challenge.Info.Message;
+
+                    return challenge.Info.Message;
+
                 }
 
                 return loginRequest.Info.Message;

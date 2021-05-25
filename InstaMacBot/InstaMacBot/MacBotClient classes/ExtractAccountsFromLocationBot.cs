@@ -19,7 +19,6 @@ namespace InstaMacBot.MacBotClient_classes
 
         private string location;
         private List<string> extracted_list;
-        private bool stop_bot;
         private UserApi UtenteApi;
 
         public ExtractAccountsFromLocationBot(UserApi Utente, BotConsole tx_console = null) : base(tx_console)
@@ -28,7 +27,6 @@ namespace InstaMacBot.MacBotClient_classes
 
             UtenteApi = Utente;
             extracted_list = new List<string>();
-            stop_bot = true;
             status = false;
         }
 
@@ -39,7 +37,6 @@ namespace InstaMacBot.MacBotClient_classes
 
             UtenteApi = Utente;
             extracted_list = new List<string>();
-            stop_bot = true;
             status = false;
             this.location = location;
         }
@@ -50,7 +47,6 @@ namespace InstaMacBot.MacBotClient_classes
         }
         public override void start()
         {
-            stop_bot = false;
             status = true;
             procedura_bot();
         }
