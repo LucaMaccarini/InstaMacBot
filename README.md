@@ -8,7 +8,7 @@ this project is composed by 2 parts:
 - Desktop client
 
 ## Video about this bot and his istallation
-[clich here for see the video](https://www.youtube.com/watch?v=2prio4o70BA)
+[click here for see the video](https://www.youtube.com/watch?v=2prio4o70BA)
 
 ## 1) Main Classes
 
