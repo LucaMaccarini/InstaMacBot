@@ -7,9 +7,9 @@ this project is composed by 2 parts:
 - Set of c# classes to split api and bot logic with desktop client implementation
 - Desktop client
 
-## Video about InstaMacBot
-https://www.youtube.com/watch?v=30x-tAKDVMQ
-
+## Video about this bot and its istallation
+watch the video to understand how to use this bot since the management file is not very easy, but I promise to simplify it in the next versions
+[click here for see the video](https://www.youtube.com/watch?v=2prio4o70BA)
 
 ## 1) Main Classes
 
@@ -62,8 +62,10 @@ other files are files of InstagramApiSharp the api that my bot use (don't touch 
 - perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
 
 # To do
-- better bots file management maybe with an xml saved for each user that uses ClientBot
+- better bots file management maybe removing all files and creating one json file for each account that uses the bot
 - like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android
+- 2 factors login
+- better interface
 
 # Developer
 me :), my instagram is: https://www.instagram.com/iammacca_/ dm me for questions
