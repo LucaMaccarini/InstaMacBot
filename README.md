@@ -12,7 +12,7 @@ watch the video to understand how to use this bot since the management file is n
 [click here for see the video](https://www.youtube.com/watch?v=2prio4o70BA)
 
 # Note
-in a few days a new version will be released with a total graphic restyiling and a better file management
+in a few days a new version will be released with a total graphic restyling and a better file management
 
 ## 1) Main Classes
 
