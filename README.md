@@ -7,8 +7,8 @@ this project is composed by 2 parts:
 - Set of c# classes to split api and bot logic with desktop client implementation
 - Desktop client
 
-# note
-- in a few days a new version will be released with a total graphic restyiling and a better file management
+# Note
+in a few days a new version will be released with a total graphic restyiling and a better file management
 
 ## Video about this bot and its istallation
 watch the video to understand how to use this bot since the management file is not very easy, but I promise to simplify it in the next versions
