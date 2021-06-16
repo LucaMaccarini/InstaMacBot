@@ -56,37 +56,95 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MacBotClient classes\BotClient.cs" />
-    <Compile Include="MacBotClient classes\BotConsole.cs" />
-    <Compile Include="MacBotClient classes\DesktopTextBoxConsole.cs" />
-    <Compile Include="MacBotClient classes\ExtractAccountsFromHastagBot.cs" />
-    <Compile Include="MacBotClient classes\ExtractAccountsFromLocationBot.cs" />
-    <Compile Include="MacBotClient classes\ExtractFollowersBot.cs" />
-    <Compile Include="MacBotClient classes\FollowLikeLastsPicBot.cs" />
-    <Compile Include="MacBotClient classes\message_form.cs">
+    <Compile Include="MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs" />
+    <Compile Include="MacBotClient_classes\bot_files_management\interface_list_management\bot_file_list.cs" />
+    <Compile Include="Main_forms\Bot_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MacBotClient classes\message_form.Designer.cs">
-      <DependentUpon>message_form.cs</DependentUpon>
+    <Compile Include="Main_forms\Bot_Client.Designer.cs">
+      <DependentUpon>Bot_Client.cs</DependentUpon>
     </Compile>
-    <Compile Include="MacBotClient classes\SendDmBot.cs" />
-    <Compile Include="MacBotClient classes\SSSBot.cs" />
-    <Compile Include="MacBotClient classes\StartStopBot.cs" />
-    <Compile Include="MacBotClient classes\UnfollowBot.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Fill_Forms\follow_like_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Fill_Forms\follow_like_form.Designer.cs">
+      <DependentUpon>follow_like_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\BotClient.cs" />
+    <Compile Include="MacBotClient_classes\Bot_console\BotConsole.cs" />
+    <Compile Include="MacBotClient_classes\bot_files_management\Bots_file_saver\DesktopBotFileSaver.cs" />
+    <Compile Include="MacBotClient_classes\Bot_console\DesktopTextBoxConsole.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\bots\scraping\ExtractAccountsFromHastagBot.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\bots\scraping\ExtractAccountsFromLocationBot.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\bots\scraping\ExtractFollowersBot.cs" />
+    <Compile Include="MacBotClient_classes\bot_files_management\Bots_file_saver\BotFileSaver.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\bots\action_bots\SendDmBot.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\SSSBot.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\StartStopBot.cs" />
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\bots\action_bots\UnfollowBot.cs" />
+    <Compile Include="Fill_Forms\manage_lists_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\manage_lists_form.Designer.cs">
+      <DependentUpon>manage_lists_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MacBotClient classes\UserApi.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\UserApi.cs" />
+    <Compile Include="Fill_Forms\scrape_from_hastag_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\scrape_from_hastag_form.Designer.cs">
+      <DependentUpon>scrape_from_hastag_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_Forms\scrape_from_location_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\scrape_from_location_form.Designer.cs">
+      <DependentUpon>scrape_from_location_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_Forms\scrape_from_user_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\scrape_from_user_form.Designer.cs">
+      <DependentUpon>scrape_from_user_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_Forms\send_dm_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\send_dm_form.Designer.cs">
+      <DependentUpon>send_dm_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_Forms\settings_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\settings_form.Designer.cs">
+      <DependentUpon>settings_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fill_Forms\unfollow_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\unfollow_form.Designer.cs">
+      <DependentUpon>unfollow_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main_forms\Bot_Client.resx">
+      <DependentUpon>Bot_Client.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MacBotClient classes\message_form.resx">
-      <DependentUpon>message_form.cs</DependentUpon>
+    <EmbeddedResource Include="Fill_Forms\follow_like_form.resx">
+      <DependentUpon>follow_like_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_Forms\manage_lists_form.resx">
+      <DependentUpon>manage_lists_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +155,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Fill_Forms\scrape_from_hastag_form.resx">
+      <DependentUpon>scrape_from_hastag_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_Forms\scrape_from_location_form.resx">
+      <DependentUpon>scrape_from_location_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_Forms\scrape_from_user_form.resx">
+      <DependentUpon>scrape_from_user_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_Forms\send_dm_form.resx">
+      <DependentUpon>send_dm_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_Forms\settings_form.resx">
+      <DependentUpon>settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fill_Forms\unfollow_form.resx">
+      <DependentUpon>unfollow_form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -114,5 +190,6 @@
   <ItemGroup>
     <Content Include="Instagram_logo_2016.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
