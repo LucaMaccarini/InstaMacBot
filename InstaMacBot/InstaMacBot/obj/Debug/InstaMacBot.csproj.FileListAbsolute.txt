@@ -150,3 +150,4 @@ L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Deskto
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.send_dm_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.settings_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.unfollow_form.resources
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
