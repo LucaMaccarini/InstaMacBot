@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PLACEHOLDER </title>
+    <title>Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PLACEHOLDER ">
+    <meta name="title" content="Documentation ">
     <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,9 +67,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="placeholder">PLACEHOLDER</h1>
+<h1 id="documentation" sourcefile="api/index.md" sourcestartlinenumber="2" sourceendlinenumber="2">Documentation</h1>
 
-<h2 id="for-now-is-commented-only-the-instamacbbotclasses-the-logic-of-the-bot">for now is commented only the InstaMacbBot.classes (the logic of the bot)</h2>
+<h2 id="for-now-is-commented-only-the-instamacbbotclasses-the-logic-of-the-bot" sourcefile="api/index.md" sourcestartlinenumber="3" sourceendlinenumber="3">for now is commented only the InstaMacbBot.classes (the logic of the bot)</h2>
 </article>
           </div>
           

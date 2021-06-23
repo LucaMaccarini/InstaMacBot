@@ -60,7 +60,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "../../documentation/_site",
     "template": [
       "default"
     ]
