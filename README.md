@@ -25,9 +25,10 @@ this project is composed by 2 parts:
   >the other entities are classes that extend SSSbot: implement the bot behavior
   
   ### Classes Diagram
+  quick draft showing the main classes of the bot logic
   (is an svg open in your browser for a better view)
   
-  ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/documentation/Class%20Diagram.svg)
+  ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/documentation/quick%20class%20diagram.svg)
   
   
  ## 2) Desktop Client
