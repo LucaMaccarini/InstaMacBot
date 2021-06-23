@@ -48,7 +48,7 @@ just download and start:
 3) extract the zip
 4) now you have the bot folder, open the exefile inside it
 
-## attention
+## Attention
 - It is important to do not touch the files inside the folder!
 - to edit the project: download the source code zip and is just a c# project open the solution file with visual studio
 
