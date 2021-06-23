@@ -22,3 +22,4 @@ L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
