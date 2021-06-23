@@ -132,7 +132,6 @@ L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.pdb
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstagramApiSharp.dll
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
