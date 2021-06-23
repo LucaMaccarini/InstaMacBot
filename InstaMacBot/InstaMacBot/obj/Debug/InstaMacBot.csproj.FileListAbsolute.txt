@@ -1,153 +1,24 @@
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaSharper.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Desktop\luca\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\InstaSharper.dll
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\vari bot\bot di instagram\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\in sviluppo\InstaMacBot class\InstaMacBot\bin\Debug\InstagramApiSharp.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\bin\Debug\InstagramApiSharp.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstagramApiSharp.dll
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Documents\GitHub\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\bin\Debug\InstagramApiSharp.dll
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\InstagramApiSharp.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot class\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstagramApiSharp.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed testing\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.MacBotClient_classes.message_form.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Form1.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.MacBotClient_classes.message_form.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe.config
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.pdb
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstagramApiSharp.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lucam\Desktop\luca\bot di instagram\developed\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe.config
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.exe
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstaMacBot.pdb
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\BouncyCastle.Crypto.dll
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\InstagramApiSharp.dll
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.dll
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\BouncyCastle.Crypto.dll
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\BouncyCastle.Crypto.xml
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\bin\Debug\Newtonsoft.Json.xml
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.Bot_Client.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.follow_like_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.Login.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.manage_lists_form.resources
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.Properties.Resources.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.scrape_from_hastag_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.scrape_from_location_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.scrape_from_user_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.send_dm_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.settings_form.resources
 L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.DesktopInterface.unfollow_form.resources
-L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csprojAssemblyReference.cache
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.GenerateResource.cache
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CoreCompileInputs.cache
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.csproj.CopyComplete
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.exe
+L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\obj\Debug\InstaMacBot.pdb
