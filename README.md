@@ -8,9 +8,9 @@ the code that is downloaded by cloning the repository is in the testing phase an
 
 ### currently
 I am developing: 
-> new graphics of the bot (done)
-> management of the various files of the bot (done)
-> create the release 2.0
+- new graphics of the bot (done)
+- management of the various files of the bot (done)
+- create the release 2.0
 
 # Description
 this project is composed by 2 parts:
