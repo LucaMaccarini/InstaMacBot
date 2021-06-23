@@ -31,9 +31,7 @@ this project is composed by 2 parts:
   >the other entities are classes that extend SSSbot: implement the bot behavior
   
   ### Classes Diagram
-  quick draft showing the main classes of the bot logic
-  
-  (is an svg open in your browser for a better view)
+  quick draft showing the main classes of the bot logic (is an svg open in your browser for a better view)
   
   to see the details of the various classes and interfaces, look at the documentation
   
