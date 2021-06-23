@@ -52,12 +52,6 @@ Attention
 - It is important to do not touch the files inside the folder!
 - to edit the project: download the source code zip and is just a c# project open the solution file with visual studio
 
-# Usage
-inside debug folder you can see the exe file and some folders:
-
-all folders are client's bots folders where each bot can save its informarion or outputs for now bots saves informations on txt files cause is a beta after i will change method
-
-other files are files of InstagramApiSharp the api that my bot use (don't touch them)
 ## bots
 1) ScrapeAccountsFromHastagBot: used to extract accounts from an hastag (accounts that recently posted with the target hastag) 
 2) ScrapeAccountsFromLocation: used to extract accounts from an instagram place (accounts that recently posted with the target location)   
