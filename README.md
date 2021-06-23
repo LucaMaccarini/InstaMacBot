@@ -72,5 +72,13 @@ Attention
 - better interface
 
 # Developer
-me :), my instagram is: https://www.instagram.com/iammacca_/ dm me for questions
+me :)
+for questions or requests for the insertion of personalized bots or to commission paid jobs in creating instagram bots contact me
+
+# Contacts
+instagram: https://www.instagram.com/iammacca_/
+telegram: @Luca_macca
+mail: lucamaccarini22@gmail.com
+
+or open a new issue, and I will answer you
 
