@@ -132,7 +132,7 @@ namespace InstaMacBot.DesktopInterface
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(138, 8);
+            this.label2.Location = new System.Drawing.Point(176, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(377, 20);
             this.label2.TabIndex = 3;
@@ -144,9 +144,8 @@ namespace InstaMacBot.DesktopInterface
             this.tx_username.ForeColor = System.Drawing.Color.White;
             this.tx_username.Location = new System.Drawing.Point(7, 8);
             this.tx_username.Name = "tx_username";
-            this.tx_username.Size = new System.Drawing.Size(125, 22);
+            this.tx_username.Size = new System.Drawing.Size(163, 22);
             this.tx_username.TabIndex = 2;
-            this.tx_username.Text = "nonsolofioridimarco";
             // 
             // tabPage3
             // 
