@@ -80,7 +80,7 @@ instagram: https://www.instagram.com/iammacca_/
 
 telegram: @Luca_macca
 
-mail: lucamaccarini22@gmail.com
+email: lucamaccarini22@gmail.com
 
 or open a new issue, and I will answer you
 
