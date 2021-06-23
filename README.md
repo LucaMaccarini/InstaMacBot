@@ -45,9 +45,10 @@ This code is in no way affiliated with, authorized, maintained, sponsored or end
 just download and start:
 1) go to [release page](https://github.com/MaccariniLuca/InstaMacBot/releases)
 2) download the plug and play zip
-3) 3) extract the zip
+3) extract the zip
 4) now you have the bot folder, open the exefile inside it
 
+## attention
 - It is important to do not touch the files inside the folder!
 - to edit the project: download the source code zip and is just a c# project open the solution file with visual studio
 
