@@ -72,10 +72,10 @@ Attention
 - perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
 
 # To do
-- better bots file management maybe removing all files and creating one json file for each account that uses the bot
-- like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android
+- better bots file management (it will be done in release 2.0)
+- like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android (it will be done in release 2.0)
 - 2 factors login
-- better interface
+- better interface (it will be done in release 2.0)
 
 # Developer
 me :)
