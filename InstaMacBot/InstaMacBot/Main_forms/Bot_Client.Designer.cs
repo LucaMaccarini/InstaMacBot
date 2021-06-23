@@ -1,5 +1,5 @@
 ﻿
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
     partial class Bot_Client
     {
@@ -317,7 +317,7 @@ namespace InstaMacBot
             this.Controls.Add(this.pn_left);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(500, 300);
+            this.MinimumSize = new System.Drawing.Size(500, 298);
             this.Name = "Bot_Client";
             this.Padding = new System.Windows.Forms.Padding(8, 11, 9, 11);
             this.Text = "Bot Client";

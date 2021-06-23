@@ -1,24 +1,31 @@
-﻿using InstagramApiSharp.Classes;
-using InstagramApiSharp.Classes.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InstaMacBot.InstaMacBot
+namespace InstaMacBot.classes
 {
-    class ScrapeAccountsFromHastagBot : SSSBot
+    /// <summary>
+    /// <para>this class represents a screaper bot that extract all accounts that had recently posted a photo tagging a target hastag</para>
+    /// <para>objects of this class are mutable</para>
+    /// <para>scraped accounts limit to about 20k of accounts for safety</para>
+    /// </summary>
+    public class ScrapeAccountsFromHastagBot : SSSBot
     {
-        //OVERVIEW: this class represents a followers screaper bot that extract all followers it can from hastag
-        //          objects of this class are mutable
-
+        /// <summary>
+        /// hastag target where extract accounts of recents posts with that hastag
+        /// </summary>
         private string hastag;
+        /// <summary>
+        /// list that contains the list of scraped accounts username
+        /// </summary>
         private List<string> extracted_list;
+        /// <summary>
+        /// the user that bot is using the account to do all actions (in this bot is used to navigate inside the hastag recent posts)
+        /// </summary>
         private UserApi UtenteApi;
 
+        /// <param name="Utente">the user that bot is using the account to do all actions (in this bot is used to navigate inside the hastag recent posts)</param>
+        /// <param name="tx_console">the console where the bot will log its process</param>
         public ScrapeAccountsFromHastagBot(UserApi Utente, BotConsole tx_console = null) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente needs to be != null");
@@ -28,6 +35,9 @@ namespace InstaMacBot.InstaMacBot
             status = false;
         }
 
+        /// <param name="Utente">the user that bot is using the account to do all actions (in this bot is used to navigate inside the hastag recent posts)</param>
+        /// <param name="hastag">the target hastag</param>
+        /// <param name="tx_console">the console where the bot will log its process</param>
         public ScrapeAccountsFromHastagBot(UserApi Utente, string hastag, BotConsole tx_console = null) : base(tx_console)
         {
             if (Utente == null) throw new ArgumentNullException("utente must be != null");
@@ -39,37 +49,51 @@ namespace InstaMacBot.InstaMacBot
             this.hastag = hastag;
         }
 
+        /// <summary>
+        /// set the target hastag
+        /// </summary>
+        /// <param name="hastag">the hastag that is going to be set</param>
         public void set_hastag(string hastag)
         {
             this.hastag = hastag;
         }
+
+        /// <summary>
+        /// start the bot
+        /// </summary>
         public override void start()
         {
             status = true;
-            procedura_bot();
+            bot_procedure();
         }
 
-        public override void stop(bool save_infos=false)
+        /// <summary>
+        /// stop the bot: but this bot isn't stopable cause iss not possible stop the scraping routine (to make the hiierarchy easy scraping bots are son of sssbot and startStopBot but really isn't possible stop it)
+        /// </summary>
+        /// <param name="save_infos">not important his value cause this method is unless</param>
+        public override void stop(bool save_infos = false)
         {
             MessageBox.Show("non stoppable bot");
         }
 
-
-        private async void procedura_bot()
+        /// <summary>
+        /// the bot procedure, all bot actions are done here
+        /// </summary>
+        private async void bot_procedure()
         {
             extracted_list.Clear();
 
             console.write_on_console("Extracting followers, don't close bot");
             HashSet<string> followers = await UtenteApi.get_user_from_hastag(hastag);
 
-            if (followers.Count==0)
+            if (followers.Count == 0)
             {
                 console.write_on_console("can't find that hastag posts");
 
             }
             else
             {
-                foreach(string entry in followers)
+                foreach (string entry in followers)
                 {
                     extracted_list.Add(entry);
                 }
@@ -82,6 +106,9 @@ namespace InstaMacBot.InstaMacBot
 
         }
 
+        /// <summary>
+        /// clear the extracted_list: list of scraped usernames
+        /// </summary>
         public void clear_extracted_list()
         {
             extracted_list.Clear();
@@ -89,6 +116,10 @@ namespace InstaMacBot.InstaMacBot
         }
 
 
+        /// <summary>
+        /// save in a file the extracted_list on a file (one username each line)
+        /// </summary>
+        /// <param name="path_file_extension">path where save the extracted_list</param>
         public void save_on_file_extracted_list_bot_file_saver(string path_file_extension)
         {
             if (extracted_list.Count > 0)

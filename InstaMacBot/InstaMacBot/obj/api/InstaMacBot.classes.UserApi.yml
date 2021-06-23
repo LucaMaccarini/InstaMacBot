@@ -1,0 +1,1440 @@
+### YamlMime:ManagedReference
+items:
+- uid: InstaMacBot.classes.UserApi
+  commentId: T:InstaMacBot.classes.UserApi
+  id: UserApi
+  parent: InstaMacBot.classes
+  children:
+  - InstaMacBot.classes.UserApi.#ctor(System.String,System.String)
+  - InstaMacBot.classes.UserApi.follow(System.String)
+  - InstaMacBot.classes.UserApi.get_following
+  - InstaMacBot.classes.UserApi.get_user(System.String)
+  - InstaMacBot.classes.UserApi.get_user_followers(System.String)
+  - InstaMacBot.classes.UserApi.get_user_from_hastag(System.String)
+  - InstaMacBot.classes.UserApi.get_user_from_location(System.String)
+  - InstaMacBot.classes.UserApi.get_user_info(System.String)
+  - InstaMacBot.classes.UserApi.get_username
+  - InstaMacBot.classes.UserApi.is_logged
+  - InstaMacBot.classes.UserApi.lasts_media_id(System.String)
+  - InstaMacBot.classes.UserApi.loginAsync
+  - InstaMacBot.classes.UserApi.put_like(System.String)
+  - InstaMacBot.classes.UserApi.send_dm_text(System.String,System.String)
+  - InstaMacBot.classes.UserApi.unfollow(System.Int64)
+  langs:
+  - csharp
+  - vb
+  name: UserApi
+  nameWithType: UserApi
+  fullName: InstaMacBot.classes.UserApi
+  type: Class
+  source:
+    id: UserApi
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 18
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\n<p>this class represents the instagram user and contains the api taken from InstagramApiSharp (github project: https://github.com/ramtinak/InstagramApiSharp)</p>\n<p>to do all action on instagram</p>\n<p>the objects of this class are mutable</p>\n<p>check InstagramApiSharp wiki https://github.com/ramtinak/InstagramApiSharp/wiki to see all IResult used inside the functions</p>\n"
+  example: []
+  syntax:
+    content: public class UserApi
+    content.vb: Public Class UserApi
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: InstaMacBot.classes.UserApi.#ctor(System.String,System.String)
+  commentId: M:InstaMacBot.classes.UserApi.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: UserApi(String, String)
+  nameWithType: UserApi.UserApi(String, String)
+  fullName: InstaMacBot.classes.UserApi.UserApi(System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 27
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  example: []
+  syntax:
+    content: public UserApi(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+      description: username of the account that will login to instagram ant the bot will perform actions
+    - id: password
+      type: System.String
+      description: password of the account to login
+    content.vb: Public Sub New(username As String, password As String)
+  overload: InstaMacBot.classes.UserApi.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.get_username
+  commentId: M:InstaMacBot.classes.UserApi.get_username
+  id: get_username
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: get_username()
+  nameWithType: UserApi.get_username()
+  fullName: InstaMacBot.classes.UserApi.get_username()
+  type: Method
+  source:
+    id: get_username
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 49
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget the username of this: is the account associated to this (this object)\n"
+  example: []
+  syntax:
+    content: public string get_username()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function get_username As String
+  overload: InstaMacBot.classes.UserApi.get_username*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.is_logged
+  commentId: P:InstaMacBot.classes.UserApi.is_logged
+  id: is_logged
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: is_logged
+  nameWithType: UserApi.is_logged
+  fullName: InstaMacBot.classes.UserApi.is_logged
+  type: Property
+  source:
+    id: is_logged
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 77
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\ncheck if the account associated to this is logged\n"
+  example: []
+  syntax:
+    content: public bool is_logged { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: "\n<p>true if is logged</p>\n<p>false if isn&apos;t logged</p>\n"
+    content.vb: Public ReadOnly Property is_logged As Boolean
+  overload: InstaMacBot.classes.UserApi.is_logged*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: InstaMacBot.classes.UserApi.loginAsync
+  commentId: M:InstaMacBot.classes.UserApi.loginAsync
+  id: loginAsync
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: loginAsync()
+  nameWithType: UserApi.loginAsync()
+  fullName: InstaMacBot.classes.UserApi.loginAsync()
+  type: Method
+  source:
+    id: loginAsync
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 86
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nlogin inside the account associated to this\n"
+  example: []
+  syntax:
+    content: public async Task<string> loginAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: "\n<p>&quot;&quot; (empty string) if can login inside the account</p>\n<p>an error message if can&apos;t login in to the account</p>\n"
+    content.vb: Public Function loginAsync As Task(Of String)
+  overload: InstaMacBot.classes.UserApi.loginAsync*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.put_like(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.put_like(System.String)
+  id: put_like(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: put_like(String)
+  nameWithType: UserApi.put_like(String)
+  fullName: InstaMacBot.classes.UserApi.put_like(System.String)
+  type: Method
+  source:
+    id: put_like
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 155
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nleave a like on a media (with the account that this is logged) \n"
+  example: []
+  syntax:
+    content: public async Task<bool> put_like(string media_id)
+    parameters:
+    - id: media_id
+      type: System.String
+      description: the id if the media that this will leave like
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: "\n<p>true if the like was successfully placed</p>\n<p>false if the like wasn&apos;t successfully placed</p>\n"
+    content.vb: Public Function put_like(media_id As String) As Task(Of Boolean)
+  overload: InstaMacBot.classes.UserApi.put_like*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.follow(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.follow(System.String)
+  id: follow(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: follow(String)
+  nameWithType: UserApi.follow(String)
+  fullName: InstaMacBot.classes.UserApi.follow(System.String)
+  type: Method
+  source:
+    id: follow
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 181
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nfollow an account (with the account that this is logged) \n"
+  example: []
+  syntax:
+    content: public async Task<bool> follow(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: the username of the account that will be followed
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: "\n<p>true if the follow was successfully</p>\n<p>false if the follow wasn&apos;t successfully</p>\n"
+    content.vb: Public Function follow(username As String) As Task(Of Boolean)
+  overload: InstaMacBot.classes.UserApi.follow*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.unfollow(System.Int64)
+  commentId: M:InstaMacBot.classes.UserApi.unfollow(System.Int64)
+  id: unfollow(System.Int64)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: unfollow(Int64)
+  nameWithType: UserApi.unfollow(Int64)
+  fullName: InstaMacBot.classes.UserApi.unfollow(System.Int64)
+  type: Method
+  source:
+    id: unfollow
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 209
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nunfollow an account (with the account that this is logged) \n"
+  example: []
+  syntax:
+    content: public async Task<bool> unfollow(long user_id)
+    parameters:
+    - id: user_id
+      type: System.Int64
+      description: the id of the account that will be unfollowed
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: "\n<p>true if the unfollow was successfully</p>\n<p>false if the unfollow wasn&apos;t successfully</p>\n"
+    content.vb: Public Function unfollow(user_id As Long) As Task(Of Boolean)
+  overload: InstaMacBot.classes.UserApi.unfollow*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.lasts_media_id(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.lasts_media_id(System.String)
+  id: lasts_media_id(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: lasts_media_id(String)
+  nameWithType: UserApi.lasts_media_id(String)
+  fullName: InstaMacBot.classes.UserApi.lasts_media_id(System.String)
+  type: Method
+  source:
+    id: lasts_media_id
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 229
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nscrape a list of lasts media of an account\n"
+  example: []
+  syntax:
+    content: public async Task<IResult<InstaMediaList>> lasts_media_id(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: username of the account where scrape lasts media
+    return:
+      type: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaMediaList}}
+      description: a list of lasts media of an account
+    content.vb: Public Function lasts_media_id(username As String) As Task(Of IResult(Of InstaMediaList))
+  overload: InstaMacBot.classes.UserApi.lasts_media_id*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.get_user(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.get_user(System.String)
+  id: get_user(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: get_user(String)
+  nameWithType: UserApi.get_user(String)
+  fullName: InstaMacBot.classes.UserApi.get_user(System.String)
+  type: Method
+  source:
+    id: get_user
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 239
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget an instagram user\n"
+  example: []
+  syntax:
+    content: public async Task<IResult<InstaUser>> get_user(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: the username of the instagram user
+    return:
+      type: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUser}}
+      description: an instagram user
+    content.vb: Public Function get_user(username As String) As Task(Of IResult(Of InstaUser))
+  overload: InstaMacBot.classes.UserApi.get_user*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.get_user_info(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.get_user_info(System.String)
+  id: get_user_info(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: get_user_info(String)
+  nameWithType: UserApi.get_user_info(String)
+  fullName: InstaMacBot.classes.UserApi.get_user_info(System.String)
+  type: Method
+  source:
+    id: get_user_info
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 249
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget the infos of an instagram user\n"
+  example: []
+  syntax:
+    content: public async Task<IResult<InstaUserInfo>> get_user_info(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: the username of the instagram user
+    return:
+      type: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUserInfo}}
+      description: the infos of an instagram user
+    content.vb: Public Function get_user_info(username As String) As Task(Of IResult(Of InstaUserInfo))
+  overload: InstaMacBot.classes.UserApi.get_user_info*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.get_user_followers(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.get_user_followers(System.String)
+  id: get_user_followers(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: get_user_followers(String)
+  nameWithType: UserApi.get_user_followers(String)
+  fullName: InstaMacBot.classes.UserApi.get_user_followers(System.String)
+  type: Method
+  source:
+    id: get_user_followers
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 263
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget a list of account that are followers of a target account\n"
+  example: []
+  syntax:
+    content: public async Task<IResult<InstaUserShortList>> get_user_followers(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: the target account
+    return:
+      type: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUserShortList}}
+      description: ''
+    content.vb: Public Function get_user_followers(username As String) As Task(Of IResult(Of InstaUserShortList))
+  overload: InstaMacBot.classes.UserApi.get_user_followers*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.get_user_from_hastag(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.get_user_from_hastag(System.String)
+  id: get_user_from_hastag(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: get_user_from_hastag(String)
+  nameWithType: UserApi.get_user_from_hastag(String)
+  fullName: InstaMacBot.classes.UserApi.get_user_from_hastag(System.String)
+  type: Method
+  source:
+    id: get_user_from_hastag
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 274
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget a set of account username that have posted a photo recently with a target hastag\n"
+  example: []
+  syntax:
+    content: public async Task<HashSet<string>> get_user_from_hastag(string hastag)
+    parameters:
+    - id: hastag
+      type: System.String
+      description: the target hastag
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.HashSet{System.String}}
+      description: a set of account username that have posted a photo recently with the target hastag
+    content.vb: Public Function get_user_from_hastag(hastag As String) As Task(Of HashSet(Of String))
+  overload: InstaMacBot.classes.UserApi.get_user_from_hastag*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.get_user_from_location(System.String)
+  commentId: M:InstaMacBot.classes.UserApi.get_user_from_location(System.String)
+  id: get_user_from_location(System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: get_user_from_location(String)
+  nameWithType: UserApi.get_user_from_location(String)
+  fullName: InstaMacBot.classes.UserApi.get_user_from_location(System.String)
+  type: Method
+  source:
+    id: get_user_from_location
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 295
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget a set of account username that have posted a photo recently with a target location id\n"
+  example: []
+  syntax:
+    content: public async Task<HashSet<string>> get_user_from_location(string location_id)
+    parameters:
+    - id: location_id
+      type: System.String
+      description: the target location id
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.HashSet{System.String}}
+      description: a set of account username that have posted a photo recently with the target location id
+    content.vb: Public Function get_user_from_location(location_id As String) As Task(Of HashSet(Of String))
+  overload: InstaMacBot.classes.UserApi.get_user_from_location*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.get_following
+  commentId: M:InstaMacBot.classes.UserApi.get_following
+  id: get_following
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: get_following()
+  nameWithType: UserApi.get_following()
+  fullName: InstaMacBot.classes.UserApi.get_following()
+  type: Method
+  source:
+    id: get_following
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 322
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget a set of accounts username that this account (the account associated to this) is following\n"
+  example: []
+  syntax:
+    content: public async Task<HashSet<string>> get_following()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.HashSet{System.String}}
+      description: get a set of accounts username that this account is following
+    content.vb: Public Function get_following As Task(Of HashSet(Of String))
+  overload: InstaMacBot.classes.UserApi.get_following*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.UserApi.send_dm_text(System.String,System.String)
+  commentId: M:InstaMacBot.classes.UserApi.send_dm_text(System.String,System.String)
+  id: send_dm_text(System.String,System.String)
+  parent: InstaMacBot.classes.UserApi
+  langs:
+  - csharp
+  - vb
+  name: send_dm_text(String, String)
+  nameWithType: UserApi.send_dm_text(String, String)
+  fullName: InstaMacBot.classes.UserApi.send_dm_text(System.String, System.String)
+  type: Method
+  source:
+    id: send_dm_text
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\UserApi.cs
+    startLine: 345
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nthis account will send a dm to an account\n"
+  example: []
+  syntax:
+    content: public async Task<bool> send_dm_text(string message, string username_to_send)
+    parameters:
+    - id: message
+      type: System.String
+      description: the dm message
+    - id: username_to_send
+      type: System.String
+      description: the destinatary account username
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: "\n<p>true if the dm was sent</p>\n<p>false if the dm wasn&apos;t sent</p>\n"
+    content.vb: Public Function send_dm_text(message As String, username_to_send As String) As Task(Of Boolean)
+  overload: InstaMacBot.classes.UserApi.send_dm_text*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+references:
+- uid: InstaMacBot.classes
+  commentId: N:InstaMacBot.classes
+  name: InstaMacBot.classes
+  nameWithType: InstaMacBot.classes
+  fullName: InstaMacBot.classes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InstaMacBot.classes.UserApi.#ctor*
+  commentId: Overload:InstaMacBot.classes.UserApi.#ctor
+  name: UserApi
+  nameWithType: UserApi.UserApi
+  fullName: InstaMacBot.classes.UserApi.UserApi
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: InstaMacBot.classes.UserApi.get_username*
+  commentId: Overload:InstaMacBot.classes.UserApi.get_username
+  name: get_username
+  nameWithType: UserApi.get_username
+  fullName: InstaMacBot.classes.UserApi.get_username
+- uid: InstaMacBot.classes.UserApi.is_logged*
+  commentId: Overload:InstaMacBot.classes.UserApi.is_logged
+  name: is_logged
+  nameWithType: UserApi.is_logged
+  fullName: InstaMacBot.classes.UserApi.is_logged
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: InstaMacBot.classes.UserApi.loginAsync*
+  commentId: Overload:InstaMacBot.classes.UserApi.loginAsync
+  name: loginAsync
+  nameWithType: UserApi.loginAsync
+  fullName: InstaMacBot.classes.UserApi.loginAsync
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: System.Threading.Tasks.Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: InstaMacBot.classes.UserApi.put_like*
+  commentId: Overload:InstaMacBot.classes.UserApi.put_like
+  name: put_like
+  nameWithType: UserApi.put_like
+  fullName: InstaMacBot.classes.UserApi.put_like
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.UserApi.follow*
+  commentId: Overload:InstaMacBot.classes.UserApi.follow
+  name: follow
+  nameWithType: UserApi.follow
+  fullName: InstaMacBot.classes.UserApi.follow
+- uid: InstaMacBot.classes.UserApi.unfollow*
+  commentId: Overload:InstaMacBot.classes.UserApi.unfollow
+  name: unfollow
+  nameWithType: UserApi.unfollow
+  fullName: InstaMacBot.classes.UserApi.unfollow
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: InstaMacBot.classes.UserApi.lasts_media_id*
+  commentId: Overload:InstaMacBot.classes.UserApi.lasts_media_id
+  name: lasts_media_id
+  nameWithType: UserApi.lasts_media_id
+  fullName: InstaMacBot.classes.UserApi.lasts_media_id
+- uid: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaMediaList}}
+  commentId: T:System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaMediaList}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IResult<InstaMediaList>>
+  nameWithType: Task<IResult<InstaMediaList>>
+  fullName: System.Threading.Tasks.Task<InstagramApiSharp.Classes.IResult<InstagramApiSharp.Classes.Models.InstaMediaList>>
+  nameWithType.vb: Task(Of IResult(Of InstaMediaList))
+  fullName.vb: System.Threading.Tasks.Task(Of InstagramApiSharp.Classes.IResult(Of InstagramApiSharp.Classes.Models.InstaMediaList))
+  name.vb: Task(Of IResult(Of InstaMediaList))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.Models.InstaMediaList
+    name: InstaMediaList
+    nameWithType: InstaMediaList
+    fullName: InstagramApiSharp.Classes.Models.InstaMediaList
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.Models.InstaMediaList
+    name: InstaMediaList
+    nameWithType: InstaMediaList
+    fullName: InstagramApiSharp.Classes.Models.InstaMediaList
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.UserApi.get_user*
+  commentId: Overload:InstaMacBot.classes.UserApi.get_user
+  name: get_user
+  nameWithType: UserApi.get_user
+  fullName: InstaMacBot.classes.UserApi.get_user
+- uid: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUser}}
+  commentId: T:System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUser}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IResult<InstaUser>>
+  nameWithType: Task<IResult<InstaUser>>
+  fullName: System.Threading.Tasks.Task<InstagramApiSharp.Classes.IResult<InstagramApiSharp.Classes.Models.InstaUser>>
+  nameWithType.vb: Task(Of IResult(Of InstaUser))
+  fullName.vb: System.Threading.Tasks.Task(Of InstagramApiSharp.Classes.IResult(Of InstagramApiSharp.Classes.Models.InstaUser))
+  name.vb: Task(Of IResult(Of InstaUser))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.Models.InstaUser
+    name: InstaUser
+    nameWithType: InstaUser
+    fullName: InstagramApiSharp.Classes.Models.InstaUser
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.Models.InstaUser
+    name: InstaUser
+    nameWithType: InstaUser
+    fullName: InstagramApiSharp.Classes.Models.InstaUser
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.UserApi.get_user_info*
+  commentId: Overload:InstaMacBot.classes.UserApi.get_user_info
+  name: get_user_info
+  nameWithType: UserApi.get_user_info
+  fullName: InstaMacBot.classes.UserApi.get_user_info
+- uid: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUserInfo}}
+  commentId: T:System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUserInfo}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IResult<InstaUserInfo>>
+  nameWithType: Task<IResult<InstaUserInfo>>
+  fullName: System.Threading.Tasks.Task<InstagramApiSharp.Classes.IResult<InstagramApiSharp.Classes.Models.InstaUserInfo>>
+  nameWithType.vb: Task(Of IResult(Of InstaUserInfo))
+  fullName.vb: System.Threading.Tasks.Task(Of InstagramApiSharp.Classes.IResult(Of InstagramApiSharp.Classes.Models.InstaUserInfo))
+  name.vb: Task(Of IResult(Of InstaUserInfo))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.Models.InstaUserInfo
+    name: InstaUserInfo
+    nameWithType: InstaUserInfo
+    fullName: InstagramApiSharp.Classes.Models.InstaUserInfo
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.Models.InstaUserInfo
+    name: InstaUserInfo
+    nameWithType: InstaUserInfo
+    fullName: InstagramApiSharp.Classes.Models.InstaUserInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.UserApi.get_user_followers*
+  commentId: Overload:InstaMacBot.classes.UserApi.get_user_followers
+  name: get_user_followers
+  nameWithType: UserApi.get_user_followers
+  fullName: InstaMacBot.classes.UserApi.get_user_followers
+- uid: System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUserShortList}}
+  commentId: T:System.Threading.Tasks.Task{InstagramApiSharp.Classes.IResult{InstagramApiSharp.Classes.Models.InstaUserShortList}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IResult<InstaUserShortList>>
+  nameWithType: Task<IResult<InstaUserShortList>>
+  fullName: System.Threading.Tasks.Task<InstagramApiSharp.Classes.IResult<InstagramApiSharp.Classes.Models.InstaUserShortList>>
+  nameWithType.vb: Task(Of IResult(Of InstaUserShortList))
+  fullName.vb: System.Threading.Tasks.Task(Of InstagramApiSharp.Classes.IResult(Of InstagramApiSharp.Classes.Models.InstaUserShortList))
+  name.vb: Task(Of IResult(Of InstaUserShortList))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: InstagramApiSharp.Classes.Models.InstaUserShortList
+    name: InstaUserShortList
+    nameWithType: InstaUserShortList
+    fullName: InstagramApiSharp.Classes.Models.InstaUserShortList
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.IResult`1
+    name: IResult
+    nameWithType: IResult
+    fullName: InstagramApiSharp.Classes.IResult
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: InstagramApiSharp.Classes.Models.InstaUserShortList
+    name: InstaUserShortList
+    nameWithType: InstaUserShortList
+    fullName: InstagramApiSharp.Classes.Models.InstaUserShortList
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.UserApi.get_user_from_hastag*
+  commentId: Overload:InstaMacBot.classes.UserApi.get_user_from_hastag
+  name: get_user_from_hastag
+  nameWithType: UserApi.get_user_from_hastag
+  fullName: InstaMacBot.classes.UserApi.get_user_from_hastag
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.HashSet{System.String}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.HashSet{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<HashSet<String>>
+  nameWithType: Task<HashSet<String>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.HashSet<System.String>>
+  nameWithType.vb: Task(Of HashSet(Of String))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.HashSet(Of System.String))
+  name.vb: Task(Of HashSet(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.UserApi.get_user_from_location*
+  commentId: Overload:InstaMacBot.classes.UserApi.get_user_from_location
+  name: get_user_from_location
+  nameWithType: UserApi.get_user_from_location
+  fullName: InstaMacBot.classes.UserApi.get_user_from_location
+- uid: InstaMacBot.classes.UserApi.get_following*
+  commentId: Overload:InstaMacBot.classes.UserApi.get_following
+  name: get_following
+  nameWithType: UserApi.get_following
+  fullName: InstaMacBot.classes.UserApi.get_following
+- uid: InstaMacBot.classes.UserApi.send_dm_text*
+  commentId: Overload:InstaMacBot.classes.UserApi.send_dm_text
+  name: send_dm_text
+  nameWithType: UserApi.send_dm_text
+  fullName: InstaMacBot.classes.UserApi.send_dm_text

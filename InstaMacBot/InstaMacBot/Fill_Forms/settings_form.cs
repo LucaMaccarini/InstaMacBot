@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using InstaMacBot.classes;
 
 
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
     public partial class settings_form : Form
     {

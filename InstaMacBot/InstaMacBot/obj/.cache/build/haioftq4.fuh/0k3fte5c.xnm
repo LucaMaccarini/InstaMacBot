@@ -1,0 +1,38 @@
+
+<div id="sidetoggle">
+  <div>
+    <div class="sidefilter">
+      <form class="toc-filter">
+        <span class="glyphicon glyphicon-filter filter-icon"></span>
+        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
+        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+      </form>
+    </div>
+    <div class="sidetoc">
+      <div class="toc" id="toc">
+          
+          <ul class="nav level1">
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="InstaMacBot.html" name="" title="InstaMacBot">InstaMacBot</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="InstaMacBot.BotFileSaver.html" name="" title="BotFileSaver">BotFileSaver</a>
+                          </li>
+                          <li>
+                              <a href="InstaMacBot.DesktopBotFileSaver.html" name="" title="DesktopBotFileSaver">DesktopBotFileSaver</a>
+                          </li>
+                          <li>
+                              <a href="InstaMacBot.Login.html" name="" title="Login">Login</a>
+                          </li>
+                          <li>
+                              <a href="InstaMacBot.settings_form.html" name="" title="settings_form">settings_form</a>
+                          </li>
+                    </ul>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>

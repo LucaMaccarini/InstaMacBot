@@ -1,5 +1,5 @@
 ﻿
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
     partial class manage_lists_form
     {

@@ -1,17 +1,12 @@
-﻿using InstaMacBot.InstaMacBot;
+﻿using InstaMacBot.classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
-    partial class follow_like_form : Form
+    public partial class follow_like_form : Form
     {
         //instagram user of Bot_client form 
         UserApi utente;
@@ -40,7 +35,8 @@ namespace InstaMacBot
             path_bots_file = files.get_path();
 
             this.files = files;
-            listBox_files.DataSource = this.files.files_list;
+
+            this.files.set_listbox(listBox_files);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -59,9 +55,9 @@ namespace InstaMacBot
 
             console = new DesktopTextBoxConsole(tx_console);
 
-           
 
-            follow_like_bot = new FollowLikeLastsPicBot(utente, path_bots_file, tx_console: console, actions:actions_bot_ended);
+
+            follow_like_bot = new FollowLikeLastsPicBot(utente, path_bots_file, tx_console: console, actions: actions_bot_ended);
             bot_manager.bots.Add("follow_like", follow_like_bot);
         }
 
@@ -163,7 +159,7 @@ namespace InstaMacBot
                     MessageBox.Show("couldn't stop bot: time out excedeed");
                 }
                 else
-                {                    
+                {
                     actions_bot_ended();
                 }
             }
@@ -176,7 +172,7 @@ namespace InstaMacBot
 
         private void follow_like_form_Activated(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

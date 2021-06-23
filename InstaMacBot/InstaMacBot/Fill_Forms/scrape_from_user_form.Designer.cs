@@ -1,5 +1,5 @@
 ﻿
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
     partial class scrape_from_user_form
     {

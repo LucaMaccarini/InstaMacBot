@@ -1,0 +1,1044 @@
+### YamlMime:ManagedReference
+items:
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot
+  commentId: T:InstaMacBot.classes.FollowLikeLastsPicBot
+  id: FollowLikeLastsPicBot
+  parent: InstaMacBot.classes
+  children:
+  - InstaMacBot.classes.FollowLikeLastsPicBot.#ctor(InstaMacBot.classes.UserApi,System.String,InstaMacBot.classes.BotConsole,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Action)
+  - InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list
+  - InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts
+  - InstaMacBot.classes.FollowLikeLastsPicBot.get_follow
+  - InstaMacBot.classes.FollowLikeLastsPicBot.get_likes
+  - InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file
+  - InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file(System.String)
+  - InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver(System.String)
+  - InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver(System.String)
+  - InstaMacBot.classes.FollowLikeLastsPicBot.set_delay(System.Int32)
+  - InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts(System.Boolean)
+  - InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic(System.Int32)
+  - InstaMacBot.classes.FollowLikeLastsPicBot.start
+  - InstaMacBot.classes.FollowLikeLastsPicBot.stop(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: FollowLikeLastsPicBot
+  nameWithType: FollowLikeLastsPicBot
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot
+  type: Class
+  source:
+    id: FollowLikeLastsPicBot
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 15
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nthis class represents a follow, like lasts pics bot that works with a list of username\nfor each username on list: follow and like lasts pics\nobjects of this class are mutable\n"
+  example: []
+  syntax:
+    content: 'public class FollowLikeLastsPicBot : SSSBot, StartStopBot'
+    content.vb: >-
+      Public Class FollowLikeLastsPicBot
+          Inherits SSSBot
+          Implements StartStopBot
+  inheritance:
+  - System.Object
+  - InstaMacBot.classes.SSSBot
+  implements:
+  - InstaMacBot.classes.StartStopBot
+  inheritedMembers:
+  - InstaMacBot.classes.SSSBot.status
+  - InstaMacBot.classes.SSSBot.console
+  - InstaMacBot.classes.SSSBot.is_running
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts
+  commentId: P:InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts
+  id: get_account_pocessing_counts
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: get_account_pocessing_counts
+  nameWithType: FollowLikeLastsPicBot.get_account_pocessing_counts
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts
+  type: Property
+  source:
+    id: get_account_pocessing_counts
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 71
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget the number of accounts where the bot will work leaving likes and follow\n"
+  example: []
+  syntax:
+    content: public int get_account_pocessing_counts { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: the number of accounts inside processing_accounts_list
+    content.vb: Public ReadOnly Property get_account_pocessing_counts As Integer
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.get_likes
+  commentId: P:InstaMacBot.classes.FollowLikeLastsPicBot.get_likes
+  id: get_likes
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: get_likes
+  nameWithType: FollowLikeLastsPicBot.get_likes
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.get_likes
+  type: Property
+  source:
+    id: get_likes
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 77
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nfet the number of likes that the bot left\n"
+  example: []
+  syntax:
+    content: public int get_likes { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: the number of likes leaved by the bot
+    content.vb: Public ReadOnly Property get_likes As Integer
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.get_likes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.get_follow
+  commentId: P:InstaMacBot.classes.FollowLikeLastsPicBot.get_follow
+  id: get_follow
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: get_follow
+  nameWithType: FollowLikeLastsPicBot.get_follow
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.get_follow
+  type: Property
+  source:
+    id: get_follow
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 82
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nfet the number of follow that the bot left\n"
+  example: []
+  syntax:
+    content: public int get_follow { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property get_follow As Integer
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.get_follow*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.#ctor(InstaMacBot.classes.UserApi,System.String,InstaMacBot.classes.BotConsole,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Action)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.#ctor(InstaMacBot.classes.UserApi,System.String,InstaMacBot.classes.BotConsole,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Action)
+  id: '#ctor(InstaMacBot.classes.UserApi,System.String,InstaMacBot.classes.BotConsole,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Action)'
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: FollowLikeLastsPicBot(UserApi, String, BotConsole, Int32, Int32, Boolean, Int32, Int32, Int32, Action)
+  nameWithType: FollowLikeLastsPicBot.FollowLikeLastsPicBot(UserApi, String, BotConsole, Int32, Int32, Boolean, Int32, Int32, Int32, Action)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.FollowLikeLastsPicBot(InstaMacBot.classes.UserApi, System.String, InstaMacBot.classes.BotConsole, System.Int32, System.Int32, System.Boolean, System.Int32, System.Int32, System.Int32, System.Action)
+  type: Constructor
+  source:
+    id: .ctor
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 97
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  example: []
+  syntax:
+    content: public FollowLikeLastsPicBot(UserApi Utente, string path_bot_save_info, BotConsole tx_console = null, int stop_fails_search_user = 20, int like_lasts_pic = 1, bool follow_accounts = true, int stop_fails_like = 5, int stop_fails_follow = 5, int delay = 40, Action actions = null)
+    parameters:
+    - id: Utente
+      type: InstaMacBot.classes.UserApi
+      description: the UserApi object that rappresents the bot logged user (the account that will leave likes and follow)
+    - id: path_bot_save_info
+      type: System.String
+      description: 'path where bot will save all files about this userApi: ./Accounts/username'
+    - id: tx_console
+      type: InstaMacBot.classes.BotConsole
+      description: the console where the bot will log its process
+    - id: stop_fails_search_user
+      type: System.Int32
+      description: "\n<p>limit of fails when bot is serching an account with the username</p>\n<p>the search could fail for some causes: account disables, account banned, ..., instagram blocked the bot chause it is doint too many actions</p>\n"
+    - id: like_lasts_pic
+      type: System.Int32
+      description: numbers of recent post liked on each account inside processing_accounts_list
+    - id: follow_accounts
+      type: System.Boolean
+      description: if is true bot will not follow users inside processing_accounts_list
+    - id: stop_fails_like
+      type: System.Int32
+      description: limit of fails when bot is likeing a post, maybe instagram blocked like action
+    - id: stop_fails_follow
+      type: System.Int32
+      description: limit of fails when bot is following a post, maybe instagram blocked follow action
+    - id: delay
+      type: System.Int32
+      description: delay in seconds between each account in processing_accounts_list
+    - id: actions
+      type: System.Action
+      description: a procedure (void function) called when finish or stopped (used to control element inside the form)
+    content.vb: Public Sub New(Utente As UserApi, path_bot_save_info As String, tx_console As BotConsole = Nothing, stop_fails_search_user As Integer = 20, like_lasts_pic As Integer = 1, follow_accounts As Boolean = True, stop_fails_like As Integer = 5, stop_fails_follow As Integer = 5, delay As Integer = 40, actions As Action = Nothing)
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic(System.Int32)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic(System.Int32)
+  id: set_likes_last_pic(System.Int32)
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: set_likes_last_pic(Int32)
+  nameWithType: FollowLikeLastsPicBot.set_likes_last_pic(Int32)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic(System.Int32)
+  type: Method
+  source:
+    id: set_likes_last_pic
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 131
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nset how many recent posts the bot will leave like on each account inside processing_accounts_list\n"
+  example: []
+  syntax:
+    content: public bool set_likes_last_pic(int i)
+    parameters:
+    - id: i
+      type: System.Int32
+      description: "\n<p>true if the bot setted the new value of like_lasts_pic</p>\n<p>false if the bot didn&apos;t cange the value of like_lasts_pic</p>\n"
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function set_likes_last_pic(i As Integer) As Boolean
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts(System.Boolean)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts(System.Boolean)
+  id: set_follow_accounts(System.Boolean)
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: set_follow_accounts(Boolean)
+  nameWithType: FollowLikeLastsPicBot.set_follow_accounts(Boolean)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts(System.Boolean)
+  type: Method
+  source:
+    id: set_follow_accounts
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 148
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nset if bot will follow or no the users inside processing_accounts_list\n"
+  example: []
+  syntax:
+    content: public void set_follow_accounts(bool i)
+    parameters:
+    - id: i
+      type: System.Boolean
+      description: "\n<p>if true bot will follow</p>\n<p>else bot will not follow the accounts</p>\n"
+    content.vb: Public Sub set_follow_accounts(i As Boolean)
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.set_delay(System.Int32)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.set_delay(System.Int32)
+  id: set_delay(System.Int32)
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: set_delay(Int32)
+  nameWithType: FollowLikeLastsPicBot.set_delay(Int32)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.set_delay(System.Int32)
+  type: Method
+  source:
+    id: set_delay
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 161
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nset the delay between each account inside processing_accounts_list\n"
+  example: []
+  syntax:
+    content: public bool set_delay(int i)
+    parameters:
+    - id: i
+      type: System.Int32
+      description: 'seconds of delay i>=30 '
+    return:
+      type: System.Boolean
+      description: "\n<p>true if the delay is setted</p>\n<p>false if the delay is not setted: i less than 30</p>\n"
+    content.vb: Public Function set_delay(i As Integer) As Boolean
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.set_delay*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.start
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.start
+  id: start
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: start()
+  nameWithType: FollowLikeLastsPicBot.start()
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.start()
+  type: Method
+  source:
+    id: start
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 174
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nstart the bot\n"
+  example: []
+  syntax:
+    content: public override void start()
+    content.vb: Public Overrides Sub start
+  overridden: InstaMacBot.classes.SSSBot.start
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.start*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.stop(System.Boolean)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.stop(System.Boolean)
+  id: stop(System.Boolean)
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: stop(Boolean)
+  nameWithType: FollowLikeLastsPicBot.stop(Boolean)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.stop(System.Boolean)
+  type: Method
+  source:
+    id: stop
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 187
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nstop the bot\n"
+  example: []
+  syntax:
+    content: public override void stop(bool save_infos)
+    parameters:
+    - id: save_infos
+      type: System.Boolean
+      description: "\n<p>if true bot will save all infos in files inside path_bot_save_info folder</p>\n<p>it saves the remaining accounts inside processing_accounts_list and followed_list inside 2 different files</p>\n"
+    content.vb: Public Overrides Sub stop(save_infos As Boolean)
+  overridden: InstaMacBot.classes.SSSBot.stop(System.Boolean)
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.stop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list
+  id: clear_processing_accounts_list
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: clear_processing_accounts_list()
+  nameWithType: FollowLikeLastsPicBot.clear_processing_accounts_list()
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list()
+  type: Method
+  source:
+    id: clear_processing_accounts_list
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 385
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nclear the processing_accounts_list\n"
+  example: []
+  syntax:
+    content: public void clear_processing_accounts_list()
+    content.vb: Public Sub clear_processing_accounts_list
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file
+  id: load_list_from_file
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: load_list_from_file()
+  nameWithType: FollowLikeLastsPicBot.load_list_from_file()
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file()
+  type: Method
+  source:
+    id: load_list_from_file
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 394
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nload usernames inside processing_accounts_list from a txt using an open file dialog (one username on each line)\n"
+  example: []
+  syntax:
+    content: public void load_list_from_file()
+    content.vb: Public Sub load_list_from_file
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file(System.String)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file(System.String)
+  id: load_list_from_file(System.String)
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: load_list_from_file(String)
+  nameWithType: FollowLikeLastsPicBot.load_list_from_file(String)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file(System.String)
+  type: Method
+  source:
+    id: load_list_from_file
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 426
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nload usernames inside processing_accounts_list from a txt (one username on each line)\n"
+  example: []
+  syntax:
+    content: public void load_list_from_file(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: path of the txt file where are written all usernames where the bot will operate leaving likes and follows
+    content.vb: Public Sub load_list_from_file(path As String)
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver(System.String)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver(System.String)
+  id: save_on_file_accounts_not_proccessed_list_bot_file_saver(System.String)
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: save_on_file_accounts_not_proccessed_list_bot_file_saver(String)
+  nameWithType: FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver(String)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver(System.String)
+  type: Method
+  source:
+    id: save_on_file_accounts_not_proccessed_list_bot_file_saver
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 452
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nsave on file all accounts not processed by the bot, the remining accounts inside the processing_accounts_list\n"
+  example: []
+  syntax:
+    content: public void save_on_file_accounts_not_proccessed_list_bot_file_saver(string path_account)
+    parameters:
+    - id: path_account
+      type: System.String
+      description: "\n<p>path where are saved all bots files of the user logged in the bot (userapi)</p>\n<p>tipically: ./Accounts/username/left accounts (follow like bot).txt</p>\n"
+    content.vb: Public Sub save_on_file_accounts_not_proccessed_list_bot_file_saver(path_account As String)
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver(System.String)
+  commentId: M:InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver(System.String)
+  id: save_on_file_accounts_followed_list_bot_file_saver(System.String)
+  parent: InstaMacBot.classes.FollowLikeLastsPicBot
+  langs:
+  - csharp
+  - vb
+  name: save_on_file_accounts_followed_list_bot_file_saver(String)
+  nameWithType: FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver(String)
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver(System.String)
+  type: Method
+  source:
+    id: save_on_file_accounts_followed_list_bot_file_saver
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\bots\action_bots\FollowLikeLastsPicBot.cs
+    startLine: 467
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nsave on file all accounts followed by the bot\n"
+  example: []
+  syntax:
+    content: public void save_on_file_accounts_followed_list_bot_file_saver(string path_account)
+    parameters:
+    - id: path_account
+      type: System.String
+      description: "\n<p>path where are saved all bots files of the user logged in the bot (userapi)</p>\n<p>tipically ./Accounts/username/followed (follow like bot).txt</p>\n"
+    content.vb: Public Sub save_on_file_accounts_followed_list_bot_file_saver(path_account As String)
+  overload: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: InstaMacBot.classes
+  commentId: N:InstaMacBot.classes
+  name: InstaMacBot.classes
+  nameWithType: InstaMacBot.classes
+  fullName: InstaMacBot.classes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: InstaMacBot.classes.SSSBot
+  commentId: T:InstaMacBot.classes.SSSBot
+  parent: InstaMacBot.classes
+  name: SSSBot
+  nameWithType: SSSBot
+  fullName: InstaMacBot.classes.SSSBot
+- uid: InstaMacBot.classes.StartStopBot
+  commentId: T:InstaMacBot.classes.StartStopBot
+  parent: InstaMacBot.classes
+  name: StartStopBot
+  nameWithType: StartStopBot
+  fullName: InstaMacBot.classes.StartStopBot
+- uid: InstaMacBot.classes.SSSBot.status
+  commentId: F:InstaMacBot.classes.SSSBot.status
+  parent: InstaMacBot.classes.SSSBot
+  name: status
+  nameWithType: SSSBot.status
+  fullName: InstaMacBot.classes.SSSBot.status
+- uid: InstaMacBot.classes.SSSBot.console
+  commentId: F:InstaMacBot.classes.SSSBot.console
+  parent: InstaMacBot.classes.SSSBot
+  name: console
+  nameWithType: SSSBot.console
+  fullName: InstaMacBot.classes.SSSBot.console
+- uid: InstaMacBot.classes.SSSBot.is_running
+  commentId: P:InstaMacBot.classes.SSSBot.is_running
+  parent: InstaMacBot.classes.SSSBot
+  name: is_running
+  nameWithType: SSSBot.is_running
+  fullName: InstaMacBot.classes.SSSBot.is_running
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts
+  name: get_account_pocessing_counts
+  nameWithType: FollowLikeLastsPicBot.get_account_pocessing_counts
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.get_account_pocessing_counts
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.get_likes*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.get_likes
+  name: get_likes
+  nameWithType: FollowLikeLastsPicBot.get_likes
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.get_likes
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.get_follow*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.get_follow
+  name: get_follow
+  nameWithType: FollowLikeLastsPicBot.get_follow
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.get_follow
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.#ctor*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.#ctor
+  name: FollowLikeLastsPicBot
+  nameWithType: FollowLikeLastsPicBot.FollowLikeLastsPicBot
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.FollowLikeLastsPicBot
+- uid: InstaMacBot.classes.UserApi
+  commentId: T:InstaMacBot.classes.UserApi
+  parent: InstaMacBot.classes
+  name: UserApi
+  nameWithType: UserApi
+  fullName: InstaMacBot.classes.UserApi
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: InstaMacBot.classes.BotConsole
+  commentId: T:InstaMacBot.classes.BotConsole
+  parent: InstaMacBot.classes
+  name: BotConsole
+  nameWithType: BotConsole
+  fullName: InstaMacBot.classes.BotConsole
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic
+  name: set_likes_last_pic
+  nameWithType: FollowLikeLastsPicBot.set_likes_last_pic
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.set_likes_last_pic
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts
+  name: set_follow_accounts
+  nameWithType: FollowLikeLastsPicBot.set_follow_accounts
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.set_follow_accounts
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.set_delay*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.set_delay
+  name: set_delay
+  nameWithType: FollowLikeLastsPicBot.set_delay
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.set_delay
+- uid: InstaMacBot.classes.SSSBot.start
+  commentId: M:InstaMacBot.classes.SSSBot.start
+  parent: InstaMacBot.classes.SSSBot
+  name: start()
+  nameWithType: SSSBot.start()
+  fullName: InstaMacBot.classes.SSSBot.start()
+  spec.csharp:
+  - uid: InstaMacBot.classes.SSSBot.start
+    name: start
+    nameWithType: SSSBot.start
+    fullName: InstaMacBot.classes.SSSBot.start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: InstaMacBot.classes.SSSBot.start
+    name: start
+    nameWithType: SSSBot.start
+    fullName: InstaMacBot.classes.SSSBot.start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.start*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.start
+  name: start
+  nameWithType: FollowLikeLastsPicBot.start
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.start
+- uid: InstaMacBot.classes.SSSBot.stop(System.Boolean)
+  commentId: M:InstaMacBot.classes.SSSBot.stop(System.Boolean)
+  parent: InstaMacBot.classes.SSSBot
+  isExternal: true
+  name: stop(Boolean)
+  nameWithType: SSSBot.stop(Boolean)
+  fullName: InstaMacBot.classes.SSSBot.stop(System.Boolean)
+  spec.csharp:
+  - uid: InstaMacBot.classes.SSSBot.stop(System.Boolean)
+    name: stop
+    nameWithType: SSSBot.stop
+    fullName: InstaMacBot.classes.SSSBot.stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: InstaMacBot.classes.SSSBot.stop(System.Boolean)
+    name: stop
+    nameWithType: SSSBot.stop
+    fullName: InstaMacBot.classes.SSSBot.stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.stop*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.stop
+  name: stop
+  nameWithType: FollowLikeLastsPicBot.stop
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.stop
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list
+  name: clear_processing_accounts_list
+  nameWithType: FollowLikeLastsPicBot.clear_processing_accounts_list
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.clear_processing_accounts_list
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file
+  name: load_list_from_file
+  nameWithType: FollowLikeLastsPicBot.load_list_from_file
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.load_list_from_file
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver
+  name: save_on_file_accounts_not_proccessed_list_bot_file_saver
+  nameWithType: FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_not_proccessed_list_bot_file_saver
+- uid: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver*
+  commentId: Overload:InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver
+  name: save_on_file_accounts_followed_list_bot_file_saver
+  nameWithType: FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver
+  fullName: InstaMacBot.classes.FollowLikeLastsPicBot.save_on_file_accounts_followed_list_bot_file_saver

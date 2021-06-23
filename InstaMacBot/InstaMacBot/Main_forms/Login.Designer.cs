@@ -1,5 +1,5 @@
 ﻿
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
     partial class Login
     {
@@ -187,7 +187,6 @@ namespace InstaMacBot
             this.tx_login_password.PasswordChar = '●';
             this.tx_login_password.Size = new System.Drawing.Size(251, 23);
             this.tx_login_password.TabIndex = 6;
-            this.tx_login_password.Text = "Masserini1";
             // 
             // label2
             // 
@@ -212,7 +211,6 @@ namespace InstaMacBot
             this.tx_login_username.Name = "tx_login_username";
             this.tx_login_username.Size = new System.Drawing.Size(251, 23);
             this.tx_login_username.TabIndex = 4;
-            this.tx_login_username.Text = "4b6470fdfd";
             // 
             // Login
             // 

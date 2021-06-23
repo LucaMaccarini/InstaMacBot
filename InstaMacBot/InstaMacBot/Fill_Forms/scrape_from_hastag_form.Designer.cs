@@ -1,5 +1,5 @@
 ﻿
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
     partial class scrape_from_hastag_form
     {

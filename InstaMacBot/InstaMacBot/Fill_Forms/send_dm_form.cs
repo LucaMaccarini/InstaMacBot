@@ -1,17 +1,12 @@
-﻿using InstaMacBot.InstaMacBot;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InstaMacBot.classes;
 
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
-    partial class send_dm_form : Form
+    public partial class send_dm_form : Form
     {
         //instagram user of Bot_client form 
         UserApi utente;
@@ -40,7 +35,7 @@ namespace InstaMacBot
             path_bots_file = files.get_path();
 
             this.files = files;
-            listBox_files.DataSource = this.files.files_list;
+            this.files.set_listbox(listBox_files);
         }
 
         private void send_dm_form_Load(object sender, EventArgs e)

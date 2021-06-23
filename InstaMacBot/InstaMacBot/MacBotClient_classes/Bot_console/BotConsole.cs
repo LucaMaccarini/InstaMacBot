@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InstaMacBot.InstaMacBot
+﻿namespace InstaMacBot.classes
 {
-    interface BotConsole
+    /// <summary>
+    /// this interface rappresents a console where is possible write in
+    /// </summary>
+    public interface BotConsole
     {
-        //OVERVIEW: this interface rappresents a console where is possible write on
+        /// <summary>
+        /// write a string on the console
+        /// </summary>
+        /// <param name="output" >a string that will be write on the console</param>
         void write_on_console(string output);
     }
 }

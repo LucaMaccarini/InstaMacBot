@@ -1,17 +1,12 @@
-﻿using InstaMacBot.InstaMacBot;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InstaMacBot.classes;
 
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
-    partial class scrape_from_user_form : Form
+    public partial class scrape_from_user_form : Form
     {
         //instagram user of Bot_client form 
         UserApi utente;
@@ -74,7 +69,7 @@ namespace InstaMacBot
         private async Task<bool> wait(int seconds)
         {
             int i = 0;
-            while (i < seconds*2 && extract_from_user.is_running)
+            while (i < seconds * 2 && extract_from_user.is_running)
             {
                 await Task.Delay(500);
                 i++;
@@ -103,11 +98,11 @@ namespace InstaMacBot
 
                 } while (x.is_running);
 
-                
+
 
             }
 
-            
+
             x.save_on_file_extracted_list_bot_file_saver(path_bots_file + "/Scraped accounts from followers.txt");
 
             pn_status.BackColor = Color.FromArgb(196, 45, 45);
@@ -117,6 +112,6 @@ namespace InstaMacBot
 
         }
 
-       
+
     }
 }

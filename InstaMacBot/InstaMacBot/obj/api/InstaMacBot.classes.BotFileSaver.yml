@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: InstaMacBot.classes.BotFileSaver
+  commentId: T:InstaMacBot.classes.BotFileSaver
+  id: BotFileSaver
+  parent: InstaMacBot.classes
+  children:
+  - InstaMacBot.classes.BotFileSaver.write_list_on_file(System.Collections.Generic.List{System.String})
+  - InstaMacBot.classes.BotFileSaver.write_on_file(System.String)
+  langs:
+  - csharp
+  - vb
+  name: BotFileSaver
+  nameWithType: BotFileSaver
+  fullName: InstaMacBot.classes.BotFileSaver
+  type: Interface
+  source:
+    id: BotFileSaver
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\Bots_file_saver\BotFileSaver.cs
+    startLine: 7
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nthis interface rapresents an entity able to save a list of strings or only a string row in a file\n"
+  example: []
+  syntax:
+    content: public interface BotFileSaver
+    content.vb: Public Interface BotFileSaver
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: InstaMacBot.classes.BotFileSaver.write_on_file(System.String)
+  commentId: M:InstaMacBot.classes.BotFileSaver.write_on_file(System.String)
+  id: write_on_file(System.String)
+  parent: InstaMacBot.classes.BotFileSaver
+  langs:
+  - csharp
+  - vb
+  name: write_on_file(String)
+  nameWithType: BotFileSaver.write_on_file(String)
+  fullName: InstaMacBot.classes.BotFileSaver.write_on_file(System.String)
+  type: Method
+  source:
+    id: write_on_file
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\Bots_file_saver\BotFileSaver.cs
+    startLine: 13
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nsave a row of text in a file\n"
+  example: []
+  syntax:
+    content: void write_on_file(string row_text)
+    parameters:
+    - id: row_text
+      type: System.String
+      description: string that will saved in the file
+    content.vb: Sub write_on_file(row_text As String)
+  overload: InstaMacBot.classes.BotFileSaver.write_on_file*
+- uid: InstaMacBot.classes.BotFileSaver.write_list_on_file(System.Collections.Generic.List{System.String})
+  commentId: M:InstaMacBot.classes.BotFileSaver.write_list_on_file(System.Collections.Generic.List{System.String})
+  id: write_list_on_file(System.Collections.Generic.List{System.String})
+  parent: InstaMacBot.classes.BotFileSaver
+  langs:
+  - csharp
+  - vb
+  name: write_list_on_file(List<String>)
+  nameWithType: BotFileSaver.write_list_on_file(List<String>)
+  fullName: InstaMacBot.classes.BotFileSaver.write_list_on_file(System.Collections.Generic.List<System.String>)
+  type: Method
+  source:
+    id: write_list_on_file
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\Bots_file_saver\BotFileSaver.cs
+    startLine: 18
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nsave a list of strings in a file\n"
+  example: []
+  syntax:
+    content: void write_list_on_file(List<string> list_text)
+    parameters:
+    - id: list_text
+      type: System.Collections.Generic.List{System.String}
+      description: list of strings that will saved in the file (one item fo each line)
+    content.vb: Sub write_list_on_file(list_text As List(Of String))
+  overload: InstaMacBot.classes.BotFileSaver.write_list_on_file*
+  nameWithType.vb: BotFileSaver.write_list_on_file(List(Of String))
+  fullName.vb: InstaMacBot.classes.BotFileSaver.write_list_on_file(System.Collections.Generic.List(Of System.String))
+  name.vb: write_list_on_file(List(Of String))
+references:
+- uid: InstaMacBot.classes
+  commentId: N:InstaMacBot.classes
+  name: InstaMacBot.classes
+  nameWithType: InstaMacBot.classes
+  fullName: InstaMacBot.classes
+- uid: InstaMacBot.classes.BotFileSaver.write_on_file*
+  commentId: Overload:InstaMacBot.classes.BotFileSaver.write_on_file
+  name: write_on_file
+  nameWithType: BotFileSaver.write_on_file
+  fullName: InstaMacBot.classes.BotFileSaver.write_on_file
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InstaMacBot.classes.BotFileSaver.write_list_on_file*
+  commentId: Overload:InstaMacBot.classes.BotFileSaver.write_list_on_file
+  name: write_list_on_file
+  nameWithType: BotFileSaver.write_list_on_file
+  fullName: InstaMacBot.classes.BotFileSaver.write_list_on_file
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

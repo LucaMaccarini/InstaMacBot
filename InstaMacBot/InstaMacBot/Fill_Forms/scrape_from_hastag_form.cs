@@ -1,17 +1,12 @@
-﻿using InstaMacBot.InstaMacBot;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InstaMacBot.classes;
 
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
-    partial class scrape_from_hastag_form : Form
+    public partial class scrape_from_hastag_form : Form
     {
         //instagram user of Bot_client form 
         UserApi utente;
@@ -92,7 +87,7 @@ namespace InstaMacBot
                 x.set_hastag(tx_hastag.Text);
                 console.write_on_console("extract process can take some times (more recent posts on this hastag more time)");
                 x.start();
-                
+
                 do
                 {
                     console.write_on_console("wait extracting...");

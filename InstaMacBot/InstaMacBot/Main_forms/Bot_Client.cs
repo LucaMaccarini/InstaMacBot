@@ -1,19 +1,16 @@
-﻿using InstaMacBot.InstaMacBot;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace InstaMacBot
+using InstaMacBot.classes;
+namespace InstaMacBot.DesktopInterface
 {
-    partial class Bot_Client : Form
+
+    public partial class Bot_Client : Form
     {
+        /// <summary>
+        /// main form
+        /// </summary>
+
         //all forms of bots
         Form manage_lists;
         Form settings;
@@ -35,10 +32,10 @@ namespace InstaMacBot
 
         bot_file_list file_list;
 
-        public Bot_Client(UserApi _utente,  string _path_save_infos)
+        public Bot_Client(UserApi _utente, string _path_save_infos)
         {
             InitializeComponent();
-            
+
             string username = _utente.get_username();
 
             lb_username.Text = username;
@@ -48,14 +45,14 @@ namespace InstaMacBot
 
             file_list = new bot_file_list("./Accounts/" + username);
 
-           
+
         }
 
 
 
 
         //code for good lock ui
-        Button selected_bot_button=null;
+        Button selected_bot_button = null;
         private void select_bot(Button button_clicked)
         {
             if (selected_bot_button == null)
@@ -118,8 +115,8 @@ namespace InstaMacBot
 
         private void bt_manage_lists_Click(object sender, EventArgs e)
         {
-             select_bot(((Button)sender));
-             open_fill_form(manage_lists);
+            select_bot(((Button)sender));
+            open_fill_form(manage_lists);
 
 
         }
@@ -177,15 +174,15 @@ namespace InstaMacBot
 
         private void Bot_Client_ResizeBegin(object sender, EventArgs e)
         {
-          // SuspendLayout();
-           
-          
+            // SuspendLayout();
+
+
         }
 
         private void Bot_Client_ResizeEnd(object sender, EventArgs e)
         {
             //ResumeLayout();
-          
+
         }
 
 
@@ -208,6 +205,6 @@ namespace InstaMacBot
             }
         }
 
-      
+
     }
 }

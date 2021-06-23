@@ -1,17 +1,12 @@
-﻿using InstaMacBot.InstaMacBot;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InstaMacBot.classes;
 
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
-    partial class unfollow_form : Form
+    public partial class unfollow_form : Form
     {
         //instagram user of Bot_client form 
         UserApi utente;
@@ -40,7 +35,7 @@ namespace InstaMacBot
             path_bots_file = files.get_path();
 
             this.files = files;
-            listBox_files.DataSource = this.files.files_list;
+            this.files.set_listbox(listBox_files);
         }
 
         private void unfollow_form_Load(object sender, EventArgs e)
@@ -90,7 +85,7 @@ namespace InstaMacBot
                 return;
             }
 
-            
+
             ((UnfollowBot)unfollow_bot).load_followed_accounts(((bot_file_entry_list)listBox_files.Items[listBox_files.SelectedIndex]).get_path());
             bt_start_unfollow_bot.Enabled = false;
             pn_status.BackColor = Color.FromArgb(42, 150, 72);

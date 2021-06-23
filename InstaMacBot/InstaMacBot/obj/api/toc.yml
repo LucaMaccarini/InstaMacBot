@@ -1,0 +1,59 @@
+### YamlMime:TableOfContent
+- uid: InstaMacBot.classes
+  name: InstaMacBot.classes
+  items:
+  - uid: InstaMacBot.classes.bot_file_entry_list
+    name: bot_file_entry_list
+  - uid: InstaMacBot.classes.bot_file_list
+    name: bot_file_list
+  - uid: InstaMacBot.classes.BotClient
+    name: BotClient
+  - uid: InstaMacBot.classes.BotConsole
+    name: BotConsole
+  - uid: InstaMacBot.classes.BotFileSaver
+    name: BotFileSaver
+  - uid: InstaMacBot.classes.DesktopBotFileSaver
+    name: DesktopBotFileSaver
+  - uid: InstaMacBot.classes.DesktopTextBoxConsole
+    name: DesktopTextBoxConsole
+  - uid: InstaMacBot.classes.FollowLikeLastsPicBot
+    name: FollowLikeLastsPicBot
+  - uid: InstaMacBot.classes.ScrapeAccountsFromHastagBot
+    name: ScrapeAccountsFromHastagBot
+  - uid: InstaMacBot.classes.ScrapeAccountsFromLocationBot
+    name: ScrapeAccountsFromLocationBot
+  - uid: InstaMacBot.classes.ScrapeFollowersBot
+    name: ScrapeFollowersBot
+  - uid: InstaMacBot.classes.SendDmBot
+    name: SendDmBot
+  - uid: InstaMacBot.classes.SSSBot
+    name: SSSBot
+  - uid: InstaMacBot.classes.StartStopBot
+    name: StartStopBot
+  - uid: InstaMacBot.classes.UnfollowBot
+    name: UnfollowBot
+  - uid: InstaMacBot.classes.UserApi
+    name: UserApi
+- uid: InstaMacBot.DesktopInterface
+  name: InstaMacBot.DesktopInterface
+  items:
+  - uid: InstaMacBot.DesktopInterface.Bot_Client
+    name: Bot_Client
+  - uid: InstaMacBot.DesktopInterface.follow_like_form
+    name: follow_like_form
+  - uid: InstaMacBot.DesktopInterface.Login
+    name: Login
+  - uid: InstaMacBot.DesktopInterface.manage_lists_form
+    name: manage_lists_form
+  - uid: InstaMacBot.DesktopInterface.scrape_from_hastag_form
+    name: scrape_from_hastag_form
+  - uid: InstaMacBot.DesktopInterface.scrape_from_location_form
+    name: scrape_from_location_form
+  - uid: InstaMacBot.DesktopInterface.scrape_from_user_form
+    name: scrape_from_user_form
+  - uid: InstaMacBot.DesktopInterface.send_dm_form
+    name: send_dm_form
+  - uid: InstaMacBot.DesktopInterface.settings_form
+    name: settings_form
+  - uid: InstaMacBot.DesktopInterface.unfollow_form
+    name: unfollow_form

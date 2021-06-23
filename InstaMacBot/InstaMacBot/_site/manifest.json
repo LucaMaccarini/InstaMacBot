@@ -1,0 +1,480 @@
+{
+  "homepages": [],
+  "source_base_path": "L:/disco/github/InstaMacBot/InstaMacBot/InstaMacBot",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "5zY6Xz6hYX7k9qGQceYELdTm5fzEGdV7jT2vDKuppbg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "BBU1uIQMUwpOSGApPARE6wPFAQWvbN7M0F3IkGqjHYg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Instagram_logo_2016.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/Instagram_logo_2016.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "/on70Kv3F8oy45Px9n2vRUcefbIVOktlWef50thj9iQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.Bot_Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.Bot_Client.html",
+          "hash": "C/QEt9gYChQL1rhVt8FIsk20PaUBlgBcFQlP4D78Sqs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.Login.html",
+          "hash": "rjLul7YU17zpSgTGfQ4Q2UIAJPg94gNOV2TZe/E80lo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.follow_like_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.follow_like_form.html",
+          "hash": "WYJczffI1y1d4y4aBUsszShbNzo8d/0mvWhr0cFuxe4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.manage_lists_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.manage_lists_form.html",
+          "hash": "ywTzRw6QFah4d3KiYrP6Ext0mEVnLKJqlOAfBEaGo/A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.scrape_from_hastag_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.scrape_from_hastag_form.html",
+          "hash": "4jQx8p7NQOaczUA9zWaGs81X77Vv5I9mCA0XbuS39Fc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.scrape_from_location_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.scrape_from_location_form.html",
+          "hash": "ZO02v2a/wcPoxai2iu2fGdzRouqYrjMJm3h3ZGDBiwA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.scrape_from_user_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.scrape_from_user_form.html",
+          "hash": "GX8WWvsL/TFqasUizS3ec7Tj1OCfBe0R480moY3UA1M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.send_dm_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.send_dm_form.html",
+          "hash": "dD6i+oeW8ghuhctgf1SNDkvtPrgwwTGploi9YV5e5Z4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.settings_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.settings_form.html",
+          "hash": "bJChOyy9/z48UzHqEaoOiFFfgVEaDz5y9PFiG5fy250="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.unfollow_form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.unfollow_form.html",
+          "hash": "OI3fgoopZRWfRFEtoAqkLsxSkPPndmRCGXAzuVKRXL4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.DesktopInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.DesktopInterface.html",
+          "hash": "HIzihz06Q4DJcjvP9qQJn6AGeLtfy8sS6wqyTRpOMvc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.BotClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.BotClient.html",
+          "hash": "t9tIH3SLq0pTg/e4obzKHgBWyur90CaXx7DeIbb8hdE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.BotConsole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.BotConsole.html",
+          "hash": "4V0sOhsfjBNMF/QJDKykd089pmJYyWT0GV38ACngD64="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.BotFileSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.BotFileSaver.html",
+          "hash": "8Gay4egt90zwoiIy+TE3YJ/eQGHiOuYxuAQ8FJbn6lg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.DesktopBotFileSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.DesktopBotFileSaver.html",
+          "hash": "nQYRMkuTcVFwC6BRSUWEabew9+xDzty+5+d3Fy6uRS8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.DesktopTextBoxConsole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.DesktopTextBoxConsole.html",
+          "hash": "3Yq1NAgzKsO53jWiytscglZDDqpA3uJMoWc8yc6ym0Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.FollowLikeLastsPicBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.FollowLikeLastsPicBot.html",
+          "hash": "9xOjzbprTmOzhxyfPcqtazZXMUO3g3ihxXYFPWPBqT4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.SSSBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.SSSBot.html",
+          "hash": "wHrVxh1m3uYql/G/b1rmJyMuYVtGMpv1/EKNTaowwPU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.ScrapeAccountsFromHastagBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.ScrapeAccountsFromHastagBot.html",
+          "hash": "CoxPC+pVF/rDvhaD4TO7mvPWu+DD8P8dvb/JWMlr0PY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.ScrapeAccountsFromLocationBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.ScrapeAccountsFromLocationBot.html",
+          "hash": "p3WV22J7/GgPPGHTUMvPm5IsuzUxSYHims037mN06bQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.ScrapeFollowersBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.ScrapeFollowersBot.html",
+          "hash": "hv5/ldDk4F8IVZUuH53S44HGwJviUm8qArM7wo0kd6U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.SendDmBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.SendDmBot.html",
+          "hash": "/suIinQnOGskRTEtmPAn+vNfPPAVHV/y7iNIEv/s4Z4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.StartStopBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.StartStopBot.html",
+          "hash": "WlWZd685siwAxucnpjlUlilpaJNDoEfLohaHfs8SULQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.UnfollowBot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.UnfollowBot.html",
+          "hash": "Wdr+mopbfyGX/m+Agp71/m+0mU+JGClXp9k8m/81Ukw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.UserApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.UserApi.html",
+          "hash": "7yBDO92OkCkCVJ0YSAhSwwXpn4JL55wBaBEGRS0OzPc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.bot_file_entry_list.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.bot_file_entry_list.html",
+          "hash": "abZCrsA0pY3A+4qs+GAu3A3yM7mpK4cBAfUyJPUZNDs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.bot_file_list.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.bot_file_list.html",
+          "hash": "x8JwXEHqScVkkXbXoD1f6XsZu3yPNUwjABeXodHm3Vg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/InstaMacBot.classes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InstaMacBot.classes.html",
+          "hash": "/comglPn+9h5TQYUH9HpblLc1XwvCisxPM79kHrPK/M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "km/X9UTqviB+xb4gUw0tkR4hRbkVHv9U6+URej8Zv48="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ras5uwrzmqFBPke121S5eFZpPvtFGqvUD1xew1b2rlU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 2
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 28,
+          "skipped_file_count": 28
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

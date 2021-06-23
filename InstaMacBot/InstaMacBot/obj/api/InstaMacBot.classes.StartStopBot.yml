@@ -1,0 +1,115 @@
+### YamlMime:ManagedReference
+items:
+- uid: InstaMacBot.classes.StartStopBot
+  commentId: T:InstaMacBot.classes.StartStopBot
+  id: StartStopBot
+  parent: InstaMacBot.classes
+  children:
+  - InstaMacBot.classes.StartStopBot.start
+  - InstaMacBot.classes.StartStopBot.stop(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: StartStopBot
+  nameWithType: StartStopBot
+  fullName: InstaMacBot.classes.StartStopBot
+  type: Interface
+  source:
+    id: StartStopBot
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\StartStopBot.cs
+    startLine: 5
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nthis interface define a start stop bot -> a bot that is possible start or stop itself\n"
+  example: []
+  syntax:
+    content: public interface StartStopBot
+    content.vb: Public Interface StartStopBot
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: InstaMacBot.classes.StartStopBot.start
+  commentId: M:InstaMacBot.classes.StartStopBot.start
+  id: start
+  parent: InstaMacBot.classes.StartStopBot
+  langs:
+  - csharp
+  - vb
+  name: start()
+  nameWithType: StartStopBot.start()
+  fullName: InstaMacBot.classes.StartStopBot.start()
+  type: Method
+  source:
+    id: start
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\StartStopBot.cs
+    startLine: 10
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nstart the bot\n"
+  example: []
+  syntax:
+    content: void start()
+    content.vb: Sub start
+  overload: InstaMacBot.classes.StartStopBot.start*
+- uid: InstaMacBot.classes.StartStopBot.stop(System.Boolean)
+  commentId: M:InstaMacBot.classes.StartStopBot.stop(System.Boolean)
+  id: stop(System.Boolean)
+  parent: InstaMacBot.classes.StartStopBot
+  langs:
+  - csharp
+  - vb
+  name: stop(Boolean)
+  nameWithType: StartStopBot.stop(Boolean)
+  fullName: InstaMacBot.classes.StartStopBot.stop(System.Boolean)
+  type: Method
+  source:
+    id: stop
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\Bots_hierarchy\StartStopBot.cs
+    startLine: 19
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nstop the bot\n"
+  example: []
+  syntax:
+    content: void stop(bool save_infos)
+    parameters:
+    - id: save_infos
+      type: System.Boolean
+      description: "\n<p>if true when bot stops it saves it&apos;s infos on files</p>\n<p>else nothing: just stop</p>\n"
+    content.vb: Sub stop(save_infos As Boolean)
+  overload: InstaMacBot.classes.StartStopBot.stop*
+references:
+- uid: InstaMacBot.classes
+  commentId: N:InstaMacBot.classes
+  name: InstaMacBot.classes
+  nameWithType: InstaMacBot.classes
+  fullName: InstaMacBot.classes
+- uid: InstaMacBot.classes.StartStopBot.start*
+  commentId: Overload:InstaMacBot.classes.StartStopBot.start
+  name: start
+  nameWithType: StartStopBot.start
+  fullName: InstaMacBot.classes.StartStopBot.start
+- uid: InstaMacBot.classes.StartStopBot.stop*
+  commentId: Overload:InstaMacBot.classes.StartStopBot.stop
+  name: stop
+  nameWithType: StartStopBot.stop
+  fullName: InstaMacBot.classes.StartStopBot.stop
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,18 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace InstaMacBot.InstaMacBot
+namespace InstaMacBot.classes
 {
-    class bot_file_list
+    /// <summary>
+    /// <para>the object of this class rapresents a list of bot_file_entry_list 
+    /// used to store all bot files of the user that is using the bot client and display the list inside a lisatbox</para>
+    /// <para>objects of this class are mutable</para>
+    /// </summary>
+    public class bot_file_list
     {
-        public BindingList<bot_file_entry_list> files_list;
-        string path;
 
+        /// <summary>
+        /// the bot_file_entry_list list used to store all bot files of the user
+        /// </summary>
+        private BindingList<bot_file_entry_list> files_list;
+        /// <summary>
+        /// path of directory thet contains all files of the user tipically ./Accounts/instagram_username
+        /// </summary>
+        private string path;
+
+
+        /// <summary>
+        /// <para>if path_account directory doesent exist will be created</para>
+        /// <para>else populate the files_list with all files inside path</para>
+        /// </summary>
+        /// <param name="path_account"><para>path of directory thet contains all files of the user logged in the bot (userapi) tipically</para>
+        /// <para>./Accounts/instagram_username</para></param>
         public bot_file_list(string path_account)
         {
             files_list = new BindingList<bot_file_entry_list>();
@@ -26,11 +41,20 @@ namespace InstaMacBot.InstaMacBot
             }
         }
 
+        public void set_listbox(ListBox x)
+        {
+            x.DataSource = files_list;
+        }
+       
+        /// <returns>the path of user directory where are stored all bots files of the user</returns>
         public string get_path()
         {
             return path;
         }
 
+        /// <summary>
+        /// check all files inside path and refresh files_list adding new files and removing missing onces
+        /// </summary>
         public void refresh_files_list()
         {
             if (files_list.Count > 0)

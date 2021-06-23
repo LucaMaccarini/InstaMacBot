@@ -1,0 +1,534 @@
+### YamlMime:ManagedReference
+items:
+- uid: InstaMacBot.classes.bot_file_entry_list
+  commentId: T:InstaMacBot.classes.bot_file_entry_list
+  id: bot_file_entry_list
+  parent: InstaMacBot.classes
+  children:
+  - InstaMacBot.classes.bot_file_entry_list.#ctor(System.String,System.String)
+  - InstaMacBot.classes.bot_file_entry_list.get_name
+  - InstaMacBot.classes.bot_file_entry_list.get_path
+  - InstaMacBot.classes.bot_file_entry_list.remove
+  - InstaMacBot.classes.bot_file_entry_list.ToString
+  langs:
+  - csharp
+  - vb
+  name: bot_file_entry_list
+  nameWithType: bot_file_entry_list
+  fullName: InstaMacBot.classes.bot_file_entry_list
+  type: Class
+  source:
+    id: bot_file_entry_list
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs
+    startLine: 8
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\n<p>the object of this class rapresents a file created from once of the StartStopBot</p>\n<p>objects of this class are immutable</p>\n"
+  example: []
+  syntax:
+    content: public class bot_file_entry_list
+    content.vb: Public Class bot_file_entry_list
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: InstaMacBot.classes.bot_file_entry_list.#ctor(System.String,System.String)
+  commentId: M:InstaMacBot.classes.bot_file_entry_list.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: InstaMacBot.classes.bot_file_entry_list
+  langs:
+  - csharp
+  - vb
+  name: bot_file_entry_list(String, String)
+  nameWithType: bot_file_entry_list.bot_file_entry_list(String, String)
+  fullName: InstaMacBot.classes.bot_file_entry_list.bot_file_entry_list(System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs
+    startLine: 23
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  example: []
+  syntax:
+    content: public bot_file_entry_list(string name, string account_directory)
+    parameters:
+    - id: name
+      type: System.String
+      description: name.extension of the file
+    - id: account_directory
+      type: System.String
+      description: path of the directory of the user logged in the bot (userapi) where are saved all bots files of the user
+    content.vb: Public Sub New(name As String, account_directory As String)
+  overload: InstaMacBot.classes.bot_file_entry_list.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.bot_file_entry_list.get_name
+  commentId: M:InstaMacBot.classes.bot_file_entry_list.get_name
+  id: get_name
+  parent: InstaMacBot.classes.bot_file_entry_list
+  langs:
+  - csharp
+  - vb
+  name: get_name()
+  nameWithType: bot_file_entry_list.get_name()
+  fullName: InstaMacBot.classes.bot_file_entry_list.get_name()
+  type: Method
+  source:
+    id: get_name
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs
+    startLine: 33
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget the name of the file\n"
+  example: []
+  syntax:
+    content: public string get_name()
+    return:
+      type: System.String
+      description: a string that contains the name of the file
+    content.vb: Public Function get_name As String
+  overload: InstaMacBot.classes.bot_file_entry_list.get_name*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.bot_file_entry_list.get_path
+  commentId: M:InstaMacBot.classes.bot_file_entry_list.get_path
+  id: get_path
+  parent: InstaMacBot.classes.bot_file_entry_list
+  langs:
+  - csharp
+  - vb
+  name: get_path()
+  nameWithType: bot_file_entry_list.get_path()
+  fullName: InstaMacBot.classes.bot_file_entry_list.get_path()
+  type: Method
+  source:
+    id: get_path
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs
+    startLine: 42
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\nget the name of the file\n"
+  example: []
+  syntax:
+    content: public string get_path()
+    return:
+      type: System.String
+      description: a string that contains the name of the file
+    content.vb: Public Function get_path As String
+  overload: InstaMacBot.classes.bot_file_entry_list.get_path*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: InstaMacBot.classes.bot_file_entry_list.ToString
+  commentId: M:InstaMacBot.classes.bot_file_entry_list.ToString
+  id: ToString
+  parent: InstaMacBot.classes.bot_file_entry_list
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: bot_file_entry_list.ToString()
+  fullName: InstaMacBot.classes.bot_file_entry_list.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs
+    startLine: 52
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\n<p>override the ToString because this is tipically used inside a list of bot_file_entry_list (inside bot_file_list class) and the list is attached as datasource of a listbox</p>\n<p>so inside the listbox will display the name of the files without extension</p>\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: a string that contains only the name of the file without extension
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: InstaMacBot.classes.bot_file_entry_list.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: InstaMacBot.classes.bot_file_entry_list.remove
+  commentId: M:InstaMacBot.classes.bot_file_entry_list.remove
+  id: remove
+  parent: InstaMacBot.classes.bot_file_entry_list
+  langs:
+  - csharp
+  - vb
+  name: remove()
+  nameWithType: bot_file_entry_list.remove()
+  fullName: InstaMacBot.classes.bot_file_entry_list.remove()
+  type: Method
+  source:
+    id: remove
+    path: L:\disco\github\InstaMacBot\InstaMacBot\InstaMacBot\MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs
+    startLine: 60
+  assemblies:
+  - InstaMacBot
+  namespace: InstaMacBot.classes
+  summary: "\ndelete the file at get_path() (the file refered to this)\n"
+  example: []
+  syntax:
+    content: public void remove()
+    content.vb: Public Sub remove
+  overload: InstaMacBot.classes.bot_file_entry_list.remove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: InstaMacBot.classes
+  commentId: N:InstaMacBot.classes
+  name: InstaMacBot.classes
+  nameWithType: InstaMacBot.classes
+  fullName: InstaMacBot.classes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InstaMacBot.classes.bot_file_entry_list.#ctor*
+  commentId: Overload:InstaMacBot.classes.bot_file_entry_list.#ctor
+  name: bot_file_entry_list
+  nameWithType: bot_file_entry_list.bot_file_entry_list
+  fullName: InstaMacBot.classes.bot_file_entry_list.bot_file_entry_list
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: InstaMacBot.classes.bot_file_entry_list.get_name*
+  commentId: Overload:InstaMacBot.classes.bot_file_entry_list.get_name
+  name: get_name
+  nameWithType: bot_file_entry_list.get_name
+  fullName: InstaMacBot.classes.bot_file_entry_list.get_name
+- uid: InstaMacBot.classes.bot_file_entry_list.get_path*
+  commentId: Overload:InstaMacBot.classes.bot_file_entry_list.get_path
+  name: get_path
+  nameWithType: bot_file_entry_list.get_path
+  fullName: InstaMacBot.classes.bot_file_entry_list.get_path
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: InstaMacBot.classes.bot_file_entry_list.ToString*
+  commentId: Overload:InstaMacBot.classes.bot_file_entry_list.ToString
+  name: ToString
+  nameWithType: bot_file_entry_list.ToString
+  fullName: InstaMacBot.classes.bot_file_entry_list.ToString
+- uid: InstaMacBot.classes.bot_file_entry_list.remove*
+  commentId: Overload:InstaMacBot.classes.bot_file_entry_list.remove
+  name: remove
+  nameWithType: bot_file_entry_list.remove
+  fullName: InstaMacBot.classes.bot_file_entry_list.remove

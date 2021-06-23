@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>InstaMacBot </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="InstaMacBot ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="instamacbot" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">InstaMacBot</h1>
+
+<p sourcefile="index.md" sourcestartlinenumber="2" sourceendlinenumber="2"><img src="https://github.com/MaccariniLuca/InstaMacBot/blob/main/resources/Instagram_logo_2016.ico" alt="class" sourcefile="index.md" sourcestartlinenumber="2" sourceendlinenumber="2"></p>
+<p sourcefile="index.md" sourcestartlinenumber="4" sourceendlinenumber="4">c# classes + desktop client bot for istagram</p>
+<h1 id="description" sourcefile="index.md" sourcestartlinenumber="5" sourceendlinenumber="5">Description</h1>
+<p sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">this project is composed by 2 parts:</p>
+<ul sourcefile="index.md" sourcestartlinenumber="7" sourceendlinenumber="8">
+<li sourcefile="index.md" sourcestartlinenumber="7" sourceendlinenumber="7">Set of c# classes to split api and bot logic with desktop client implementation</li>
+<li sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="8">Desktop client</li>
+</ul>
+<h2 id="video-about-this-bot-and-its-istallation" sourcefile="index.md" sourcestartlinenumber="10" sourceendlinenumber="10">Video about this bot and its istallation</h2>
+<p sourcefile="index.md" sourcestartlinenumber="11" sourceendlinenumber="12">watch the video to understand how to use this bot since the management file is not very easy, but I promise to simplify it in the next versions
+<a href="https://www.youtube.com/watch?v=2prio4o70BA" data-raw-source="[click here for see the video](https://www.youtube.com/watch?v=2prio4o70BA)" sourcefile="index.md" sourcestartlinenumber="12" sourceendlinenumber="12">click here for see the video</a></p>
+<h1 id="note" sourcefile="index.md" sourcestartlinenumber="14" sourceendlinenumber="14">Note</h1>
+<p sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">in a few days a new version will be released with a total graphic restyling and a better file management</p>
+<h2 id="1-main-classes" sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="17">1) Main Classes</h2>
+<h4 id="userapi-class" sourcefile="index.md" sourcestartlinenumber="18" sourceendlinenumber="18">UserApi (Class):</h4>
+<blockquote sourcefile="index.md" sourcestartlinenumber="19" sourceendlinenumber="19"><p sourcefile="index.md" sourcestartlinenumber="19" sourceendlinenumber="19">rappresents the instagram user and contains the api to do all action on instagram</p>
+</blockquote>
+<h4 id="botclient-classes" sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="21">BotClient (Classes):</h4>
+<blockquote sourcefile="index.md" sourcestartlinenumber="22" sourceendlinenumber="22"><p sourcefile="index.md" sourcestartlinenumber="22" sourceendlinenumber="22">rappresents a botClient with some different bots connected, having an organizzation of all bots grouped in a client and with an unic name for the bot</p>
+</blockquote>
+<h4 id="startstopbot-interface" sourcefile="index.md" sourcestartlinenumber="24" sourceendlinenumber="24">StartStopBot (interface):</h4>
+<blockquote sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25"><p sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25">a startable or stoppable bot</p>
+</blockquote>
+<h4 id="sssbot-abstract-class-implemets-startstopbot" sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="27">SSSBot (Abstract class, implemets StartStopBot):</h4>
+<blockquote sourcefile="index.md" sourcestartlinenumber="28" sourceendlinenumber="28"><p sourcefile="index.md" sourcestartlinenumber="28" sourceendlinenumber="28">rappresents a status bot or StartStopBot with status is_running</p>
+</blockquote>
+<h4 id="the-other-entities-are" sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="30">the other entities are:</h4>
+<blockquote sourcefile="index.md" sourcestartlinenumber="31" sourceendlinenumber="33"><p sourcefile="index.md" sourcestartlinenumber="31" sourceendlinenumber="33">classes that extend SSSbot: implement the bot behavior
+entities for file save management
+classes for display files inside listbox inside desktop client</p>
+</blockquote>
+<h2 id="2-desktop-client" sourcefile="index.md" sourcestartlinenumber="36" sourceendlinenumber="36">2) Desktop Client</h2>
+<ul sourcefile="index.md" sourcestartlinenumber="37" sourceendlinenumber="38">
+<li sourcefile="index.md" sourcestartlinenumber="37" sourceendlinenumber="37">A basic client that uses these classes</li>
+<li sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="38">In the future I will develop a client for android that will use these classes to bring the bot to a mobile platform</li>
+</ul>
+<h1 id="terms-and-conditions" sourcefile="index.md" sourcestartlinenumber="40" sourceendlinenumber="40">Terms and Conditions</h1>
+<p sourcefile="index.md" sourcestartlinenumber="41" sourceendlinenumber="41"> use this bot at you own risk!</p>
+<h1 id="legal" sourcefile="index.md" sourcestartlinenumber="42" sourceendlinenumber="42">Legal</h1>
+<p sourcefile="index.md" sourcestartlinenumber="43" sourceendlinenumber="43">This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by Instagram or any of its affiliates or subsidiaries. This is an independent and unofficial instagram bot</p>
+<h1 id="installation-plug-and-play" sourcefile="index.md" sourcestartlinenumber="45" sourceendlinenumber="45">Installation (plug and play)</h1>
+<p sourcefile="index.md" sourcestartlinenumber="46" sourceendlinenumber="47">just download and start:
+InstaMacBot.exe is in InstaMacBot/InstaMacBot/InstaMacBot/bin/Debug/</p>
+<ul sourcefile="index.md" sourcestartlinenumber="48" sourceendlinenumber="49">
+<li sourcefile="index.md" sourcestartlinenumber="48" sourceendlinenumber="48">you can start InstaMacBot.exe or paste the entire debug folder on your desktop and rename it. It is important to do not touch the files inside the folder!</li>
+<li sourcefile="index.md" sourcestartlinenumber="49" sourceendlinenumber="49">to edit the project is just a c# project open the solution file with visual studio</li>
+</ul>
+<h1 id="usage" sourcefile="index.md" sourcestartlinenumber="51" sourceendlinenumber="51">Usage</h1>
+<p sourcefile="index.md" sourcestartlinenumber="52" sourceendlinenumber="52">inside debug folder you can see the exe file and some folders:</p>
+<p sourcefile="index.md" sourcestartlinenumber="54" sourceendlinenumber="54">all folders are client&#39;s bots folders where each bot can save its informarion or outputs for now bots saves informations on txt files cause is a beta after i will change method</p>
+<p sourcefile="index.md" sourcestartlinenumber="56" sourceendlinenumber="56">other files are files of InstagramApiSharp the api that my bot use (don&#39;t touch them)</p>
+<h4 id="bots" sourcefile="index.md" sourcestartlinenumber="57" sourceendlinenumber="57">Bots:</h4>
+<p sourcefile="index.md" sourcestartlinenumber="58" sourceendlinenumber="58">1) ScrapeAccountsFromHastagBot: used to extract accounts from an hastag (accounts that recently posted with the target hastag)</p>
+<p sourcefile="index.md" sourcestartlinenumber="60" sourceendlinenumber="60">2) ScrapeAccountsFromLocation: used to extract accounts from an instagram place (accounts that recently posted with the target location)</p>
+<p sourcefile="index.md" sourcestartlinenumber="62" sourceendlinenumber="62">3) ScrapeFollowersBot: used to extract accounts from the followers of public instagram user (private only if following)</p>
+<p sourcefile="index.md" sourcestartlinenumber="64" sourceendlinenumber="64">4) FollowLikeLastsPicBot use the extracted followes: for follow and left some likes at lasts pics</p>
+<p sourcefile="index.md" sourcestartlinenumber="66" sourceendlinenumber="66">5) UnfollowBot use the followed list of FollowLikeLastsPicBot to unfollow all person in the list</p>
+<p sourcefile="index.md" sourcestartlinenumber="68" sourceendlinenumber="68">6) UnfollowBot use a list of accounts to send them a Direct Message</p>
+<h1 id="bug-or-bad-choises" sourcefile="index.md" sourcestartlinenumber="70" sourceendlinenumber="70">Bug or Bad choises</h1>
+<ul sourcefile="index.md" sourcestartlinenumber="71" sourceendlinenumber="73">
+<li sourcefile="index.md" sourcestartlinenumber="71" sourceendlinenumber="71">currently my classes open files only with openfiledialog, this method doesen&#39;t work on android same when bots saves them infos on files, i am searching an alternative</li>
+<li sourcefile="index.md" sourcestartlinenumber="72" sourceendlinenumber="72">async stop of procedura_bot() small active wait if the bot is scheduled to stop in a short time</li>
+<li sourcefile="index.md" sourcestartlinenumber="73" sourceendlinenumber="73">perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a &#39;fake&#39; override of stop() method because of the extract process that can&#39;t be stopped</li>
+</ul>
+<h1 id="to-do" sourcefile="index.md" sourcestartlinenumber="75" sourceendlinenumber="75">To do</h1>
+<ul sourcefile="index.md" sourcestartlinenumber="76" sourceendlinenumber="79">
+<li sourcefile="index.md" sourcestartlinenumber="76" sourceendlinenumber="76">better bots file management maybe removing all files and creating one json file for each account that uses the bot</li>
+<li sourcefile="index.md" sourcestartlinenumber="77" sourceendlinenumber="77">like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android</li>
+<li sourcefile="index.md" sourcestartlinenumber="78" sourceendlinenumber="78">2 factors login</li>
+<li sourcefile="index.md" sourcestartlinenumber="79" sourceendlinenumber="79">better interface</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

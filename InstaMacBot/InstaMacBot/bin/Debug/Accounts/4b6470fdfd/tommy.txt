@@ -1,0 +1,23 @@
+instlogin:
+instpass:
+ip:port:
+proxylogin:
+proxypass/
+user@mail.ru/
+useragent/
+uuid/
+phone_id/
+device_id/
+cookie
+
+instlogin:	mcfarlane_sinaq1526:
+instpass:	artDbMrrYU:
+ip:port:	213.108.196.228:10949:
+proxylogin:	avtim4699:
+proxypass/	ebfafb|
+user@mail.ru:	wconfemail|
+useragent/	Instagram 136.0.0.34.124 Android (23/6.0.1; 320dpi; 1280x720; Samsung; SCH-i705; espressovzw; qcom; ru_RU)|
+uuid dvice/		1b14a595-3a13-4b0b-8af3-15049daa4a92|
+phone_id/	fa966adb-d645-421b-b8b4-aa9d0ead8d1f|
+device_id/	android-25ec78eed2e12604|
+cookie	csrftoken=VWOaJUMw9HAqzQyS2vQdN98MxGRDdV5l; mid=YMdhkQABAAEMWw2QPCMLcOmJKbpm; rur=PRN; ds_user_id=48337049001; sessionid=48337049001%3ABk92jyviouS5wv%3A5; csrftoken=VWOaJUMw9HAqzQyS2vQdN98MxGRDdV5l; rur=PRN; ds_user_id=48337049001

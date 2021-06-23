@@ -1,18 +1,10 @@
-﻿using InstaMacBot.InstaMacBot;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using InstaMacBot.classes;
 
-namespace InstaMacBot
+namespace InstaMacBot.DesktopInterface
 {
-    partial class manage_lists_form : Form
+    public partial class manage_lists_form : Form
     {
         //list of all files of all bots
         bot_file_list files;
@@ -22,10 +14,10 @@ namespace InstaMacBot
             InitializeComponent();
             this.files = files;
             this.files.refresh_files_list();
-            listBox_files.DataSource = this.files.files_list;
+            this.files.set_listbox(listBox_files);
         }
 
-        
+
 
         private void manage_lists_Load(object sender, EventArgs e)
         {
@@ -34,7 +26,7 @@ namespace InstaMacBot
             SetDoubleBuffered(pn_lists);
             SetDoubleBuffered(pn_controls);
             this.files.refresh_files_list();
-            listBox_files.DataSource = this.files.files_list;
+            this.files.set_listbox(listBox_files);
         }
 
 

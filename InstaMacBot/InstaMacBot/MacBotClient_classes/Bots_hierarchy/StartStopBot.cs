@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InstaMacBot.InstaMacBot
+﻿namespace InstaMacBot.classes
 {
-    interface StartStopBot
+    /// <summary>
+    /// this interface define a start stop bot -> a bot that is possible start or stop itself
+    /// </summary>
+    public interface StartStopBot
     {
-        //OVERVIEW: this interface define a start stop bot -> a bot that is possible start or stop
+        /// <summary>
+        /// start the bot
+        /// </summary>
         void start();
+
+        /// <summary>
+        /// stop the bot
+        /// </summary>
+        /// <param name="save_infos">
+        /// <para>if true when bot stops it saves it's infos on files</para>
+        /// <para>else nothing: just stop</para>
+        /// </param>
         void stop(bool save_infos);
     }
 }
