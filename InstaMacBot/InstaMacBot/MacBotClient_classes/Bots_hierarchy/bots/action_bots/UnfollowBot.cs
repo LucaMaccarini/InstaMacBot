@@ -245,7 +245,7 @@ namespace InstaMacBot.classes
                     else
                     {
                         error_unfollowed_list.Add(followed_list[0]);
-                        console.write_on_console("unfollow error" + followed_list[0]);
+                        console.write_on_console("unfollow error: " + followed_list[0]);
                     }
                 }
                 followed_list.RemoveAt(0);
