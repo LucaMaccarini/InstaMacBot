@@ -38,7 +38,7 @@ this project is composed by 2 parts:
   ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/documentation/quick%20class%20diagram.svg)
   
   ### Documentation
-  [Download the DOCUMENTATION](http://www.how2macca.altervista.org/Documentation_InstaMacBot.chm)
+  [Download the DOCUMENTATION](http://www.how2macca.altervista.org)
   
   (created with sand castle)
   
