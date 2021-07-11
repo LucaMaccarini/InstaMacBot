@@ -38,9 +38,9 @@ this project is composed by 2 parts:
   ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/documentation/quick%20class%20diagram.svg)
   
   ### Documentation
-  [see the DOCUMENTATION](http://www.how2macca.altervista.org/_site/index.html)
+  [Download the DOCUMENTATION](http://www.how2macca.altervista.org/Documentation_InstaMacBot.chm)
   
-  is also aviable inside the project in the documentation folder
+  (created with sand castle)
   
   
  ## 2) Desktop Client
