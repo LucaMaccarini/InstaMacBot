@@ -63,7 +63,7 @@ Attention
 - It is important to do not touch the files inside the folder!
 - to edit the project: download the source code zip and is just a c# project open the solution file with visual studio
 
-## bots
+## Bots
 1) ScrapeAccountsFromHastagBot: used to extract accounts from an hastag (accounts that recently posted with the target hastag) 
 2) ScrapeAccountsFromLocation: used to extract accounts from an instagram place (accounts that recently posted with the target location)   
 3) ScrapeFollowersBot: used to extract accounts from the followers of public instagram user (private only if following)
