@@ -49,7 +49,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_main.Controls.Add(this.lb_1);
             this.pn_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_main.Location = new System.Drawing.Point(0, 0);
-            this.pn_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_main.Margin = new System.Windows.Forms.Padding(4);
             this.pn_main.Name = "pn_main";
             this.pn_main.Size = new System.Drawing.Size(927, 674);
             this.pn_main.TabIndex = 2;
@@ -110,7 +110,7 @@ namespace InstaMacBot.DesktopInterface
             this.bt_manage_lists.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_manage_lists.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
             this.bt_manage_lists.Location = new System.Drawing.Point(0, 91);
-            this.bt_manage_lists.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_manage_lists.Margin = new System.Windows.Forms.Padding(4);
             this.bt_manage_lists.Name = "bt_manage_lists";
             this.bt_manage_lists.Size = new System.Drawing.Size(927, 43);
             this.bt_manage_lists.TabIndex = 13;
@@ -142,7 +142,7 @@ namespace InstaMacBot.DesktopInterface
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(927, 674);
             this.Controls.Add(this.pn_main);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "new_bot";
             this.Text = "New Bot";
             this.Load += new System.EventHandler(this.new_bot_Load);
