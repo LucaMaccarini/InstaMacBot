@@ -42,7 +42,7 @@ this project is composed by 2 parts:
   
   
  ## 2) Desktop Client
- - A basic client that uses these classes, (bot is in beta testing)
+ - A basic client that uses these classes
  - In the future I will develop a client for android that will use these classes to bring the bot to a mobile platform
     
  # Terms and Conditions
@@ -66,7 +66,7 @@ Attention
 2) ScrapeAccountsFromLocation: used to extract accounts from an instagram place (accounts that recently posted with the target location)   
 3) ScrapeFollowersBot: used to extract accounts from the followers of public instagram user (private only if following)
 4) FollowLikeLastsPicBot use the extracted followes: for follow and left some likes at lasts pics   
-5) UnfollowBot use the followed list of FollowLikeLastsPicBot to unfollow all person in the list   
+5) UnfollowBot use the followed list of FollowLikeLastsPicBot (or just a list of accounts) to unfollow all person in the list   
 6) UnfollowBot use a list of accounts to send them a Direct Message
 
 # Bug or Bad choises
