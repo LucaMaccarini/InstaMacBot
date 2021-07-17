@@ -37,7 +37,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox_files = new System.Windows.Forms.ListBox();
             this.pn_options = new System.Windows.Forms.Panel();
-            this.cb_delay = new System.Windows.Forms.ComboBox();
+            this.nm_delay = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.bt_manage_lists = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_description.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.pn_options.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_delay)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.pn_controls.SuspendLayout();
             this.pn_controls_status.SuspendLayout();
@@ -141,7 +142,7 @@ namespace InstaMacBot.DesktopInterface
             // pn_options
             // 
             this.pn_options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pn_options.Controls.Add(this.cb_delay);
+            this.pn_options.Controls.Add(this.nm_delay);
             this.pn_options.Controls.Add(this.label3);
             this.pn_options.Controls.Add(this.bt_manage_lists);
             this.pn_options.Controls.Add(this.label7);
@@ -153,33 +154,38 @@ namespace InstaMacBot.DesktopInterface
             this.pn_options.Size = new System.Drawing.Size(683, 243);
             this.pn_options.TabIndex = 1;
             // 
-            // cb_delay
+            // nm_delay
             // 
-            this.cb_delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.cb_delay.DisplayMember = "1";
-            this.cb_delay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_delay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_delay.ForeColor = System.Drawing.Color.White;
-            this.cb_delay.FormattingEnabled = true;
-            this.cb_delay.Items.AddRange(new object[] {
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80"});
-            this.cb_delay.Location = new System.Drawing.Point(3, 129);
-            this.cb_delay.Name = "cb_delay";
-            this.cb_delay.Size = new System.Drawing.Size(74, 28);
-            this.cb_delay.TabIndex = 33;
-            this.cb_delay.SelectedIndexChanged += new System.EventHandler(this.cb_delay_SelectedIndexChanged);
+            this.nm_delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
+            this.nm_delay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nm_delay.ForeColor = System.Drawing.Color.White;
+            this.nm_delay.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nm_delay.Location = new System.Drawing.Point(3, 130);
+            this.nm_delay.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nm_delay.Name = "nm_delay";
+            this.nm_delay.Size = new System.Drawing.Size(70, 26);
+            this.nm_delay.TabIndex = 33;
+            this.nm_delay.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nm_delay.ValueChanged += new System.EventHandler(this.nm_delay_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 132);
+            this.label3.Location = new System.Drawing.Point(79, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(303, 20);
             this.label3.TabIndex = 32;
@@ -352,6 +358,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage2.ResumeLayout(false);
             this.pn_options.ResumeLayout(false);
             this.pn_options.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_delay)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.pn_controls.ResumeLayout(false);
             this.pn_controls.PerformLayout();
@@ -382,7 +389,7 @@ namespace InstaMacBot.DesktopInterface
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tx_console;
         private System.Windows.Forms.Label lb_description;
-        private System.Windows.Forms.ComboBox cb_delay;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nm_delay;
     }
 }

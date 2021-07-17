@@ -37,10 +37,10 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox_files = new System.Windows.Forms.ListBox();
             this.pn_options = new System.Windows.Forms.Panel();
+            this.nm_delay = new System.Windows.Forms.NumericUpDown();
             this.bt_manage_lists = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cb_delay = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pn_controls = new System.Windows.Forms.Panel();
@@ -56,6 +56,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_description.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.pn_options.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_delay)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.pn_controls.SuspendLayout();
             this.pn_console.SuspendLayout();
@@ -141,16 +142,42 @@ namespace InstaMacBot.DesktopInterface
             // pn_options
             // 
             this.pn_options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pn_options.Controls.Add(this.nm_delay);
             this.pn_options.Controls.Add(this.bt_manage_lists);
             this.pn_options.Controls.Add(this.label7);
             this.pn_options.Controls.Add(this.label6);
-            this.pn_options.Controls.Add(this.cb_delay);
             this.pn_options.Controls.Add(this.label3);
             this.pn_options.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_options.Location = new System.Drawing.Point(2, 3);
             this.pn_options.Name = "pn_options";
             this.pn_options.Size = new System.Drawing.Size(683, 243);
             this.pn_options.TabIndex = 1;
+            // 
+            // nm_delay
+            // 
+            this.nm_delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
+            this.nm_delay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nm_delay.ForeColor = System.Drawing.Color.White;
+            this.nm_delay.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nm_delay.Location = new System.Drawing.Point(10, 30);
+            this.nm_delay.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nm_delay.Name = "nm_delay";
+            this.nm_delay.Size = new System.Drawing.Size(70, 26);
+            this.nm_delay.TabIndex = 31;
+            this.nm_delay.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nm_delay.ValueChanged += new System.EventHandler(this.nm_delay_ValueChanged);
             // 
             // bt_manage_lists
             // 
@@ -190,27 +217,6 @@ namespace InstaMacBot.DesktopInterface
             this.label6.Size = new System.Drawing.Size(277, 20);
             this.label6.TabIndex = 26;
             this.label6.Text = "If not selected bot uses default values";
-            // 
-            // cb_delay
-            // 
-            this.cb_delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.cb_delay.DisplayMember = "1";
-            this.cb_delay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_delay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_delay.ForeColor = System.Drawing.Color.White;
-            this.cb_delay.FormattingEnabled = true;
-            this.cb_delay.Items.AddRange(new object[] {
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80"});
-            this.cb_delay.Location = new System.Drawing.Point(6, 29);
-            this.cb_delay.Name = "cb_delay";
-            this.cb_delay.Size = new System.Drawing.Size(74, 28);
-            this.cb_delay.TabIndex = 23;
-            this.cb_delay.SelectedIndexChanged += new System.EventHandler(this.cb_delay_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -350,6 +356,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage2.ResumeLayout(false);
             this.pn_options.ResumeLayout(false);
             this.pn_options.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_delay)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.pn_controls.ResumeLayout(false);
             this.pn_console.ResumeLayout(false);
@@ -369,7 +376,6 @@ namespace InstaMacBot.DesktopInterface
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel pn_options;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cb_delay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel pn_controls;
@@ -383,5 +389,6 @@ namespace InstaMacBot.DesktopInterface
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bt_manage_lists;
         private System.Windows.Forms.ListBox listBox_files;
+        private System.Windows.Forms.NumericUpDown nm_delay;
     }
 }

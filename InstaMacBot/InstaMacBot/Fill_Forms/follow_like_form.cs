@@ -107,17 +107,9 @@ namespace InstaMacBot.DesktopInterface
 
         }
 
-        private void cb_nlikes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)follow_like_bot;
-            x.set_likes_last_pic(int.Parse(cb_nlikes.SelectedItem.ToString()));
-        }
+       
 
-        private void cb_delay_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)follow_like_bot;
-            x.set_delay(int.Parse(cb_delay.SelectedItem.ToString()));
-        }
+
 
         private void cb_follow_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -143,28 +135,11 @@ namespace InstaMacBot.DesktopInterface
             return true;
         }
 
-        private async void bt_stop_Click(object sender, EventArgs e)
+        private void  bt_stop_Click(object sender, EventArgs e)
         {
             if (follow_like_bot.is_running)
             {
                 follow_like_bot.stop(true);
-
-                int i = 0;
-                do
-                {
-                    await wait(1);
-                    i++;
-
-                } while (follow_like_bot.is_running && i < 5);
-
-                if (follow_like_bot.is_running)
-                {
-                    MessageBox.Show("couldn't stop bot: time out excedeed");
-                }
-                else
-                {
-                    actions_bot_ended();
-                }
             }
         }
 
@@ -206,6 +181,19 @@ namespace InstaMacBot.DesktopInterface
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)follow_like_bot;
+            x.set_likes_last_pic(Convert.ToInt32(nm_number_of_likes_each_account.Value));
+            
+        }
+
+        private void nm_delay_ValueChanged(object sender, EventArgs e)
+        {
+            FollowLikeLastsPicBot x = (FollowLikeLastsPicBot)follow_like_bot;
+            x.set_delay(Convert.ToInt32(nm_delay.Value));
         }
     }
 }

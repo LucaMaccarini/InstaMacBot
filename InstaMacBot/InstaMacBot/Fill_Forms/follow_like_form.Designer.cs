@@ -37,12 +37,12 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox_files = new System.Windows.Forms.ListBox();
             this.pn_options = new System.Windows.Forms.Panel();
+            this.nm_delay = new System.Windows.Forms.NumericUpDown();
+            this.nm_number_of_likes_each_account = new System.Windows.Forms.NumericUpDown();
             this.bt_manage_lists = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cb_follow = new System.Windows.Forms.ComboBox();
-            this.cb_nlikes = new System.Windows.Forms.ComboBox();
-            this.cb_delay = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@ namespace InstaMacBot.DesktopInterface
             this.pn_description.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.pn_options.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_delay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_number_of_likes_each_account)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.pn_controls.SuspendLayout();
             this.pn_console.SuspendLayout();
@@ -148,12 +150,12 @@ namespace InstaMacBot.DesktopInterface
             // pn_options
             // 
             this.pn_options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pn_options.Controls.Add(this.nm_delay);
+            this.pn_options.Controls.Add(this.nm_number_of_likes_each_account);
             this.pn_options.Controls.Add(this.bt_manage_lists);
             this.pn_options.Controls.Add(this.label7);
             this.pn_options.Controls.Add(this.label6);
             this.pn_options.Controls.Add(this.cb_follow);
-            this.pn_options.Controls.Add(this.cb_nlikes);
-            this.pn_options.Controls.Add(this.cb_delay);
             this.pn_options.Controls.Add(this.label4);
             this.pn_options.Controls.Add(this.label3);
             this.pn_options.Controls.Add(this.label2);
@@ -162,6 +164,53 @@ namespace InstaMacBot.DesktopInterface
             this.pn_options.Name = "pn_options";
             this.pn_options.Size = new System.Drawing.Size(683, 243);
             this.pn_options.TabIndex = 1;
+            // 
+            // nm_delay
+            // 
+            this.nm_delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
+            this.nm_delay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nm_delay.ForeColor = System.Drawing.Color.White;
+            this.nm_delay.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nm_delay.Location = new System.Drawing.Point(8, 65);
+            this.nm_delay.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nm_delay.Name = "nm_delay";
+            this.nm_delay.Size = new System.Drawing.Size(70, 26);
+            this.nm_delay.TabIndex = 30;
+            this.nm_delay.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nm_delay.ValueChanged += new System.EventHandler(this.nm_delay_ValueChanged);
+            // 
+            // nm_number_of_likes_each_account
+            // 
+            this.nm_number_of_likes_each_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
+            this.nm_number_of_likes_each_account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nm_number_of_likes_each_account.ForeColor = System.Drawing.Color.White;
+            this.nm_number_of_likes_each_account.Location = new System.Drawing.Point(8, 34);
+            this.nm_number_of_likes_each_account.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nm_number_of_likes_each_account.Name = "nm_number_of_likes_each_account";
+            this.nm_number_of_likes_each_account.Size = new System.Drawing.Size(70, 26);
+            this.nm_number_of_likes_each_account.TabIndex = 29;
+            this.nm_number_of_likes_each_account.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nm_number_of_likes_each_account.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // bt_manage_lists
             // 
@@ -212,58 +261,18 @@ namespace InstaMacBot.DesktopInterface
             this.cb_follow.Items.AddRange(new object[] {
             "yes",
             "no"});
-            this.cb_follow.Location = new System.Drawing.Point(4, 94);
+            this.cb_follow.Location = new System.Drawing.Point(8, 97);
             this.cb_follow.Name = "cb_follow";
-            this.cb_follow.Size = new System.Drawing.Size(74, 28);
+            this.cb_follow.Size = new System.Drawing.Size(70, 28);
             this.cb_follow.TabIndex = 25;
             this.cb_follow.SelectedIndexChanged += new System.EventHandler(this.cb_follow_SelectedIndexChanged);
-            // 
-            // cb_nlikes
-            // 
-            this.cb_nlikes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.cb_nlikes.DisplayMember = "1";
-            this.cb_nlikes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_nlikes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_nlikes.ForeColor = System.Drawing.Color.White;
-            this.cb_nlikes.FormattingEnabled = true;
-            this.cb_nlikes.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3"});
-            this.cb_nlikes.Location = new System.Drawing.Point(4, 32);
-            this.cb_nlikes.Name = "cb_nlikes";
-            this.cb_nlikes.Size = new System.Drawing.Size(74, 28);
-            this.cb_nlikes.TabIndex = 24;
-            this.cb_nlikes.SelectedIndexChanged += new System.EventHandler(this.cb_nlikes_SelectedIndexChanged);
-            // 
-            // cb_delay
-            // 
-            this.cb_delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.cb_delay.DisplayMember = "1";
-            this.cb_delay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_delay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_delay.ForeColor = System.Drawing.Color.White;
-            this.cb_delay.FormattingEnabled = true;
-            this.cb_delay.Items.AddRange(new object[] {
-            "30",
-            "40",
-            "50",
-            "60",
-            "70",
-            "80"});
-            this.cb_delay.Location = new System.Drawing.Point(4, 64);
-            this.cb_delay.Name = "cb_delay";
-            this.cb_delay.Size = new System.Drawing.Size(74, 28);
-            this.cb_delay.TabIndex = 23;
-            this.cb_delay.SelectedIndexChanged += new System.EventHandler(this.cb_delay_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 97);
+            this.label4.Location = new System.Drawing.Point(84, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(210, 20);
             this.label4.TabIndex = 7;
@@ -276,9 +285,9 @@ namespace InstaMacBot.DesktopInterface
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(84, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(303, 20);
+            this.label3.Size = new System.Drawing.Size(214, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Delay between each account (default: 50)";
+            this.label3.Text = "Delay between each account";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -288,9 +297,9 @@ namespace InstaMacBot.DesktopInterface
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(81, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(431, 20);
+            this.label2.Size = new System.Drawing.Size(355, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Number of likes at recent posts for each account (default: 1)";
+            this.label2.Text = "Number of likes at recent posts for each account ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tabPage3
@@ -420,6 +429,8 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage2.ResumeLayout(false);
             this.pn_options.ResumeLayout(false);
             this.pn_options.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_delay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nm_number_of_likes_each_account)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.pn_controls.ResumeLayout(false);
             this.pn_console.ResumeLayout(false);
@@ -449,13 +460,13 @@ namespace InstaMacBot.DesktopInterface
         private System.Windows.Forms.Button bt_stop_like_follow_bot;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_delay;
-        private System.Windows.Forms.ComboBox cb_nlikes;
         private System.Windows.Forms.ComboBox cb_follow;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox listBox_files;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bt_manage_lists;
         private System.Windows.Forms.Label lb_description;
+        private System.Windows.Forms.NumericUpDown nm_number_of_likes_each_account;
+        private System.Windows.Forms.NumericUpDown nm_delay;
     }
 }

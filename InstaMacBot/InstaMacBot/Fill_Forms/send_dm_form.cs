@@ -117,25 +117,11 @@ namespace InstaMacBot.DesktopInterface
             send_dm.start();
         }
 
-        private async void bt_stop_send_dm_bot_Click(object sender, EventArgs e)
+        private void bt_stop_send_dm_bot_Click(object sender, EventArgs e)
         {
             if (send_dm.is_running)
             {
                 send_dm.stop(true);
-
-                int i = 0;
-                do
-                {
-                    await wait(1);
-                    i++;
-
-                } while (send_dm.is_running && i < 5);
-
-                if (send_dm.is_running)
-                {
-                    MessageBox.Show("couldn't stop bot: time out excedeed");
-                }
-
             }
         }
 
@@ -144,9 +130,11 @@ namespace InstaMacBot.DesktopInterface
             lb_description.MaximumSize = pn_description.Size;
         }
 
-        private void cb_delay_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void nm_delay_ValueChanged(object sender, EventArgs e)
         {
-            ((SendDmBot)send_dm).set_delay(int.Parse(cb_delay.SelectedItem.ToString()));
+            ((SendDmBot)send_dm).set_delay(Convert.ToInt32(nm_delay.Value));
         }
     }
 }

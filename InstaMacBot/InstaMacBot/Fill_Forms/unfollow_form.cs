@@ -104,33 +104,15 @@ namespace InstaMacBot.DesktopInterface
             return true;
         }
 
-        private async void bt_stop_unfollow_bot_Click(object sender, EventArgs e)
+        private void bt_stop_unfollow_bot_Click(object sender, EventArgs e)
         {
             if (unfollow_bot.is_running)
             {
                 unfollow_bot.stop(true);
-
-                int i = 0;
-                do
-                {
-                    await wait(1);
-                    i++;
-
-                } while (unfollow_bot.is_running && i < 5);
-
-                if (unfollow_bot.is_running)
-                {
-                    MessageBox.Show("couldn't stop bot: time out excedeed");
-                }
-
             }
         }
 
-        private void cb_delay_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            UnfollowBot x = (UnfollowBot)unfollow_bot;
-            x.set_delay(int.Parse(cb_delay.SelectedItem.ToString()));
-        }
+      
 
         private void bt_manage_lists_Click(object sender, EventArgs e)
         {
@@ -145,6 +127,12 @@ namespace InstaMacBot.DesktopInterface
         private void pn_description_Resize(object sender, EventArgs e)
         {
             lb_description.MaximumSize = pn_description.Size;
+        }
+
+        private void nm_delay_ValueChanged(object sender, EventArgs e)
+        {
+            UnfollowBot x = (UnfollowBot)unfollow_bot;
+            x.set_delay(Convert.ToInt32(nm_delay.Value));
         }
     }
 }

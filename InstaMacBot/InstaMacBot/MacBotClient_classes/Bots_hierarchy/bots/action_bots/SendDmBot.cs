@@ -171,9 +171,9 @@ namespace InstaMacBot.classes
         private async Task<bool> wait(int seconds)
         {
             int i = 0;
-            while (i < seconds && status)
+            while (i < seconds*2 && status)
             {
-                await Task.Delay(1000);
+                await Task.Delay(500);
                 i++;
             }
             return true;

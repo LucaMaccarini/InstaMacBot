@@ -150,12 +150,12 @@ namespace InstaMacBot.classes
         /// </summary>
         /// <param name="seconds">number of seconds of sleep</param>
         /// <returns>true when delay finishes</returns>
-        private async Task<bool> wait(int secondi)
+        private async Task<bool> wait(int seconds)
         {
             int i = 0;
-            while (i < secondi && status)
+            while (i < seconds*2 && status)
             {
-                await Task.Delay(1000);
+                await Task.Delay(500);
                 i++;
             }
             return true;
