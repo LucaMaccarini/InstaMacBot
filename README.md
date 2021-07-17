@@ -9,6 +9,11 @@ the code that is downloaded by cloning the repository is in the testing phase an
 ### currently
 I am developing: 
 - testing release 2.0 beta
+### To do
+- better bots file management (it will be done in release 2.0)
+- like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android (it will be done in release 2.0)
+- 2 factors login
+- better interface (it will be done in release 2.0)
 
 # Description
 this project is composed by 2 parts:
@@ -73,12 +78,6 @@ Attention
 - currently my classes open files only with openfiledialog, this method doesen't work on android same when bots saves them infos on files, i am searching an alternative
 - async stop of procedura_bot() small active wait if the bot is scheduled to stop in a short time
 - perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
-
-# To do
-- better bots file management (it will be done in release 2.0)
-- like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android (it will be done in release 2.0)
-- 2 factors login
-- better interface (it will be done in release 2.0)
 
 # Developer
 me :)
