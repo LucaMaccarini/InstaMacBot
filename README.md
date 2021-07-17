@@ -7,7 +7,7 @@ c# classes + desktop client bot for istagram
 the code that is downloaded by cloning the repository is in the testing phase and could lead to problems in using the bot, if you intend to use the bot download it from the releases page obviously by downloading the latest one: [RELEASES](https://github.com/MaccariniLuca/InstaMacBot/releases)
 
 ### currently
-I am developing: 
+I am doing: 
 - testing release 2.0 beta
 ### To do
 - better bots file management (it will be done in release 2.0)
