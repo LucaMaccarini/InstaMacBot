@@ -18,7 +18,7 @@ I am doing:
 - new bot for giveway comments
 - new bot that simulates everyday human actions of instagram, trying to hide the repetitive actions of bots
 - activate the settings panel by putting some settings
-####will be done
+#### will be done
 - 2 factors login
 
 
