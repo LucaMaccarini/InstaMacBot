@@ -10,14 +10,11 @@ the code that is downloaded by cloning the repository is in the testing phase an
 I am doing: 
 - testing release 2.0 beta
 ### To do
-#### Release 2.0 (in beta testing)
-- better bots file management
-- like console class: wrap saving system to dissociate desktop openfiledialog and savefiledialog to another saving system that could be used for android
-- better interface
 #### Release 2.1
 - new bot for giveway comments
 - new bot that simulates everyday human actions of instagram, trying to hide the repetitive actions of bots
 - activate the settings panel by putting some settings
+- add in login form login with last session, so instagram will not see any new login, like open instagram app
 #### will be done
 - 2 factors login
 
