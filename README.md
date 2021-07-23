@@ -12,9 +12,10 @@ I am doing:
 ### To do
 #### Release 2.1
 - new bot for giveway comments
-- new bot that simulates everyday human actions of instagram, trying to hide the repetitive actions of bots
 - activate the settings panel by putting some settings
 - add in login form login with last session, so instagram will not see any new login, like open instagram app
+#### Release 2.2
+- new bot that simulates everyday human actions of instagram, trying to hide the repetitive actions of bots
 #### will be done
 - 2 factors login
 
