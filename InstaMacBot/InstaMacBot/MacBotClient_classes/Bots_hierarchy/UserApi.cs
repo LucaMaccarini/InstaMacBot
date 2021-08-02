@@ -18,9 +18,15 @@ namespace InstaMacBot.classes
     /// </summary>
     public class UserApi
     {
+        /// <summary>
+        /// user infos like username and password
+        /// </summary>
         private UserSessionData user;
+
+        /// <summary>
+        /// instApiSharp object (private api to instagram)
+        /// </summary>
         private IInstaApi api;
-        private bool logged;
 
 
         /// <param name="username">username of the account that will login to instagram ant the bot will perform actions</param>
@@ -38,10 +44,38 @@ namespace InstaMacBot.classes
            //.SetRequestDelay(RequestDelay.FromSeconds(5, 8))
            .Build();
 
-            logged = false;
-
-
         }
+
+        private UserApi(string session_json)
+        {
+            api = InstaApiBuilder.CreateBuilder()
+                .SetUser(UserSessionData.Empty)
+                //.SetRequestDelay(RequestDelay.FromSeconds(2, 2))
+                .Build();
+             api.LoadStateDataFromString(session_json);
+        }
+
+
+        /// <summary>
+        /// production method, used to create a UserApi object from a session json file
+        /// </summary>
+        /// <param name="session_json">the json file that contains all session parameters</param>
+        /// <returns>an UserApi that restored a session (logged inside the targhet user using his last session)</returns>
+        public static async Task<UserApi> Get_userApi_from_session(string session_json)
+        {
+            UserApi myuser = new UserApi(session_json);
+            myuser.user = myuser.api.GetLoggedUser();
+            var result2 = await myuser.get_user(myuser.get_username());
+
+            if (result2.Succeeded)
+                return myuser;
+            else
+                return null;
+        }
+
+
+
+
 
         /// <summary>
         /// get the username of this: is the account associated to this (this object)
@@ -68,14 +102,12 @@ namespace InstaMacBot.classes
             return true;
         }
 
+        
         /// <summary>
-        /// check if the account associated to this is logged
+        /// check if the user is autenticated (if logghed with session it is false)
         /// </summary>
-        /// <returns>
-        /// <para>true if is logged</para>
-        /// <para>false if isn't logged</para>
-        /// </returns>
-        public bool is_logged { get { return logged; } }
+        public bool is_autentitcated { get { return api.IsUserAuthenticated; } }
+        
 
         /// <summary>
         /// login inside the account associated to this
@@ -88,7 +120,6 @@ namespace InstaMacBot.classes
         {
             if (api.IsUserAuthenticated)
             {
-                logged = true;
                 return "already logged";
             }
 
@@ -101,7 +132,6 @@ namespace InstaMacBot.classes
 
             if (loginRequest.Succeeded)
             {
-                logged = true;
                 return "";
             }
             else
@@ -155,8 +185,8 @@ namespace InstaMacBot.classes
         /// </returns>
         public async Task<bool> put_like(string media_id)
         {
-            if (!is_logged)
-                return false;
+            //if (!is_logged)
+            //    return false;
 
 
             IResult<bool> like_request = await api.MediaProcessor.LikeMediaAsync(media_id);
@@ -181,10 +211,12 @@ namespace InstaMacBot.classes
         /// </returns>
         public async Task<bool> follow(string username)
         {
-            if (!is_logged)
-                return false;
+            //if (!is_logged)
+            //    return false;
 
             IResult<InstaUserInfo> utente = await api.UserProcessor.GetUserInfoByUsernameAsync(username);
+            if (!utente.Succeeded)
+                return false;
 
 
             IResult<InstaFriendshipFullStatus> follow_request = await api.UserProcessor.FollowUserAsync(utente.Value.Pk);
@@ -358,6 +390,16 @@ namespace InstaMacBot.classes
             {
                 return false;
             }
+        }
+
+
+        /// <summary>
+        /// get a string that contains the content of the session json file
+        /// </summary>
+        /// <returns>a string that contains the content of the session json file</returns>
+        public string get_session()
+        {
+            return api.GetStateDataAsString();
         }
 
         /*

@@ -31,20 +31,24 @@ namespace InstaMacBot.DesktopInterface
         //where save bots files
         string path_account_save_infos;
 
+        //list displayed inside list box, is the list of all bots file of the user logged in to the bot
         bot_file_list file_list;
 
-        public Bot_Client(UserApi _utente, string _path_save_infos)
+        bool save_session;
+
+        public Bot_Client(UserApi _utente, string _path_save_infos, bool _save_session)
         {
             InitializeComponent();
 
             string username = _utente.get_username();
+            save_session = _save_session;
 
             lb_username.Text = username;
             utente = _utente;
             bot_manager = new BotClient();
             path_account_save_infos = _path_save_infos;
 
-            file_list = new bot_file_list("./Accounts/" + username);
+            file_list = new bot_file_list("./Accounts/" + username, "txt");
 
 
         }
@@ -52,7 +56,7 @@ namespace InstaMacBot.DesktopInterface
 
 
 
-        //code for good lock ui
+        //code for good look ui
         Button selected_bot_button = null;
         private void select_bot(Button button_clicked)
         {
@@ -80,17 +84,20 @@ namespace InstaMacBot.DesktopInterface
         Form activeForm;
         private void open_fill_form(Form fill_form)
         {
-            if (activeForm != null)
+            if (activeForm != null && activeForm!=fill_form)
                 activeForm.Hide();
 
-            activeForm = fill_form;
-            fill_form.TopLevel = false;
-            fill_form.FormBorderStyle = FormBorderStyle.None;
-            fill_form.Dock = DockStyle.Fill;
-            pn_container_fill_form.Controls.Add(fill_form);
-            //pn_manage_your_list.Tag = fill_form;
-            fill_form.BringToFront();
-            fill_form.Show();
+            if (activeForm != fill_form)
+            {
+                activeForm = fill_form;
+                fill_form.TopLevel = false;
+                fill_form.FormBorderStyle = FormBorderStyle.None;
+                fill_form.Dock = DockStyle.Fill;
+                pn_container_fill_form.Controls.Add(fill_form);
+                //pn_manage_your_list.Tag = fill_form;
+                fill_form.BringToFront();
+                fill_form.Show();
+            }
         }
 
 
@@ -112,7 +119,7 @@ namespace InstaMacBot.DesktopInterface
             SetDoubleBuffered(pn_instamacbot);
             SetDoubleBuffered(pn_conteiner);
 
-            activeForm = new_bot;
+            activeForm = null;
             select_bot(bt_new_bot_soon);
             open_fill_form(new_bot);
 
@@ -211,6 +218,14 @@ namespace InstaMacBot.DesktopInterface
             }
         }
 
-
+        private void Bot_Client_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (save_session)
+            {
+                //save session
+                BotFileSaver save_file = new DesktopBotFileSaver("./Sessions/" + utente.get_username() + ".json", true);
+                save_file.write_on_file(utente.get_session());
+            }
+        }
     }
 }

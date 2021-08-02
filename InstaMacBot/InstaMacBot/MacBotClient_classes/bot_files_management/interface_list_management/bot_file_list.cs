@@ -23,14 +23,21 @@ namespace InstaMacBot.classes
 
 
         /// <summary>
+        /// extension of files to be added to the list (files_list) in the specified directory (path)
+        /// </summary>
+        private string type_of_file;
+
+
+        /// <summary>
         /// <para>if path_account directory doesent exist will be created</para>
         /// <para>else populate the files_list with all files inside path</para>
         /// </summary>
         /// <param name="path_account"><para>path of directory thet contains all files of the user logged in the bot (userapi) tipically</para>
         /// <para>./Accounts/instagram_username</para></param>
-        public bot_file_list(string path_account)
+        public bot_file_list(string path_account, string type_of_file)
         {
             files_list = new BindingList<bot_file_entry_list>();
+            this.type_of_file = type_of_file;
             path = path_account;
 
             if (!Directory.Exists(path))
@@ -41,6 +48,10 @@ namespace InstaMacBot.classes
             }
         }
 
+        /// <summary>
+        /// set a list box with this obgect list (files_list)
+        /// </summary>
+        /// <param name="x">the listbox that will set this object list files_list</param>
         public void set_listbox(ListBox x)
         {
             x.DataSource = files_list;
@@ -62,7 +73,7 @@ namespace InstaMacBot.classes
 
             DirectoryInfo d = new DirectoryInfo(path);
 
-            FileInfo[] Files = d.GetFiles("*.txt");
+            FileInfo[] Files = d.GetFiles("*." + type_of_file);
             foreach (FileInfo file in Files)
             {
                 this.files_list.Add(new bot_file_entry_list(file.ToString(), path));

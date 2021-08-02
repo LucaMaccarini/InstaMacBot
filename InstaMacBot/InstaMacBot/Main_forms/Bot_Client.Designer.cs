@@ -61,10 +61,9 @@ namespace InstaMacBot.DesktopInterface
             this.pn_left.Controls.Add(this.pn_bots);
             this.pn_left.Controls.Add(this.pn_instamacbot);
             this.pn_left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pn_left.Location = new System.Drawing.Point(11, 14);
-            this.pn_left.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_left.Location = new System.Drawing.Point(8, 11);
             this.pn_left.Name = "pn_left";
-            this.pn_left.Size = new System.Drawing.Size(309, 722);
+            this.pn_left.Size = new System.Drawing.Size(232, 587);
             this.pn_left.TabIndex = 0;
             // 
             // pn_bots
@@ -82,11 +81,10 @@ namespace InstaMacBot.DesktopInterface
             this.pn_bots.Controls.Add(this.bt_settings);
             this.pn_bots.Controls.Add(this.bt_manage_lists);
             this.pn_bots.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pn_bots.Location = new System.Drawing.Point(0, 149);
-            this.pn_bots.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_bots.Location = new System.Drawing.Point(0, 121);
             this.pn_bots.Name = "pn_bots";
-            this.pn_bots.Padding = new System.Windows.Forms.Padding(9, 9, 11, 9);
-            this.pn_bots.Size = new System.Drawing.Size(309, 573);
+            this.pn_bots.Padding = new System.Windows.Forms.Padding(7, 7, 8, 7);
+            this.pn_bots.Size = new System.Drawing.Size(232, 466);
             this.pn_bots.TabIndex = 2;
             // 
             // bt_new_bot_soon
@@ -97,10 +95,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_new_bot_soon.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_new_bot_soon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_new_bot_soon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_new_bot_soon.Location = new System.Drawing.Point(9, 386);
-            this.bt_new_bot_soon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_new_bot_soon.Location = new System.Drawing.Point(7, 313);
             this.bt_new_bot_soon.Name = "bt_new_bot_soon";
-            this.bt_new_bot_soon.Size = new System.Drawing.Size(289, 43);
+            this.bt_new_bot_soon.Size = new System.Drawing.Size(217, 35);
             this.bt_new_bot_soon.TabIndex = 22;
             this.bt_new_bot_soon.Text = "new bot soon";
             this.bt_new_bot_soon.UseVisualStyleBackColor = false;
@@ -114,10 +111,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_send_dm_bot.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_send_dm_bot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_send_dm_bot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_send_dm_bot.Location = new System.Drawing.Point(9, 343);
-            this.bt_send_dm_bot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_send_dm_bot.Location = new System.Drawing.Point(7, 278);
             this.bt_send_dm_bot.Name = "bt_send_dm_bot";
-            this.bt_send_dm_bot.Size = new System.Drawing.Size(289, 43);
+            this.bt_send_dm_bot.Size = new System.Drawing.Size(217, 35);
             this.bt_send_dm_bot.TabIndex = 21;
             this.bt_send_dm_bot.Text = "Send dm Bot";
             this.bt_send_dm_bot.UseVisualStyleBackColor = false;
@@ -131,10 +127,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_unfollow_bot.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_unfollow_bot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_unfollow_bot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_unfollow_bot.Location = new System.Drawing.Point(9, 300);
-            this.bt_unfollow_bot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_unfollow_bot.Location = new System.Drawing.Point(7, 243);
             this.bt_unfollow_bot.Name = "bt_unfollow_bot";
-            this.bt_unfollow_bot.Size = new System.Drawing.Size(289, 43);
+            this.bt_unfollow_bot.Size = new System.Drawing.Size(217, 35);
             this.bt_unfollow_bot.TabIndex = 19;
             this.bt_unfollow_bot.Text = "Unfollow Bot";
             this.bt_unfollow_bot.UseVisualStyleBackColor = false;
@@ -148,10 +143,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_follow_like_bot.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_follow_like_bot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_follow_like_bot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_follow_like_bot.Location = new System.Drawing.Point(9, 257);
-            this.bt_follow_like_bot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_follow_like_bot.Location = new System.Drawing.Point(7, 208);
             this.bt_follow_like_bot.Name = "bt_follow_like_bot";
-            this.bt_follow_like_bot.Size = new System.Drawing.Size(289, 43);
+            this.bt_follow_like_bot.Size = new System.Drawing.Size(217, 35);
             this.bt_follow_like_bot.TabIndex = 18;
             this.bt_follow_like_bot.Text = "Follow / Like Bot";
             this.bt_follow_like_bot.UseVisualStyleBackColor = false;
@@ -164,10 +158,9 @@ namespace InstaMacBot.DesktopInterface
             this.Scrape_from_location.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.Scrape_from_location.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Scrape_from_location.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Scrape_from_location.Location = new System.Drawing.Point(9, 214);
-            this.Scrape_from_location.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Scrape_from_location.Location = new System.Drawing.Point(7, 173);
             this.Scrape_from_location.Name = "Scrape_from_location";
-            this.Scrape_from_location.Size = new System.Drawing.Size(289, 43);
+            this.Scrape_from_location.Size = new System.Drawing.Size(217, 35);
             this.Scrape_from_location.TabIndex = 17;
             this.Scrape_from_location.Text = "Scrape from location";
             this.Scrape_from_location.UseVisualStyleBackColor = false;
@@ -180,10 +173,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_Scrape_from_hastag.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_Scrape_from_hastag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Scrape_from_hastag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Scrape_from_hastag.Location = new System.Drawing.Point(9, 171);
-            this.bt_Scrape_from_hastag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_Scrape_from_hastag.Location = new System.Drawing.Point(7, 138);
             this.bt_Scrape_from_hastag.Name = "bt_Scrape_from_hastag";
-            this.bt_Scrape_from_hastag.Size = new System.Drawing.Size(289, 43);
+            this.bt_Scrape_from_hastag.Size = new System.Drawing.Size(217, 35);
             this.bt_Scrape_from_hastag.TabIndex = 16;
             this.bt_Scrape_from_hastag.Text = "Scrape from hastag";
             this.bt_Scrape_from_hastag.UseVisualStyleBackColor = false;
@@ -196,10 +188,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_scrape_from_user.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_scrape_from_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_scrape_from_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_scrape_from_user.Location = new System.Drawing.Point(9, 128);
-            this.bt_scrape_from_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_scrape_from_user.Location = new System.Drawing.Point(7, 103);
             this.bt_scrape_from_user.Name = "bt_scrape_from_user";
-            this.bt_scrape_from_user.Size = new System.Drawing.Size(289, 43);
+            this.bt_scrape_from_user.Size = new System.Drawing.Size(217, 35);
             this.bt_scrape_from_user.TabIndex = 15;
             this.bt_scrape_from_user.Text = "Scrape from user";
             this.bt_scrape_from_user.UseVisualStyleBackColor = false;
@@ -212,11 +203,10 @@ namespace InstaMacBot.DesktopInterface
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(9, 95);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(7, 77);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.label2.Size = new System.Drawing.Size(56, 33);
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label2.Size = new System.Drawing.Size(46, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Bots";
             // 
@@ -228,10 +218,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_settings.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_settings.Location = new System.Drawing.Point(9, 52);
-            this.bt_settings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_settings.Location = new System.Drawing.Point(7, 42);
             this.bt_settings.Name = "bt_settings";
-            this.bt_settings.Size = new System.Drawing.Size(289, 43);
+            this.bt_settings.Size = new System.Drawing.Size(217, 35);
             this.bt_settings.TabIndex = 13;
             this.bt_settings.Text = "Settings";
             this.bt_settings.UseVisualStyleBackColor = false;
@@ -244,10 +233,9 @@ namespace InstaMacBot.DesktopInterface
             this.bt_manage_lists.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_manage_lists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_manage_lists.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_manage_lists.Location = new System.Drawing.Point(9, 9);
-            this.bt_manage_lists.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_manage_lists.Location = new System.Drawing.Point(7, 7);
             this.bt_manage_lists.Name = "bt_manage_lists";
-            this.bt_manage_lists.Size = new System.Drawing.Size(289, 43);
+            this.bt_manage_lists.Size = new System.Drawing.Size(217, 35);
             this.bt_manage_lists.TabIndex = 12;
             this.bt_manage_lists.Text = "Manage your lists";
             this.bt_manage_lists.UseVisualStyleBackColor = false;
@@ -261,9 +249,8 @@ namespace InstaMacBot.DesktopInterface
             this.pn_instamacbot.Controls.Add(this.label1);
             this.pn_instamacbot.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_instamacbot.Location = new System.Drawing.Point(0, 0);
-            this.pn_instamacbot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pn_instamacbot.Name = "pn_instamacbot";
-            this.pn_instamacbot.Size = new System.Drawing.Size(309, 149);
+            this.pn_instamacbot.Size = new System.Drawing.Size(232, 121);
             this.pn_instamacbot.TabIndex = 1;
             // 
             // lb_username
@@ -273,20 +260,18 @@ namespace InstaMacBot.DesktopInterface
             this.lb_username.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lb_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_username.ForeColor = System.Drawing.Color.White;
-            this.lb_username.Location = new System.Drawing.Point(19, 107);
-            this.lb_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_username.Location = new System.Drawing.Point(14, 87);
             this.lb_username.Name = "lb_username";
-            this.lb_username.Size = new System.Drawing.Size(105, 27);
+            this.lb_username.Size = new System.Drawing.Size(86, 22);
             this.lb_username.TabIndex = 5;
             this.lb_username.Text = "not logged";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(59, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -297,10 +282,9 @@ namespace InstaMacBot.DesktopInterface
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(105, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(79, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 34);
+            this.label1.Size = new System.Drawing.Size(142, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "InstaMacBot";
             // 
@@ -308,38 +292,36 @@ namespace InstaMacBot.DesktopInterface
             // 
             this.pn_conteiner.Controls.Add(this.pn_container_fill_form);
             this.pn_conteiner.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_conteiner.Location = new System.Drawing.Point(320, 14);
-            this.pn_conteiner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_conteiner.Location = new System.Drawing.Point(240, 11);
             this.pn_conteiner.Name = "pn_conteiner";
-            this.pn_conteiner.Size = new System.Drawing.Size(948, 722);
+            this.pn_conteiner.Size = new System.Drawing.Size(711, 587);
             this.pn_conteiner.TabIndex = 1;
             // 
             // pn_container_fill_form
             // 
             this.pn_container_fill_form.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_container_fill_form.Location = new System.Drawing.Point(0, 0);
-            this.pn_container_fill_form.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pn_container_fill_form.Name = "pn_container_fill_form";
-            this.pn_container_fill_form.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.pn_container_fill_form.Size = new System.Drawing.Size(948, 722);
+            this.pn_container_fill_form.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.pn_container_fill_form.Size = new System.Drawing.Size(711, 587);
             this.pn_container_fill_form.TabIndex = 2;
             // 
             // Bot_Client
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(40, 40);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1280, 750);
+            this.ClientSize = new System.Drawing.Size(960, 609);
             this.Controls.Add(this.pn_conteiner);
             this.Controls.Add(this.pn_left);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(1295, 787);
+            this.MinimumSize = new System.Drawing.Size(975, 647);
             this.Name = "Bot_Client";
-            this.Padding = new System.Windows.Forms.Padding(11, 14, 12, 14);
+            this.Padding = new System.Windows.Forms.Padding(8, 11, 9, 11);
             this.Text = "Bot Client";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bot_Client_FormClosing);
             this.Load += new System.EventHandler(this.Bot_Client_Load);
             this.ResizeBegin += new System.EventHandler(this.Bot_Client_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.Bot_Client_ResizeEnd);
