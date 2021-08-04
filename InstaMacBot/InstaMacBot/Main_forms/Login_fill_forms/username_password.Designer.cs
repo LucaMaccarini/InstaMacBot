@@ -30,13 +30,13 @@ namespace InstaMacBot.DesktopInterface
         private void InitializeComponent()
         {
             this.pn_container_fill_form = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.ck_save_session = new System.Windows.Forms.CheckBox();
             this.bt_login = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tx_login_password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tx_login_username = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pn_container_fill_form.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,21 @@ namespace InstaMacBot.DesktopInterface
             this.pn_container_fill_form.Padding = new System.Windows.Forms.Padding(10);
             this.pn_container_fill_form.Size = new System.Drawing.Size(362, 292);
             this.pn_container_fill_form.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(16, 179);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 27);
+            this.button1.TabIndex = 8;
+            this.button1.Text = " ?";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ck_save_session
             // 
@@ -132,22 +147,6 @@ namespace InstaMacBot.DesktopInterface
             this.tx_login_username.Name = "tx_login_username";
             this.tx_login_username.Size = new System.Drawing.Size(251, 23);
             this.tx_login_username.TabIndex = 4;
-            this.tx_login_username.Text = "chiara_rampolla";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(16, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 27);
-            this.button1.TabIndex = 8;
-            this.button1.Text = " ?";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // username_password
             // 
