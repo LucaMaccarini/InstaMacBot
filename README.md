@@ -16,8 +16,10 @@ I am doing:
 - fix documentation
 
 #### Release 2.2
-- new bot that simulates everyday human actions of instagram, trying to hide the repetitive actions of bots
 - new bot (or edit follow/like bot) adding the possibility to comment last users posts
+- I will add the possibility to add technical accounts in the bot (useless instagram accounts like fakes):
+the technical accounts will be used for massive actions which do not need to be performed from our main account such as the 3 scraping bots so it will be safer to use the bot on your main account
+-I will also add multi-user bots: bots where multiple technical accounts will be used to perform actions
 
 #### will be done
 - 2 factors login
