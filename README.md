@@ -14,6 +14,7 @@ I am doing:
 - new bot for giveway comments (comments barrage)
 - add in login form login with last session, so instagram will not see any new login, like open instagram app
 - fix documentation
+- 2 factors login
 
 #### Release 2.2
 - new bot (or edit follow/like bot) adding the possibility to comment last users posts
@@ -22,7 +23,6 @@ the technical accounts will be used for massive actions which do not need to be 
 - I will also add multi-user bots: bots where multiple technical accounts will be used to perform actions
 
 #### will be done
-- 2 factors login
 - put a bots controller that can schedule start/stop/pause bots (a user request)
 - activate the settings panel by putting some settings
 
