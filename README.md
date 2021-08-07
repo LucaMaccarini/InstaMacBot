@@ -13,13 +13,15 @@ I am doing:
 #### Release 2.1
 - new bot for giveway comments (comments barrage)
 - add in login form login with last session, so instagram will not see any new login, like open instagram app
+- fix documentation
 
 #### Release 2.2
 - new bot that simulates everyday human actions of instagram, trying to hide the repetitive actions of bots
-- new bot (or edit follow/like bot) adding the possibility to comment last users pics
+- new bot (or edit follow/like bot) adding the possibility to comment last users posts
+
 #### will be done
 - 2 factors login
-- put a bots controller that can schedule start/stop/pause bots
+- put a bots controller that can schedule start/stop/pause bots (a user request)
 - activate the settings panel by putting some settings
 
 
