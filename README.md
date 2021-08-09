@@ -54,7 +54,8 @@ this project is composed by 2 parts:
   
   ### Documentation
   I stopped producing documentation from the 2.1 release as I noticed that there is not much interest in the development of the app but only in its use, so instead of the documentation I have more time to take care of other aspects of the bot.
-  [Download the DOCUMENTATION](http://www.how2macca.altervista.org)
+  
+  [Download the DOCUMENTATION (relese 2.0)](http://www.how2macca.altervista.org)
   
   (created with sand castle)
   
