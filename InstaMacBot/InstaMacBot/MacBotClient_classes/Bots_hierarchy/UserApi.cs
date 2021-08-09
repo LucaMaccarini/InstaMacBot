@@ -137,6 +137,7 @@ namespace InstaMacBot.classes
             else
             {
 
+
                 if (loginRequest.Value == InstaLoginResult.ChallengeRequired)
                 {
                     var challenge = await api.GetChallengeRequireVerifyMethodAsync();
@@ -149,6 +150,10 @@ namespace InstaMacBot.classes
                     return challenge.Info.Message;
 
                 }
+                else if(loginRequest.Value == InstaLoginResult.TwoFactorRequired)
+                {
+                    return "2 factor code";
+                }
 
                 return loginRequest.Info.Message;
 
@@ -156,22 +161,15 @@ namespace InstaMacBot.classes
 
         }
 
-        /*
-        public async Task<string> logoutAsync()
+
+        public async Task<string> Send2factorCodeAsync(string code)
         {
-            IResult<bool> logoutRequest = await api.LogoutAsync();
-
-            if (logoutRequest.Succeeded)
-            {
-                return "logged out";
-            }
+            var twoFactorLogin = await api.TwoFactorLoginAsync(code);
+            if (twoFactorLogin.Succeeded)
+                return "";
             else
-            {
-                return "logout error (close and reopen the entire bot): " + logoutRequest.Info.Message;
-            }
+                return twoFactorLogin.Info.Message;
         }
-        */
-
 
         //wrap here all api actions you need in the bots
 
@@ -402,32 +400,39 @@ namespace InstaMacBot.classes
             return api.GetStateDataAsString();
         }
 
-        /*
-        public async Task<bool> send_dm_link(string link, string username_to_send, string message = "a")
+        /// <summary>
+        /// get the media id having the url of the media
+        /// </summary>
+        /// <param name="url">the url of the target media</param>
+        /// <returns>the id of the target media</returns>
+        public async Task<string> get_media_id_from_url(string url)
+        {
+            var post = await api.MediaProcessor.GetMediaIdFromUrlAsync(new System.Uri(url));
+
+            if (post.Succeeded)
+                return post.Value;
+            else
+                return null;
+        }
+
+
+        /// <summary>
+        /// comment a post
+        /// </summary>
+        /// <param name="post_id">id of the post that will be commented</param>
+        /// <param name="comment">the content of the comment</param>
+        /// <returns>
+        /// <para>true if the post has been commented correctly</para>
+        /// <para>false if the photo has not been commented correctly or post removed</para>
+        /// </returns>
+        public async Task<bool> comment_post(string post_id, string comment)
         {
 
-            var user = await get_user(username_to_send);
-            var userId = user.Value.Pk.ToString();
+            var result = await api.CommentProcessor.CommentMediaAsync(post_id, comment);
 
-            var inbox = await api.MessagingProcessor.GetDirectInboxAsync(PaginationParameters.MaxPagesToLoad(1));
+            return result.Succeeded;
 
-            var desireUsername = username_to_send;
-            var desireThread = inbox.Value.Inbox.Threads.Find(u => u.Users.FirstOrDefault().UserName.ToLower() == desireUsername);
-            var requestedThreadId = desireThread.ThreadId;
-            string[] treadsid_array = { requestedThreadId };
-
-            var directLink = await api.MessagingProcessor.SendDirectLinkAsync(message, link, treadsid_array);
-
-
-            if (directLink.Succeeded)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+                
         }
-        */
     }
 }

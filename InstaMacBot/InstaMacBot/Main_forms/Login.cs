@@ -23,8 +23,7 @@ namespace InstaMacBot.DesktopInterface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            select_login_method(bt_2factor);
-            open_fill_form(factor2_form);
+            select_2_factor_tab();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -63,11 +62,14 @@ namespace InstaMacBot.DesktopInterface
             }
         }
 
-
+        public void select_2_factor_tab() {
+            select_login_method(bt_2factor);
+            open_fill_form(factor2_form);
+        }
         private void Login_Load(object sender, EventArgs e)
         {
-            username_password_form = new username_password(this);
             factor2_form = new factor2(this);
+            username_password_form = new username_password(this, (factor2)factor2_form);
             load_session_form = new load_session_form(this);
 
             open_fill_form(username_password_form);

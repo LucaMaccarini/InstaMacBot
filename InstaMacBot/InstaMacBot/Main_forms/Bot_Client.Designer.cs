@@ -33,6 +33,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_left = new System.Windows.Forms.Panel();
             this.pn_bots = new System.Windows.Forms.Panel();
             this.bt_new_bot_soon = new System.Windows.Forms.Button();
+            this.bt_comments_barrage_bot = new System.Windows.Forms.Button();
             this.bt_send_dm_bot = new System.Windows.Forms.Button();
             this.bt_unfollow_bot = new System.Windows.Forms.Button();
             this.bt_follow_like_bot = new System.Windows.Forms.Button();
@@ -71,6 +72,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_bots.AutoScroll = true;
             this.pn_bots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pn_bots.Controls.Add(this.bt_new_bot_soon);
+            this.pn_bots.Controls.Add(this.bt_comments_barrage_bot);
             this.pn_bots.Controls.Add(this.bt_send_dm_bot);
             this.pn_bots.Controls.Add(this.bt_unfollow_bot);
             this.pn_bots.Controls.Add(this.bt_follow_like_bot);
@@ -95,13 +97,29 @@ namespace InstaMacBot.DesktopInterface
             this.bt_new_bot_soon.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.bt_new_bot_soon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_new_bot_soon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_new_bot_soon.Location = new System.Drawing.Point(7, 313);
+            this.bt_new_bot_soon.Location = new System.Drawing.Point(7, 348);
             this.bt_new_bot_soon.Name = "bt_new_bot_soon";
             this.bt_new_bot_soon.Size = new System.Drawing.Size(217, 35);
-            this.bt_new_bot_soon.TabIndex = 22;
+            this.bt_new_bot_soon.TabIndex = 24;
             this.bt_new_bot_soon.Text = "new bot soon";
             this.bt_new_bot_soon.UseVisualStyleBackColor = false;
             this.bt_new_bot_soon.Click += new System.EventHandler(this.bt_new_bot_soon_Click);
+            // 
+            // bt_comments_barrage_bot
+            // 
+            this.bt_comments_barrage_bot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_comments_barrage_bot.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bt_comments_barrage_bot.FlatAppearance.BorderSize = 0;
+            this.bt_comments_barrage_bot.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.bt_comments_barrage_bot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_comments_barrage_bot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_comments_barrage_bot.Location = new System.Drawing.Point(7, 313);
+            this.bt_comments_barrage_bot.Name = "bt_comments_barrage_bot";
+            this.bt_comments_barrage_bot.Size = new System.Drawing.Size(217, 35);
+            this.bt_comments_barrage_bot.TabIndex = 22;
+            this.bt_comments_barrage_bot.Text = "comments barrage";
+            this.bt_comments_barrage_bot.UseVisualStyleBackColor = false;
+            this.bt_comments_barrage_bot.Click += new System.EventHandler(this.bt_comments_barrage_bot_Click);
             // 
             // bt_send_dm_bot
             // 
@@ -353,8 +371,9 @@ namespace InstaMacBot.DesktopInterface
         private System.Windows.Forms.Button bt_Scrape_from_hastag;
         private System.Windows.Forms.Panel pn_conteiner;
         private System.Windows.Forms.Panel pn_container_fill_form;
-        private System.Windows.Forms.Button bt_new_bot_soon;
+        private System.Windows.Forms.Button bt_comments_barrage_bot;
         private System.Windows.Forms.Button bt_send_dm_bot;
         private System.Windows.Forms.Label lb_username;
+        private System.Windows.Forms.Button bt_new_bot_soon;
     }
 }

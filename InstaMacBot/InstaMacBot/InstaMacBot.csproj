@@ -98,12 +98,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fill_Forms\comments_barrage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fill_Forms\comments_barrage.Designer.cs">
+      <DependentUpon>comments_barrage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fill_Forms\new_bot.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fill_Forms\new_bot.Designer.cs">
       <DependentUpon>new_bot.cs</DependentUpon>
     </Compile>
+    <Compile Include="MacBotClient_classes\Bots_hierarchy\bots\action_bots\CommentsBarrageBot.cs" />
     <Compile Include="MacBotClient_classes\bot_files_management\interface_list_management\bot_file_entry_list.cs" />
     <Compile Include="MacBotClient_classes\bot_files_management\interface_list_management\bot_file_list.cs" />
     <Compile Include="Main_forms\Bot_Client.cs">
@@ -200,6 +207,9 @@
     <Compile Include="Fill_Forms\unfollow_form.Designer.cs">
       <DependentUpon>unfollow_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Fill_Forms\comments_barrage.resx">
+      <DependentUpon>comments_barrage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fill_Forms\new_bot.resx">
       <DependentUpon>new_bot.cs</DependentUpon>
     </EmbeddedResource>

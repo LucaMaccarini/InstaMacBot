@@ -58,11 +58,13 @@ namespace InstaMacBot.DesktopInterface
             }catch(Exception e)
             {
                 MessageBox.Show("Invalid json file", "json parsing error");
+                return;
             }
 
             if (utente == null)
             {
                 MessageBox.Show("session no longer valid", "Load Session Error");
+                return;
             }
 
 

@@ -55,7 +55,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage2.Size = new System.Drawing.Size(687, 519);
+            this.tabPage2.Size = new System.Drawing.Size(703, 558);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lists";
             // 
@@ -69,7 +69,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_lists.Margin = new System.Windows.Forms.Padding(3, 4, 3, 0);
             this.pn_lists.Name = "pn_lists";
             this.pn_lists.Padding = new System.Windows.Forms.Padding(3);
-            this.pn_lists.Size = new System.Drawing.Size(683, 513);
+            this.pn_lists.Size = new System.Drawing.Size(699, 552);
             this.pn_lists.TabIndex = 1;
             // 
             // pn_controls
@@ -83,7 +83,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_controls.Location = new System.Drawing.Point(406, 3);
             this.pn_controls.Name = "pn_controls";
             this.pn_controls.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.pn_controls.Size = new System.Drawing.Size(199, 507);
+            this.pn_controls.Size = new System.Drawing.Size(199, 546);
             this.pn_controls.TabIndex = 1;
             // 
             // button3
@@ -134,6 +134,7 @@ namespace InstaMacBot.DesktopInterface
             // listBox_files
             // 
             this.listBox_files.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
+            this.listBox_files.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox_files.Dock = System.Windows.Forms.DockStyle.Left;
             this.listBox_files.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox_files.ForeColor = System.Drawing.Color.White;
@@ -141,7 +142,7 @@ namespace InstaMacBot.DesktopInterface
             this.listBox_files.ItemHeight = 20;
             this.listBox_files.Location = new System.Drawing.Point(3, 3);
             this.listBox_files.Name = "listBox_files";
-            this.listBox_files.Size = new System.Drawing.Size(403, 507);
+            this.listBox_files.Size = new System.Drawing.Size(403, 546);
             this.listBox_files.TabIndex = 0;
             this.listBox_files.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -153,7 +154,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(687, 519);
+            this.tabPage1.Size = new System.Drawing.Size(703, 558);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Description";
             // 
@@ -164,7 +165,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_description.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_description.Location = new System.Drawing.Point(2, 3);
             this.pn_description.Name = "pn_description";
-            this.pn_description.Size = new System.Drawing.Size(683, 513);
+            this.pn_description.Size = new System.Drawing.Size(699, 552);
             this.pn_description.TabIndex = 0;
             this.pn_description.Resize += new System.EventHandler(this.pn_description_Resize);
             // 
@@ -193,7 +194,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(695, 548);
+            this.tabControl1.Size = new System.Drawing.Size(711, 587);
             this.tabControl1.TabIndex = 3;
             // 
             // manage_lists_form
@@ -201,7 +202,7 @@ namespace InstaMacBot.DesktopInterface
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(695, 548);
+            this.ClientSize = new System.Drawing.Size(711, 587);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.Name = "manage_lists_form";

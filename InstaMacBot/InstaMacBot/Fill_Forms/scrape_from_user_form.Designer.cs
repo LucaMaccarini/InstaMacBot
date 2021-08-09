@@ -69,7 +69,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(695, 548);
+            this.tabControl1.Size = new System.Drawing.Size(711, 587);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -80,7 +80,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(687, 519);
+            this.tabPage1.Size = new System.Drawing.Size(703, 558);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Description";
             // 
@@ -91,7 +91,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_description.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_description.Location = new System.Drawing.Point(2, 3);
             this.pn_description.Name = "pn_description";
-            this.pn_description.Size = new System.Drawing.Size(683, 513);
+            this.pn_description.Size = new System.Drawing.Size(699, 552);
             this.pn_description.TabIndex = 0;
             this.pn_description.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_description_Paint);
             this.pn_description.Resize += new System.EventHandler(this.pn_description_Resize);
@@ -116,7 +116,7 @@ namespace InstaMacBot.DesktopInterface
             this.option_tab.Location = new System.Drawing.Point(4, 25);
             this.option_tab.Name = "option_tab";
             this.option_tab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.option_tab.Size = new System.Drawing.Size(687, 519);
+            this.option_tab.Size = new System.Drawing.Size(703, 558);
             this.option_tab.TabIndex = 1;
             this.option_tab.Text = "Options";
             // 
@@ -128,7 +128,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_options.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_options.Location = new System.Drawing.Point(2, 3);
             this.pn_options.Name = "pn_options";
-            this.pn_options.Size = new System.Drawing.Size(683, 513);
+            this.pn_options.Size = new System.Drawing.Size(699, 552);
             this.pn_options.TabIndex = 1;
             // 
             // label2
@@ -158,7 +158,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage3.Size = new System.Drawing.Size(687, 519);
+            this.tabPage3.Size = new System.Drawing.Size(703, 558);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Controls";
             // 
@@ -171,7 +171,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_controls.Location = new System.Drawing.Point(2, 3);
             this.pn_controls.Name = "pn_controls";
             this.pn_controls.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.pn_controls.Size = new System.Drawing.Size(683, 513);
+            this.pn_controls.Size = new System.Drawing.Size(699, 552);
             this.pn_controls.TabIndex = 2;
             // 
             // pn_console
@@ -181,7 +181,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_console.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_console.Location = new System.Drawing.Point(5, 128);
             this.pn_console.Name = "pn_console";
-            this.pn_console.Size = new System.Drawing.Size(673, 380);
+            this.pn_console.Size = new System.Drawing.Size(689, 419);
             this.pn_console.TabIndex = 8;
             // 
             // tx_console
@@ -196,7 +196,7 @@ namespace InstaMacBot.DesktopInterface
             this.tx_console.Name = "tx_console";
             this.tx_console.ReadOnly = true;
             this.tx_console.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tx_console.Size = new System.Drawing.Size(673, 380);
+            this.tx_console.Size = new System.Drawing.Size(689, 419);
             this.tx_console.TabIndex = 7;
             // 
             // pn_controls_status
@@ -208,7 +208,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_controls_status.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_controls_status.Location = new System.Drawing.Point(5, 0);
             this.pn_controls_status.Name = "pn_controls_status";
-            this.pn_controls_status.Size = new System.Drawing.Size(673, 128);
+            this.pn_controls_status.Size = new System.Drawing.Size(689, 128);
             this.pn_controls_status.TabIndex = 7;
             // 
             // label5
@@ -250,7 +250,7 @@ namespace InstaMacBot.DesktopInterface
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(695, 548);
+            this.ClientSize = new System.Drawing.Size(711, 587);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.Name = "scrape_from_user_form";

@@ -69,7 +69,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(695, 548);
+            this.tabControl1.Size = new System.Drawing.Size(711, 587);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -80,7 +80,7 @@ namespace InstaMacBot.DesktopInterface
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(687, 519);
+            this.tabPage1.Size = new System.Drawing.Size(703, 558);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Description";
             // 
@@ -91,7 +91,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_description.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_description.Location = new System.Drawing.Point(2, 3);
             this.pn_description.Name = "pn_description";
-            this.pn_description.Size = new System.Drawing.Size(683, 513);
+            this.pn_description.Size = new System.Drawing.Size(699, 552);
             this.pn_description.TabIndex = 0;
             this.pn_description.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_description_Paint);
             this.pn_description.Resize += new System.EventHandler(this.pn_description_Resize);
@@ -251,7 +251,7 @@ namespace InstaMacBot.DesktopInterface
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(695, 548);
+            this.ClientSize = new System.Drawing.Size(711, 587);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.Name = "scrape_from_location_form";

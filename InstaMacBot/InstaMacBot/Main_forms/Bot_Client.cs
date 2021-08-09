@@ -20,6 +20,7 @@ namespace InstaMacBot.DesktopInterface
         Form like_follow_bot;
         Form unfollow_bot;
         Form send_dm_bot;
+        Form comments_battage;
         Form new_bot;
 
         //istagram user api
@@ -111,7 +112,9 @@ namespace InstaMacBot.DesktopInterface
             like_follow_bot = new follow_like_form(utente, bot_manager, file_list);
             unfollow_bot = new unfollow_form(utente, bot_manager, file_list);
             send_dm_bot = new send_dm_form(utente, bot_manager, file_list);
+            comments_battage = new comments_barrage(utente, bot_manager, file_list);
             new_bot = new new_bot();
+
 
             SetDoubleBuffered(pn_container_fill_form);
             SetDoubleBuffered(pn_left);
@@ -226,6 +229,12 @@ namespace InstaMacBot.DesktopInterface
                 BotFileSaver save_file = new DesktopBotFileSaver("./Sessions/" + utente.get_username() + ".json", true);
                 save_file.write_on_file(utente.get_session());
             }
+        }
+
+        private void bt_comments_barrage_bot_Click(object sender, EventArgs e)
+        {
+            select_bot(((Button)sender));
+            open_fill_form(comments_battage);
         }
     }
 }

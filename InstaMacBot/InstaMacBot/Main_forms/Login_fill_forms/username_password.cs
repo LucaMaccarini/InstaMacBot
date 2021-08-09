@@ -17,12 +17,14 @@ namespace InstaMacBot.DesktopInterface
     {
 
         UserApi utente;
-        Form login_form;
+        Login login_form;
+        factor2 factor2_form;
 
-        public username_password(Login login_form)
+        public username_password(Login login_form, factor2 factor2_form)
         {
             InitializeComponent();
             this.login_form = login_form;
+            this.factor2_form = factor2_form;
         }
 
         
@@ -30,11 +32,16 @@ namespace InstaMacBot.DesktopInterface
         private async void bt_login_Click(object sender, EventArgs e)
         {
             bt_login.Enabled = false;
+            ck_save_session.Enabled = false;
+
+            if (factor2_form.is_panel_unlocked())
+                factor2_form.lock_panel();
 
             if (tx_login_username.Text == "" || tx_login_password.Text == "")
             {
                 MessageBox.Show("fill username and password", "invalid credentials");
                 bt_login.Enabled = true;
+                ck_save_session.Enabled = true;
                 return;
             }
 
@@ -42,11 +49,23 @@ namespace InstaMacBot.DesktopInterface
 
             string esito = await utente.loginAsync();
 
-            if (!utente.is_autentitcated)
+            if (esito == "2 factor code")
             {
-                MessageBox.Show(esito, "Login error");
+                factor2_form.unlock_panel(utente, tx_login_username.Text, ck_save_session.Checked);
+                login_form.select_2_factor_tab();
                 bt_login.Enabled = true;
+                ck_save_session.Enabled = true;
                 return;
+            }
+            else
+            {
+                if (!utente.is_autentitcated)
+                {
+                    MessageBox.Show(esito, "Login error");
+                    bt_login.Enabled = true;
+                    ck_save_session.Enabled = true;
+                    return;
+                }
             }
 
             Bot_Client form_client_bot = new Bot_Client(utente, "./Accounts/" + tx_login_username.Text, ck_save_session.Checked);

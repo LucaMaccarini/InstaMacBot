@@ -41,7 +41,7 @@ namespace InstaMacBot.DesktopInterface
             this.pn_settings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_settings.Location = new System.Drawing.Point(0, 0);
             this.pn_settings.Name = "pn_settings";
-            this.pn_settings.Size = new System.Drawing.Size(695, 548);
+            this.pn_settings.Size = new System.Drawing.Size(711, 587);
             this.pn_settings.TabIndex = 1;
             // 
             // label1
@@ -59,7 +59,7 @@ namespace InstaMacBot.DesktopInterface
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(695, 548);
+            this.ClientSize = new System.Drawing.Size(711, 587);
             this.Controls.Add(this.pn_settings);
             this.DoubleBuffered = true;
             this.Name = "settings_form";

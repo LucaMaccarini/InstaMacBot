@@ -102,7 +102,7 @@ namespace InstaMacBot.classes
             if (stop_fails_search_user <= 0) throw new ArgumentOutOfRangeException("stop_fails_search_user must be > 0");
             if (stop_fails_like <= 0) throw new ArgumentOutOfRangeException("stop_fails_like must be > 0");
             if (stop_fails_follow <= 0) throw new ArgumentOutOfRangeException("stop_fails_follow must be > 0");
-            if (delay < 0) throw new ArgumentOutOfRangeException("stop_fails_follow must be >=0");
+            if (delay < 0) throw new ArgumentOutOfRangeException("delay must be >=0");
 
             likes = 0;
             follow = 0;

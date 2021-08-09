@@ -54,7 +54,7 @@ namespace InstaMacBot.DesktopInterface
             SetDoubleBuffered(pn_controls_status);
             SetDoubleBuffered(pn_console);
 
-            lb_description.MaximumSize = this.Size;
+            lb_description.MaximumSize = pn_description.Size;
 
             console = new DesktopTextBoxConsole(tx_console);
 
