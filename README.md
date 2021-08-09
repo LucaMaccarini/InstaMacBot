@@ -86,6 +86,7 @@ Attention
 4) FollowLikeLastsPicBot use the extracted followes: for follow and left some likes at lasts pics   
 5) UnfollowBot use the followed list of FollowLikeLastsPicBot (or just a list of accounts) to unfollow all person in the list   
 6) UnfollowBot use a list of accounts to send them a Direct Message
+7) comments barrage, continue to comment a post
 
 # Bug or Bad choises
 - currently my classes open files only with openfiledialog, this method doesen't work on android same when bots saves them infos on files, i am searching an alternative
