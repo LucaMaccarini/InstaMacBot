@@ -13,7 +13,6 @@ I am doing:
 #### Release 2.1
 - new bot for giveway comments (comments barrage)
 - add in login form login with last session, so instagram will not see any new login, like open instagram app
-- fix documentation
 - 2 factors login
 
 #### Release 2.2
