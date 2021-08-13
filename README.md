@@ -8,13 +8,8 @@ the code that is downloaded by cloning the repository is in the testing phase an
 
 ### currently
 I am doing: 
-- developing release 2.1
+- testing release 2.1
 ### To do
-#### Release 2.1
-- new bot for giveway comments (comments barrage)
-- add in login form login with last session, so instagram will not see any new login, like open instagram app
-- 2 factors login
-
 #### Release 2.2
 - new bot (or edit follow/like bot) adding the possibility to comment last users posts
 - I will add the possibility to add technical accounts in the bot (useless instagram accounts like fakes):
@@ -23,6 +18,7 @@ the technical accounts will be used for massive actions which do not need to be 
 
 #### will be done
 - put a bots controller that can schedule start/stop/pause bots (a user request)
+- bot autostart when instagram stop to block user actions
 - activate the settings panel by putting some settings
 
 
