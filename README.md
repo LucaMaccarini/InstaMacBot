@@ -87,8 +87,6 @@ Attention
 7) comments barrage, continue to comment a post
 
 # Bug or Bad choises
-- currently my classes open files only with openfiledialog, this method doesen't work on android same when bots saves them infos on files, i am searching an alternative
-- async stop of procedura_bot() small active wait if the bot is scheduled to stop in a short time
 - perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
 
 # Developer
