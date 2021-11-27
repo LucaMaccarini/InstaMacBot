@@ -7,9 +7,7 @@ c# classes + desktop client bot for istagram
 the code that is downloaded by cloning the repository is in the testing phase and could lead to problems in using the bot, if you intend to use the bot download it from the releases page obviously by downloading the latest one: [RELEASES](https://github.com/MaccariniLuca/InstaMacBot/releases)
 
 ### currently
-I am doing: 
-- testing release 2.1
-- i'm adding a new setting inside all bot for automatic restart bot when instagram unlock bot actions (after an instagram block)
+I have taken a break from development due to a short time, but the project is not discontinued and indeed I plan to resume working on it as soon as I am less busy
 ### To do
 #### release 2.2
 - new bot (or edit follow/like bot) adding the possibility to comment last users posts
