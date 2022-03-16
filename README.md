@@ -13,55 +13,21 @@ I have taken a break from development due to a short time, but the project is no
 - new bot (or edit follow/like bot) adding the possibility to comment last users posts
 - add the possibility to use a proxy server
 
-#### Release 3.0
-- I will add the possibility to add technical accounts in the bot (useless instagram accounts like fakes):
-the technical accounts will be used for massive actions which do not need to be performed from our main account such as the 3 scraping bots so it will be safer to use the bot on your main account
-- I will also add multi-user bots: bots where multiple technical accounts will be used to perform actions
-
-#### will be done
-- activate the settings panel by putting some settings
-
-
 # Description
-this project is composed by 2 parts:
-- Set of c# classes to split api and bot logic with desktop client implementation
-- Desktop client
+this bot is developed to allow a user to have a client that provides various easy and intuitive bots
 
-## 1) Main Classes
+## Bots
+1) ScrapeAccountsFromHastagBot: used to extract accounts from an hastag (accounts that recently posted with the target hastag) 
+2) ScrapeAccountsFromLocation: used to extract accounts from an instagram place (accounts that recently posted with the target location)   
+3) ScrapeFollowersBot: used to extract accounts from the followers of public instagram user (private only if following)
+4) FollowLikeLastsPicBot use the extracted followes: for follow and left some likes at lasts pics   
+5) UnfollowBot use the followed list of FollowLikeLastsPicBot (or just a list of accounts) to unfollow all person in the list   
+6) UnfollowBot use a list of accounts to send them a Direct Message
+7) comments barrage, continue to comment a post
 
-  #### UserApi (Class): 
-  >rappresents the instagram user and contains the api to do all action on instagram
-  #### BotClient (Classes): 
-  >rappresents a botClient with some different bots connected, having an organizzation of all bots grouped in a client and with an unic name for the bot
-  #### StartStopBot (interface): 
-  >a startable or stoppable bot
-  #### SSSBot (Abstract class, implemets StartStopBot):
-  >rappresents a status bot or StartStopBot with status is_running
-  >
-  >the other entities are classes that extend SSSbot: implement the bot behavior
-  
-  ### Classes Diagram & Documentation
-  quick draft showing the main classes of the bot logic (is an svg open in your browser for a better view)
-  
-  to see the details of the various classes and interfaces, look at the documentation
-  
-  ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/documentation/quick%20class%20diagram.svg)
-  
-  ### Documentation
-  I stopped producing documentation from the 2.1 release as I noticed that there is not much interest in the development of the app but only in its use, so instead of the documentation I have more time to take care of other aspects of the bot.
-  
-  [Download the DOCUMENTATION (relese 2.0)](http://www.how2macca.altervista.org)
-  
-  (created with sand castle)
-  
-  
- ## 2) Desktop Client
- - A basic client that uses these classes
- - In the future I will develop a client for android that will use these classes to bring the bot to a mobile platform
-    
- # Terms and Conditions
+# Terms and Conditions
  use this bot at you own risk!
- # Legal
+# Legal
 This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by Instagram or any of its affiliates or subsidiaries. This is an independent and unofficial instagram bot
  
 # Installation (plug and play)
@@ -75,17 +41,11 @@ Attention
 - It is important to do not touch the files inside the folder!
 - to edit the project: download the source code zip and is just a c# project open the solution file with visual studio
 
-## Bots
-1) ScrapeAccountsFromHastagBot: used to extract accounts from an hastag (accounts that recently posted with the target hastag) 
-2) ScrapeAccountsFromLocation: used to extract accounts from an instagram place (accounts that recently posted with the target location)   
-3) ScrapeFollowersBot: used to extract accounts from the followers of public instagram user (private only if following)
-4) FollowLikeLastsPicBot use the extracted followes: for follow and left some likes at lasts pics   
-5) UnfollowBot use the followed list of FollowLikeLastsPicBot (or just a list of accounts) to unfollow all person in the list   
-6) UnfollowBot use a list of accounts to send them a Direct Message
-7) comments barrage, continue to comment a post
+
 
 # Bug or Bad choises
 - perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
+- developed for fun when I had no knowledge of software engineering yet
 
 # Developer
 me :)
