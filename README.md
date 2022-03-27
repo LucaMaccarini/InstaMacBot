@@ -46,9 +46,7 @@ me :)
 for questions or requests for the insertion of personalized bots or to commission paid jobs in creating instagram bots contact me
 
 ### Contacts
-telegram: @Luca_macca
-
-email: lucamaccarini22@gmail.com
+telegram: @ObyWoniMaccheroni
 
 or open a new issue, and I will answer you
 
