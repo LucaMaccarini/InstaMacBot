@@ -43,7 +43,6 @@ Attention
 
 # Developer
 me :)
-for questions or requests for the insertion of personalized bots or to commission paid jobs in creating instagram bots contact me
 
 ### Contacts
 telegram: @ObyWoniMaccheroni
