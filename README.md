@@ -16,7 +16,7 @@ this bot is developed to allow a user to have a client that provides various eas
 3) ScrapeFollowersBot: used to extract accounts from the followers of public instagram user (private only if following)
 4) FollowLikeLastsPicBot use the extracted followes: for follow and left some likes at lasts pics   
 5) UnfollowBot use the followed list of FollowLikeLastsPicBot (or just a list of accounts) to unfollow all person in the list   
-6) UnfollowBot use a list of accounts to send them a Direct Message
+6) DMBot use a list of accounts to send them a Direct Message
 7) comments barrage, continue to comment a post
 
 # Terms and Conditions
