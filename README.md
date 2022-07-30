@@ -17,7 +17,7 @@ this bot is developed to allow a user to have a client that provides various eas
 4) FollowLikeLastsPicBot use the extracted followes: for follow and left some likes at lasts pics   
 5) UnfollowBot use the followed list of FollowLikeLastsPicBot (or just a list of accounts) to unfollow all person in the list   
 6) DMBot use a list of accounts to send them a Direct Message
-7) comments barrage, continue to comment a post
+7) Comments barrage, continue to comment a post
 
 # Terms and Conditions
  use this bot at you own risk!
