@@ -41,11 +41,3 @@ Attention
 - perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
 - developed for fun when I had no knowledge of software engineering yet
 
-# Developer
-me :)
-
-### Contacts
-telegram: @luca_macca
-
-or open a new issue, and I will answer you
-
