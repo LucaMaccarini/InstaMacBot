@@ -1,5 +1,6 @@
 # InstaMacBot 
 ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/resources/logo.ico)
+
 [![Maintenance](https://img.shields.io/badge/Maintained-no-red.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
 # Description
