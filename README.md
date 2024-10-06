@@ -35,9 +35,3 @@ Attention
 - It is important to do not touch the files inside the folder!
 - to edit the project: download the source code zip and is just a c# project open the solution file with visual studio
 
-
-
-# Bug or Bad choises
-- perhaps the extract.....Bots, like ExtractAccountsFromHastagBot or ExtractFollowersBot, that extends sssbot make a 'fake' override of stop() method because of the extract process that can't be stopped
-- developed for fun when I had no knowledge of software engineering yet
-
