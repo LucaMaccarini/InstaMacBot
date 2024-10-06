@@ -1,14 +1,12 @@
 # InstaMacBot 
 ![class](https://github.com/MaccariniLuca/InstaMacBot/blob/main/resources/logo.ico)
 
-# NOTE
-If you intend to use the bot download it from the releases page obviously by downloading the latest one: [RELEASES](https://github.com/MaccariniLuca/InstaMacBot/releases)
-
 ### currently
 [![Maintenance](https://img.shields.io/badge/Maintained-no-red.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
 # Description
-this bot is developed to allow a user to have a client that provides various easy and intuitive bots
+This desktop app allows you to run some simple and intuitive bots on your instagram account.
+The strong point of this bot is the use of private api’s official instagram app in such a way to reduce the risk of bans or blocks of aoocunt by instagram.
 
 ## Bots
 1) ScrapeAccountsFromHastagBot: used to extract accounts from an hastag (accounts that recently posted with the target hastag) 
@@ -30,8 +28,3 @@ just download and start:
 2) download the plug and play zip
 3) extract the zip
 4) now you have the bot folder, open the exefile inside it
-
-Attention
-- It is important to do not touch the files inside the folder!
-- to edit the project: download the source code zip and is just a c# project open the solution file with visual studio
-
