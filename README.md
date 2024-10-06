@@ -3,7 +3,7 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained-no-red.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
-In future I would like to rewind this project, amplifying it and making it into a working project also on smartphones
+In future I would like to upgrade this project making it working on both desktop and smartphone
 
 # Description
 This desktop app allows you to run some simple and intuitive bots on your instagram account.
