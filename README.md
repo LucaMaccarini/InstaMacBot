@@ -19,7 +19,7 @@ The strong point of this bot is the use of private api’s official instagram ap
 # Terms and Conditions
  use this bot at you own risk!
 # Legal
-This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by Instagram or any of its affiliates or subsidiaries. This is an independent and unofficial instagram bot
+This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by Instagram or any of its affiliates or subsidiaries. This is an independent and unofficial instagram bot.
  
 # Installation (plug and play)
 just download and start:
