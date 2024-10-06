@@ -3,6 +3,8 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained-no-red.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
+In future I would like to rewind this project, amplifying it and making it into a working project also on smartphones
+
 # Description
 This desktop app allows you to run some simple and intuitive bots on your instagram account.
 The strong point of this bot is the use of private api’s official instagram app in such a way to reduce the risk of bans or blocks of aoocunt by instagram.
